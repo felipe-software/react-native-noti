@@ -1,0 +1,17 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+group = 'expo.modules.notificationmotion'
+version = '0.1.0'
+android {
+  namespace 'expo.modules.notificationmotion'
+  defaultConfig {
+    minSdkVersion 31
+    versionCode 1
+    versionName '0.1.0'
+  }
+}
+dependencies {
+  implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.32'
+}

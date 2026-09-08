@@ -1,0 +1,50 @@
+{
+    "expo": {
+        "name": "React Native Noti",
+        "slug": "react-native-noti-demo",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "userInterfaceStyle": "dark",
+        "backgroundColor": "#09090b",
+        "platforms": ["android"],
+        "android": {
+            "package": "dev.reactnativenoti.demo",
+            "predictiveBackGestureEnabled": false
+        },
+        "plugins": [
+            [
+                "expo-build-properties",
+                {
+                    "android": {
+                        "minSdkVersion": 31,
+                        "compileSdkVersion": 36,
+                        "targetSdkVersion": 36
+                    }
+                }
+            ],
+            [
+                "react-native-noti",
+                {
+                    "widgets": true,
+                    "animations": {
+                        "drift": {
+                            "from": { "opacity": 0, "translateX": "1.25rem", "scale": 0.96 },
+                            "animate": { "opacity": 1, "translateX": 0, "scale": 1 },
+                            "exit": { "opacity": 0, "translateX": "-1.25rem", "scale": 0.96 },
+                            "transition": { "duration": 480, "easing": [0.16, 1, 0.3, 1] }
+                        }
+                    }
+                }
+            ],
+            [
+                "expo-dev-client",
+                {
+                    "launchMode": "most-recent",
+                    "toolsButton": false,
+                    "showMenuAtLaunch": false,
+                    "skipOnboarding": true
+                }
+            ]
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "react-native-noti",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "android": "bun --cwd apps/demo android",
+        "prebuild": "bun --cwd apps/demo prebuild",
+        "start": "bun --cwd apps/demo start",
+        "typecheck": "bun --cwd apps/demo typecheck && bun --cwd packages/react-native-noti typecheck"
+    }
+}

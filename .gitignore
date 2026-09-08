@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+apps/demo/android/
+apps/demo/ios/
+packages/react-native-noti/android/build/
+*.log
+
+.argent

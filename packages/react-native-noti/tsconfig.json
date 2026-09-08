@@ -1,0 +1,6 @@
+{
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": { "strict": true, "noEmit": true },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "examples/**/*.tsx", "plugin/index.d.ts"],
+    "exclude": ["tests", "android"]
+}
