@@ -6,3 +6,8 @@ packages/react-native-noti/android/build/
 *.log
 
 .argent
+
+# Reproducible video frames and emulator recordings.
+apps/demo/assets/bad-apple/
+artifacts/
+__pycache__/

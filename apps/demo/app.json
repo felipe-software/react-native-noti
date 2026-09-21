@@ -12,6 +12,7 @@
             "predictiveBackGestureEnabled": false
         },
         "plugins": [
+            "./plugins/with-bad-apple",
             [
                 "expo-build-properties",
                 {

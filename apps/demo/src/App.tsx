@@ -4,6 +4,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Noti, type NotificationTarget } from 'react-native-noti';
 import { examples, notificationScene } from './scenes';
+import { BadApple } from './BadApple';
 
 const demoIdentity = { id: 12012, tag: 'noti-demo' } as const;
 
@@ -97,6 +98,7 @@ function Demo() {
 
     useEffect(() => {
         const notificationSubscription = Noti.addActionListener((event) => {
+            if (event.id !== demoIdentity.id || event.tag !== demoIdentity.tag) return;
             const nextSelected =
                 event.action === 'next-example'
                     ? (selectedRef.current + 1) % examples.length
@@ -155,6 +157,7 @@ function Demo() {
         <SafeAreaView className="flex-1 bg-zinc-950" edges={['top']}>
             <StatusBar style="light" />
             <ScrollView contentContainerClassName="px-5 pb-12 pt-6">
+                <BadApple />
                 <View className="mb-7 flex-row items-end justify-between">
                     <View>
                         <Text className="text-xs font-bold tracking-[0.2rem] text-violet-300">

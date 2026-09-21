@@ -6,6 +6,8 @@ import { serializeScene } from './serialize';
 import type {
     ActiveNotification,
     CreateNotificationOptions,
+    FramePlaybackOptions,
+    FramePlaybackStatus,
     NotiAction,
     NotificationIdentity,
     NotificationTarget,
@@ -28,6 +30,9 @@ declare class NotificationMotionModule extends NativeModule<Events> {
     listActive(): Promise<ActiveNotification[]>;
     dismiss(identity: NotificationIdentity): Promise<void>;
     scrollTo(identity: NotificationIdentity, nodeId: string, index: number): Promise<void>;
+    playFrames(options: string): Promise<FramePlaybackStatus>;
+    stopFrames(): Promise<FramePlaybackStatus>;
+    getFramesStatus(): Promise<FramePlaybackStatus>;
     isWidgetPinningSupported(): Promise<boolean>;
     requestPinWidget(scene: string): Promise<boolean>;
     listWidgets(): Promise<number[]>;
@@ -99,6 +104,87 @@ function widgetId(id: number): number {
     return id;
 }
 
+function serializeFramePlayback(options: FramePlaybackOptions): string {
+    const {
+        assetDirectory,
+        frameCount,
+        sourceFps = 30,
+        fps = 30,
+        filenamePrefix = 'frame_',
+        filenameDigits = 5,
+        filenameStartIndex = 1,
+        filenameExtension = 'png',
+        batchSize = 60,
+        notificationId = 90731,
+        title = 'Frame playback',
+        body = 'Playing silently in the notification shade',
+        channelId = 'noti-frame-playback',
+        channelName = 'Frame playback',
+        smallIcon = 'nm_small_icon',
+        loop = false,
+        height = 120,
+    } = options;
+    if (
+        typeof assetDirectory !== 'string' ||
+        !assetDirectory ||
+        assetDirectory
+            .replace(/^\/+|\/+$/g, '')
+            .split('/')
+            .some((part) => !/^[a-zA-Z0-9._-]+$/.test(part) || part === '.' || part === '..')
+    )
+        throw new Error('assetDirectory must be a safe relative Android asset directory.');
+    if (!Number.isInteger(frameCount) || frameCount < 1 || frameCount > 100_000)
+        throw new Error('frameCount must be an integer between 1 and 100000.');
+    if (!Number.isInteger(sourceFps) || sourceFps < 1 || sourceFps > 240)
+        throw new Error('sourceFps must be an integer between 1 and 240.');
+    if (fps !== 15 && fps !== 30 && fps !== 60)
+        throw new Error('fps must be 15, 30, or 60.');
+    if (!/^[a-zA-Z0-9._-]*$/.test(filenamePrefix))
+        throw new Error("filenamePrefix may only contain letters, numbers, '.', '_' and '-'.");
+    if (!Number.isInteger(filenameDigits) || filenameDigits < 1 || filenameDigits > 9)
+        throw new Error('filenameDigits must be an integer between 1 and 9.');
+    if (
+        !Number.isSafeInteger(filenameStartIndex) ||
+        filenameStartIndex < 0 ||
+        filenameStartIndex + frameCount - 1 > 2147483647
+    )
+        throw new Error('filenameStartIndex must be a non-negative integer.');
+    if (String(filenameStartIndex + frameCount - 1).length > filenameDigits)
+        throw new Error('filenameDigits is too small for the final frame number.');
+    if (!['png', 'jpg', 'jpeg', 'webp'].includes(filenameExtension))
+        throw new Error('filenameExtension must be png, jpg, jpeg, or webp.');
+    if (!Number.isInteger(batchSize) || batchSize < 2 || batchSize > 60)
+        throw new Error('batchSize must be an integer between 2 and 60.');
+    if (
+        !Number.isInteger(notificationId) ||
+        notificationId === 0 ||
+        notificationId < -2147483648 ||
+        notificationId > 2147483647
+    )
+        throw new Error('notificationId must be a non-zero Android notification id.');
+    if (!Number.isInteger(height) || height < 48 || height > 240)
+        throw new Error('height must be an integer between 48 and 240 dp.');
+    return JSON.stringify({
+        assetDirectory: assetDirectory.replace(/^\/+|\/+$/g, ''),
+        frameCount,
+        sourceFps,
+        fps,
+        filenamePrefix,
+        filenameDigits,
+        filenameStartIndex,
+        filenameExtension,
+        batchSize,
+        notificationId,
+        title,
+        body,
+        channelId,
+        channelName,
+        smallIcon,
+        loop,
+        height,
+    });
+}
+
 const widgets = {
     async isPinningSupported(): Promise<boolean> {
         if (Platform.OS !== 'android' || Number(Platform.Version) < 31) return false;
@@ -154,6 +240,15 @@ const lifecycle = {
         if (!Number.isInteger(index) || index < 0)
             throw new Error('Scroll index must be a non-negative integer.');
         await native().scrollTo(identity(target), nodeId, index);
+    },
+    async playFrames(options: FramePlaybackOptions): Promise<FramePlaybackStatus> {
+        return native().playFrames(serializeFramePlayback(options));
+    },
+    async stopFrames(): Promise<FramePlaybackStatus> {
+        return native().stopFrames();
+    },
+    async getFramesStatus(): Promise<FramePlaybackStatus> {
+        return native().getFramesStatus();
     },
     addActionListener(listener: (event: NotiAction) => void) {
         return native().addListener('onAction', listener);

@@ -173,6 +173,64 @@ export type ActiveNotification = NotificationIdentity & {
 export type NotiAction = NotificationIdentity & { action: string; nodeId: string };
 export type WidgetAction = { widgetId: number; action: string; nodeId: string };
 
+export type FramePlaybackFps = 15 | 30 | 60;
+export type FramePlaybackOptions = {
+    /** Relative directory below the host app's Android `assets` directory. */
+    assetDirectory: string;
+    frameCount: number;
+    /** Frame rate represented by the source files. Defaults to 30. */
+    sourceFps?: number;
+    /** ViewFlipper target rate. A 60 fps target repeats frames from a 30 fps source. */
+    fps?: FramePlaybackFps;
+    filenamePrefix?: string;
+    filenameDigits?: number;
+    filenameStartIndex?: number;
+    filenameExtension?: 'png' | 'jpg' | 'jpeg' | 'webp';
+    /** Frames hosted per ViewFlipper batch. Must be between 2 and 60. */
+    batchSize?: number;
+    /** Non-zero foreground-service notification id. */
+    notificationId?: number;
+    title?: string;
+    body?: string;
+    channelId?: string;
+    channelName?: string;
+    smallIcon?: string;
+    loop?: boolean;
+    /** Expanded custom notification height in dp, from 48 through 240. */
+    height?: number;
+};
+export type FramePlaybackState =
+    | 'idle'
+    | 'starting'
+    | 'playing'
+    | 'completed'
+    | 'stopped'
+    | 'error';
+export type FramePlaybackStatus = {
+    state: FramePlaybackState;
+    notificationId: number | null;
+    requestedFps: FramePlaybackFps | null;
+    hostFrameIntervalMs: number | null;
+    /** Configured tick rate from the integer interval; not measured display fps. */
+    hostFps: number | null;
+    sourceFps: number | null;
+    /** Nominal source rate capped at the requested fps; not measured display fps. */
+    uniqueFrameFps: number | null;
+    duplicatesSourceFrames: boolean;
+    sourceFrameIndex: number;
+    sourceFrameNumber: number;
+    outputFrameIndex: number;
+    elapsedMs: number;
+    durationMs: number;
+    progress: number;
+    batchSize: number | null;
+    batchIndex: number;
+    batchesPublished: number;
+    lastBatchFrameCount: number;
+    startedAt: number | null;
+    error: string | null;
+};
+
 export type SerializedRuntimeFrame = Record<string, string | number>;
 export type SerializedNode = {
     type:

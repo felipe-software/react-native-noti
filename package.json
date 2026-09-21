@@ -9,6 +9,8 @@
         "android": "bun --cwd apps/demo android",
         "prebuild": "bun --cwd apps/demo prebuild",
         "start": "bun --cwd apps/demo start",
+        "bad-apple:prepare": "bun --cwd apps/demo prepare:bad-apple",
+        "bad-apple:android": "bun run bad-apple:prepare && bun --cwd apps/demo android",
         "typecheck": "bun --cwd apps/demo typecheck && bun --cwd packages/react-native-noti typecheck"
     }
 }

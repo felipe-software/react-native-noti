@@ -11,8 +11,9 @@ class NotificationIdentity : Record {
 }
 
 class NotificationMotionModule : Module() {
-  private val store get() = MotionNotifications.get(requireNotNull(appContext.reactContext).applicationContext)
-  private val widgets get() = MotionWidgets.get(requireNotNull(appContext.reactContext).applicationContext)
+  private val context get() = requireNotNull(appContext.reactContext).applicationContext
+  private val store get() = MotionNotifications.get(context)
+  private val widgets get() = MotionWidgets.get(context)
 
   override fun definition() = ModuleDefinition {
     Name("NotificationMotion")
@@ -23,6 +24,9 @@ class NotificationMotionModule : Module() {
     AsyncFunction("listActive") { store.listActive() }
     AsyncFunction("dismiss") { identity: NotificationIdentity -> store.dismiss(identity) }
     AsyncFunction("scrollTo") { identity: NotificationIdentity, nodeId: String, index: Int -> store.scrollTo(identity, nodeId, index) }
+    AsyncFunction("playFrames") { options: String -> FramePlaybackController.play(context, options) }
+    AsyncFunction("stopFrames") { FramePlaybackController.stop(context) }
+    AsyncFunction("getFramesStatus") { FramePlaybackController.status(context) }
     AsyncFunction("isWidgetPinningSupported") { widgets.isPinningSupported() }
     AsyncFunction("requestPinWidget") { scene: String -> widgets.requestPin(scene) }
     AsyncFunction("listWidgets") { widgets.list() }

@@ -48,6 +48,28 @@ The provider persists the last serialized scene and restores it after reinflatio
 
 `Noti.Gif` creates a time-aware schedule of up to 30 frames by default and 60 at most. Original frame delays are preserved, repeated held frames reuse the same bitmap, and decoded frames are resized to the rendered bounds. The `automatic`, `smoothness`, `quality`, and `none` optimization modes trade dimensions against frame retention under a configurable memory budget. The default per-GIF budget is 2 MB.
 
+## Long frame sequences
+
+`Noti.playFrames` plays a numbered image sequence packaged in the host app's Android assets. Unlike `Noti.Gif`, it does not decode or publish the whole video. A foreground service publishes a bounded 2–60-frame `ViewFlipper` batch, lets System UI advance that batch without JavaScript or per-frame notification updates, and replaces it on a monotonic native schedule. Each image is represented by a temporary-permission `content://` URI, so decoded frame pixels are not flattened into the Binder payload.
+
+```ts
+await Noti.playFrames({
+  assetDirectory: 'bad-apple/frames',
+  frameCount: 6572,
+  sourceFps: 30,
+  fps: 30,
+  batchSize: 60,
+  title: 'Bad Apple!!',
+});
+
+const status = await Noti.getFramesStatus();
+await Noti.stopFrames();
+```
+
+Frames default to `frame_00001.png`, `frame_00002.png`, and so on; the prefix, padding, starting number, and extension are configurable. Calling `playFrames` again atomically restarts the one active playback. The expanded notification contains the high-rate flipper; the collapsed view is a current-frame preview refreshed once per batch. Playback supports 15, 30, and 60 host ticks per second. A 60 fps host target repeats a 30 fps source as needed, and diagnostics report `uniqueFrameFps: 30` plus `duplicatesSourceFrames: true` instead of describing repeats as unique frames.
+
+The foreground service keeps scheduling when React Native is backgrounded and exposes `starting`, `playing`, `completed`, `stopped`, and `error` status with frame, elapsed-time, progress, and batch counters. Starting a foreground service is subject to Android's background-start restrictions, so begin or restart playback from a visible user action. The notification channel is created silent and the notification provides a native Stop action.
+
 ## Limits
 
 - 96 serialized nodes and seven nesting levels per presentation.
@@ -59,5 +81,6 @@ The provider persists the last serialized scene and restores it after reinflatio
 - A 3.5 MB decoded-image budget per rendered scene.
 - Up to three native notification actions.
 - Up to 32 managed notification identities per process.
+- One foreground frame-sequence playback at a time, with 2–60 URI-backed frames per batch.
 
 These guards bound payload construction but cannot guarantee identical behavior across SystemUI and launcher implementations. Binder transaction size, host memory, background policy, layout measurement, and OEM restrictions still apply.
