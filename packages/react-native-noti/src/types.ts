@@ -231,6 +231,19 @@ export type FramePlaybackStatus = {
     error: string | null;
 };
 
+/** Each movement/turn tap holds a native Doom key for 250 ms; fire holds for 160 ms. */
+export type DoomAction = 'forward' | 'backward' | 'left' | 'right' | 'fire' | 'use' | 'pause';
+export type DoomStatus = {
+    state: 'idle' | 'starting' | 'playing' | 'paused' | 'stopped' | 'error';
+    /** Frames sent to Android, not a measurement of SystemUI's display rate. */
+    framesPublished: number;
+    /** Requested animation frame rate within each batch. Android may display fewer frames. */
+    notificationFps: number;
+    engineTickRate: number;
+    lastAction: DoomAction | null;
+    error: string | null;
+};
+
 export type SerializedRuntimeFrame = Record<string, string | number>;
 export type SerializedNode = {
     type:

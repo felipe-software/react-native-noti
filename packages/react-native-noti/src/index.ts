@@ -6,6 +6,8 @@ import { serializeScene } from './serialize';
 import type {
     ActiveNotification,
     CreateNotificationOptions,
+    DoomAction,
+    DoomStatus,
     FramePlaybackOptions,
     FramePlaybackStatus,
     NotiAction,
@@ -33,6 +35,10 @@ declare class NotificationMotionModule extends NativeModule<Events> {
     playFrames(options: string): Promise<FramePlaybackStatus>;
     stopFrames(): Promise<FramePlaybackStatus>;
     getFramesStatus(): Promise<FramePlaybackStatus>;
+    startDoom(): Promise<DoomStatus>;
+    stopDoom(): Promise<DoomStatus>;
+    getDoomStatus(): Promise<DoomStatus>;
+    doomAction(action: DoomAction): Promise<DoomStatus>;
     isWidgetPinningSupported(): Promise<boolean>;
     requestPinWidget(scene: string): Promise<boolean>;
     listWidgets(): Promise<number[]>;
@@ -249,6 +255,21 @@ const lifecycle = {
     },
     async getFramesStatus(): Promise<FramePlaybackStatus> {
         return native().getFramesStatus();
+    },
+    /** Start/resume the bundled Freedoom session in an expanded Android notification. */
+    async startDoom(): Promise<DoomStatus> {
+        return native().startDoom();
+    },
+    async stopDoom(): Promise<DoomStatus> {
+        return native().stopDoom();
+    },
+    async getDoomStatus(): Promise<DoomStatus> {
+        return native().getDoomStatus();
+    },
+    async doomAction(action: DoomAction): Promise<DoomStatus> {
+        if (!['forward', 'backward', 'left', 'right', 'fire', 'use', 'pause'].includes(action))
+            throw new Error('Unknown Doom control.');
+        return native().doomAction(action);
     },
     addActionListener(listener: (event: NotiAction) => void) {
         return native().addListener('onAction', listener);

@@ -3,9 +3,11 @@ node_modules/
 apps/demo/android/
 apps/demo/ios/
 packages/react-native-noti/android/build/
+packages/react-native-noti/android/.cxx/
 *.log
 
 .argent
+.codex/project-environment.json
 
 # Reproducible video frames and emulator recordings.
 apps/demo/assets/bad-apple/

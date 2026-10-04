@@ -27,6 +27,10 @@ class NotificationMotionModule : Module() {
     AsyncFunction("playFrames") { options: String -> FramePlaybackController.play(context, options) }
     AsyncFunction("stopFrames") { FramePlaybackController.stop(context) }
     AsyncFunction("getFramesStatus") { FramePlaybackController.status(context) }
+    AsyncFunction("startDoom") { DoomController.start(context) }
+    AsyncFunction("stopDoom") { DoomController.stop(context) }
+    AsyncFunction("getDoomStatus") { DoomController.status() }
+    AsyncFunction("doomAction") { action: String -> DoomController.action(action) }
     AsyncFunction("isWidgetPinningSupported") { widgets.isPinningSupported() }
     AsyncFunction("requestPinWidget") { scene: String -> widgets.requestPin(scene) }
     AsyncFunction("listWidgets") { widgets.list() }

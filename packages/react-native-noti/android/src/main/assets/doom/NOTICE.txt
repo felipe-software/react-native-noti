@@ -1,0 +1,17 @@
+This demo runs the Doom engine using original Freedoom game data.
+
+Engine: doomgeneric, https://github.com/ozkl/doomgeneric
+Pinned commit: dcb7a8dbc7a16ce3dda29382ac9aae9d77d21284
+Copyright id Software, Simon Howard, and the upstream contributors.
+GNU GPL version 2 or later; see DOOM-ENGINE-LICENSE.txt and source file notices.
+Corresponding vendored source and native integration are in this repository at
+packages/react-native-noti/android/src/main/cpp/ (including build instructions).
+
+Game data: Freedoom Phase 1, version 0.13.0
+https://github.com/freedoom/freedoom/releases/tag/v0.13.0
+Copyright 2001-2024 Contributors to the Freedoom project.
+BSD 3-Clause; see COPYING.txt, CREDITS.txt, and CREDITS-MUSIC.txt.
+The complete freedoom1.wad is included unchanged. No commercial Doom WAD is included.
+
+Reproduce the downloads with src/main/cpp/prepare_sources.py. The script pins
+both source/archive versions and SHA-256 hashes; builds do not access the network.

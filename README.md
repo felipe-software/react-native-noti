@@ -47,6 +47,21 @@ await Noti.widgets.requestPin(widget);
 
 See the [package README](packages/react-native-noti/README.md) for installation, APIs, components, and Android limits.
 
+## Doom in a notification
+
+The **Doom** card runs the real Doom engine with the freely redistributable Freedoom Phase 1 levels and artwork. Tap **Play Doom**, allow notifications, then pull down the shade and expand **Doom · Noti**. The expanded notification contains the live game, movement/turn buttons, **Fire**, and **Use** for doors and switches. **Pause / Resume** and **Stop Doom** work directly in the notification, even with React in the background.
+
+Rebuild the Android development client to include the native engine and bundled WAD. Game assets work offline; no commercial Doom WAD is required. The native simulation runs at 35 ticks/s, while this demo samples live frames at a target of 30 fps and sends eight-frame batches to a SystemUI ViewFlipper (about 3.8 notification updates/s). Frames use 240×150 RGB565 to bound each batch payload. Batching adds roughly 230–265 ms of visual latency. The expanded game area is 200 dp tall; with controls and Android decoration, the notification reaches 358 dp on the API 36 test emulator. This is interactive gameplay, not prerecorded frames. Android/SystemUI determines the actual visible frame rate. Notification buttons support taps: movement/turn/use holds a key for 250 ms, fire for 160 ms; repeated taps extend the pulse. Audio is disabled.
+
+```tsx
+if (await Noti.requestPermission()) await Noti.startDoom();
+await Noti.doomAction('forward'); // also backward, left, right, fire, use, pause
+const status = await Noti.getDoomStatus();
+await Noti.stopDoom();
+```
+
+Stopping removes the notification and pauses the engine. Playing again resumes the level while the app process is alive; after process death it starts E1M1 again. `framesPublished` counts frames submitted to Android, not frames displayed. The native engine and its source/license notices are in [`android/src/main/cpp`](packages/react-native-noti/android/src/main/cpp); the JNI contract is documented in [docs/doom-engine-contract.md](docs/doom-engine-contract.md).
+
 ## Bad Apple in a notification
 
 The demo includes the complete silent Bad Apple video (3m39s, 6,572 source frames at 30 fps). Use **Play**, then open the Android notification shade and expand **Bad Apple!!**. The controls select 15, 30, or an experimental 60 Hz schedule, restart playback, and stop it. A 30 fps source still has at most 30 unique images per second in the 60 Hz mode.
