@@ -1,16 +1,40 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include "doom_runtime.h"
+#include "doom_audio.h"
 #include <array>
 #include <chrono>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
 #include <thread>
+#include <vector>
 
 extern "C" void noti_doom_probe(int64_t result[6]);
+extern "C" void noti_doom_probe_sound(void);
 static void require(bool value, const char* message) {
     if (!value) { fprintf(stderr, "FAIL: %s\n", message); std::exit(1); }
 }
 static void sleep_ms(int ms) { std::this_thread::sleep_for(std::chrono::milliseconds(ms)); }
+// The host has no audio device, so tests pull the mixer directly.
+static double render_rms(int frames, const char* wav_path) {
+    std::vector<int16_t> audio(frames * 2);
+    noti_audio_render(audio.data(), frames);
+    double sum = 0;
+    for (const auto sample : audio) sum += double(sample) * sample;
+    FILE* wav = fopen(wav_path, "wb");
+    if (wav) {
+        const uint32_t bytes = audio.size() * 2, rate = NOTI_AUDIO_RATE, byte_rate = rate * 4;
+        const uint32_t riff = 36 + bytes, fmt_size = 16;
+        const uint16_t pcm = 1, channels = 2, align = 4, bits = 16;
+        fwrite("RIFF", 1, 4, wav); fwrite(&riff, 4, 1, wav); fwrite("WAVEfmt ", 1, 8, wav);
+        fwrite(&fmt_size, 4, 1, wav); fwrite(&pcm, 2, 1, wav); fwrite(&channels, 2, 1, wav);
+        fwrite(&rate, 4, 1, wav); fwrite(&byte_rate, 4, 1, wav); fwrite(&align, 2, 1, wav);
+        fwrite(&bits, 2, 1, wav); fwrite("data", 1, 4, wav); fwrite(&bytes, 4, 1, wav);
+        fwrite(audio.data(), 2, audio.size(), wav);
+        fclose(wav);
+    }
+    return std::sqrt(sum / audio.size());
+}
 static std::array<int64_t, 6> snapshot() {
     noti_doom::stop();
     std::array<int64_t, 6> state{};
@@ -78,7 +102,19 @@ int main(int argc, char** argv) {
     const auto released = snapshot();
     require(released[2] == settled[2], "stop released held turn control");
     require(released[3] == settled[3], "stop released held fire control");
-    printf("PASS: real Doom frames, move, turn, fire, pause/resume; tics=%lld, ammo=%lld -> %lld\n",
+    // E1M1's music has been queued since the level started; the OPL clock only
+    // advances as audio is rendered.
+    const double music = render_rms(NOTI_AUDIO_RATE, "/tmp/noti-doom-music.wav");
+    require(music > 200, "OPL music plays E1M1 from the WAD's GENMIDI instruments");
+    noti_doom_probe_sound();
+    const double pistol = render_rms(NOTI_AUDIO_RATE / 4, "/tmp/noti-doom-pistol.wav");
+    require(pistol > 500, "pistol sound effect mixes");
+    // The 0.5 s pistol sample and OPL note releases fade out first.
+    render_rms(NOTI_AUDIO_RATE / 2, "/tmp/noti-doom-fade.wav");
+    const double after = render_rms(NOTI_AUDIO_RATE / 2, "/tmp/noti-doom-after.wav");
+    require(after < 20, "effect ends and stopped music is silent");
+    printf("PASS: real Doom frames, move, turn, fire, pause/resume; tics=%lld, ammo=%lld -> %lld; "
+        "audio RMS music=%.0f pistol=%.0f after=%.1f\n",
         static_cast<long long>(moved[5] - initial[5]), static_cast<long long>(moved[3]),
-        static_cast<long long>(fired[3]));
+        static_cast<long long>(fired[3]), music, pistol, after);
 }

@@ -2,6 +2,8 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/nm_doom_frame_image"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center_horizontal"
+    android:adjustViewBounds="true"
     android:contentDescription="Live Doom gameplay"
     android:scaleType="fitCenter" />

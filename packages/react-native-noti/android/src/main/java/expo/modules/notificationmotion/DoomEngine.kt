@@ -7,4 +7,6 @@ internal object DoomEngine {
   external fun render(): IntArray?
   external fun key(key: Int, pressed: Boolean)
   external fun stop()
+  /** 0 mutes (and pauses audio output), 1 is full volume. */
+  external fun setVolume(volume: Float)
 }

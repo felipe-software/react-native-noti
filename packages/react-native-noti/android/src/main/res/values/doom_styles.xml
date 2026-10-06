@@ -1,14 +1,19 @@
 <resources>
     <style name="NotiDoomControl">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_height">64dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:padding">0dp</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:backgroundTint">#303030</item>
+        <!-- Replace the theme's inset button drawable with a full-size surface. -->
+        <item name="android:background">@drawable/nm_doom_control_background</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@animator/nm_doom_control_press</item>
         <item name="android:textAllCaps">false</item>
     </style>
 </resources>

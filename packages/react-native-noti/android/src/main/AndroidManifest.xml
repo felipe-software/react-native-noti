@@ -19,6 +19,14 @@
       android:authorities="${applicationId}.notificationmotion.frames"
       android:exported="false"
       android:grantUriPermissions="true" />
+    <!-- Live Doom frames. SystemUI reads them with its own permission because the per-update
+         grants NotificationManager issues are revoked while late inflations still read. -->
+    <provider
+      android:name="expo.modules.notificationmotion.DoomFrameProvider"
+      android:authorities="${applicationId}.notificationmotion.doom"
+      android:exported="true"
+      android:permission="android.permission.STATUS_BAR_SERVICE"
+      android:grantUriPermissions="true" />
     <service
       android:name="expo.modules.notificationmotion.FramePlaybackService"
       android:exported="false"

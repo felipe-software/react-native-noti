@@ -90,7 +90,7 @@ export function Doom() {
                         ? game?.state === 'paused' ? 'Paused. Resume here or in the notification.'
                             : 'Playing. Pull down and expand the Doom notification.'
                         : game?.state === 'stopped' ? 'Stopped. Play resumes this session until the app process closes.'
-                            : 'Freedoom Phase 1 · Doom engine · no audio'
+                            : 'Freedoom Phase 1 · Doom engine · sound and OPL music'
                 )}
             </Text>
             <Text className="mt-2 text-xs leading-4 text-zinc-500">

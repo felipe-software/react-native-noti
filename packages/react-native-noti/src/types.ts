@@ -231,8 +231,11 @@ export type FramePlaybackStatus = {
     error: string | null;
 };
 
-/** Each movement/turn tap holds a native Doom key for 250 ms; fire holds for 160 ms. */
-export type DoomAction = 'forward' | 'backward' | 'left' | 'right' | 'fire' | 'use' | 'pause';
+/**
+ * Each movement/turn tap holds a native Doom key for 250 ms; fire holds for 160 ms.
+ * `pause` and `mute` toggle.
+ */
+export type DoomAction = 'forward' | 'backward' | 'left' | 'right' | 'fire' | 'use' | 'pause' | 'mute';
 export type DoomStatus = {
     state: 'idle' | 'starting' | 'playing' | 'paused' | 'stopped' | 'error';
     /** Frames sent to Android, not a measurement of SystemUI's display rate. */
@@ -241,6 +244,8 @@ export type DoomStatus = {
     notificationFps: number;
     engineTickRate: number;
     lastAction: DoomAction | null;
+    /** Sound effects and music are off. Audio also yields to other apps' audio focus. */
+    muted: boolean;
     error: string | null;
 };
 

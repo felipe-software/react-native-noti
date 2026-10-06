@@ -11,4 +11,6 @@ bool start(const std::string& wad_path);
 bool render(int32_t* pixels);
 void key(int code, bool pressed);
 void stop();
+// 0 mutes (and pauses output), 1 is full volume.
+void set_volume(float volume);
 }

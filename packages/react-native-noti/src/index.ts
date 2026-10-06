@@ -267,7 +267,7 @@ const lifecycle = {
         return native().getDoomStatus();
     },
     async doomAction(action: DoomAction): Promise<DoomStatus> {
-        if (!['forward', 'backward', 'left', 'right', 'fire', 'use', 'pause'].includes(action))
+        if (!['forward', 'backward', 'left', 'right', 'fire', 'use', 'pause', 'mute'].includes(action))
             throw new Error('Unknown Doom control.');
         return native().doomAction(action);
     },

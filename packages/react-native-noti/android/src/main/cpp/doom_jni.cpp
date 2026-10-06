@@ -31,3 +31,8 @@ extern "C" JNIEXPORT void JNICALL
 Java_expo_modules_notificationmotion_DoomEngine_stop(JNIEnv*, jobject) {
     noti_doom::stop();
 }
+
+extern "C" JNIEXPORT void JNICALL
+Java_expo_modules_notificationmotion_DoomEngine_setVolume(JNIEnv*, jobject, jfloat volume) {
+    noti_doom::set_volume(volume);
+}

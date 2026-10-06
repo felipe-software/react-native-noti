@@ -7,6 +7,12 @@ GNU GPL version 2 or later; see DOOM-ENGINE-LICENSE.txt and source file notices.
 Corresponding vendored source and native integration are in this repository at
 packages/react-native-noti/android/src/main/cpp/ (including build instructions).
 
+Sound: the OPL music player, MIDI parser and DOSBox OPL emulator from
+Chocolate Doom 2.2.1, https://github.com/chocolate-doom/chocolate-doom
+Pinned commit: 2ddd290b8226e1d1f0c52e344e76150261a8c0c3
+Copyright id Software, Simon Howard, the DOSBox Team, and the upstream contributors.
+GNU GPL version 2 or later; vendored unchanged in src/main/cpp/vendor/chocolate-doom/.
+
 Game data: Freedoom Phase 1, version 0.13.0
 https://github.com/freedoom/freedoom/releases/tag/v0.13.0
 Copyright 2001-2024 Contributors to the Freedoom project.
@@ -14,4 +20,4 @@ BSD 3-Clause; see COPYING.txt, CREDITS.txt, and CREDITS-MUSIC.txt.
 The complete freedoom1.wad is included unchanged. No commercial Doom WAD is included.
 
 Reproduce the downloads with src/main/cpp/prepare_sources.py. The script pins
-both source/archive versions and SHA-256 hashes; builds do not access the network.
+every source/archive version and SHA-256 hash; builds do not access the network.

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include "doom_runtime.h"
+#include "doom_audio.h"
 #include "doom_guard.h"
 #include "doomgeneric.h"
 #include <algorithm>
@@ -81,7 +82,7 @@ void engine_thread() {
     // The engine retains argv pointers, so keep their storage for its lifetime.
     std::vector<std::string> arguments = {
         "noti-doom", "-iwad", state.wad_path, "-warp", "1", "1",
-        "-skill", "3", "-nosound", "-nomusic", "-nogui",
+        "-skill", "3", "-nogui",
         "-config", state.config_dir + "noti-doom.cfg",
         "-extraconfig", state.config_dir + "noti-doom-extra.cfg"
     };
@@ -115,6 +116,7 @@ void engine_thread() {
     state.running = false;
     state.has_frame = false;
     state.changed.notify_all();
+    noti_audio_set_running(0);
 #ifdef __ANDROID__
     __android_log_print(ANDROID_LOG_ERROR, "NotiDoom", "%s", noti_doom_error());
 #else
@@ -133,6 +135,7 @@ bool start(const std::string& wad_path) {
         if (state.wad_path != wad_path) return false;
         state.running = true;
         state.changed.notify_all();
+        noti_audio_set_running(1);
         return true;
     }
     if (!valid_wad(wad_path)) return false;
@@ -140,11 +143,13 @@ bool start(const std::string& wad_path) {
     state.config_dir = wad_path.substr(0, wad_path.find_last_of('/') + 1);
     state.starting = true;
     state.running = true;
+    noti_audio_set_running(1);
     try {
         std::thread(engine_thread).detach();
     } catch (...) {
         state.starting = false;
         state.running = false;
+        noti_audio_set_running(0);
         return false;
     }
     state.changed.wait(lock, [&] { return !state.starting; });
@@ -176,7 +181,10 @@ void stop() {
     state.running = false;
     state.changed.wait(lock, [&] { return !state.ticking && !state.starting; });
     release_keys(state);
+    noti_audio_set_running(0);
 }
+
+void set_volume(float volume) { noti_audio_set_volume(volume); }
 } // namespace noti_doom
 
 extern "C" {
