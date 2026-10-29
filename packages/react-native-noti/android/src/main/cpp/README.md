@@ -1,8 +1,8 @@
 This is the actual Doom engine (doomgeneric) embedded for the Android notification
 demo. It runs original Doom gameplay at 35 tics per second on a native worker and
 publishes 320×200 opaque ARGB frames. Kotlin polls snapshots at its own notification
-refresh rate. The exact Kotlin API is in `docs/doom-engine-contract.md` at repository
-root. Multiplayer is disabled.
+refresh rate. See [the exact Kotlin contract](../../../../../../docs/doom-engine-contract.md)
+and [the current notification guide](../../../../../../docs/doom.md). Multiplayer is disabled.
 
 Sound is enabled. `doom_audio.c` replaces doomgeneric's SDL backends: it mixes the
 WAD's DMX sound effects (16 channels, linear resampling), runs Chocolate Doom 2.2.1's
@@ -89,4 +89,4 @@ class and native method descriptors with a host JVM, including tracked input and
 matching rendered-frame metadata. `doom_input.c` wraps the original command
 builder without editing vendored sources. The October 28 service revision ran in
 a native comparison APK on an Android 16 emulator and Xiaomi Android 14 device;
-see [results and scope](../../../../../../docs/doom-optimization.md).
+see [the research record](../../../../../../docs/doom-research.md#earlier-viewflipper-trials).

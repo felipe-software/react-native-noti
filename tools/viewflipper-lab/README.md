@@ -88,7 +88,7 @@ To test producer exit, background the lab and terminate only its PID, without fo
 
 Open `flippertransport://run` in the lab package. The separate `:transport` activity compares a 320×200 ARGB bitmap with a 24-bit BMP URI served through a memory-backed file descriptor by the app's other process. Each trial discards 20 warm-up pairs, alternates both orderings, and retains 80 samples per mode. Dimensions and an image pixel are verified on every inflation. The result is `files/doom-transport.json`.
 
-This probe times frame preparation, the RemoteViews/parcel round trip and synchronous inflation. It does not pass through NotificationManager or SystemUI, attach a view to a window, or measure a touch. Keep those limitations when interpreting its results. Read [the Doom optimization analysis](../../docs/doom-optimization.md).
+This probe times frame preparation, the RemoteViews/parcel round trip and synchronous inflation. It does not pass through NotificationManager or SystemUI, attach a view to a window, or measure a touch. Keep those limitations when interpreting its results. Read [the Doom research record](../../docs/doom-research.md#earlier-viewflipper-trials).
 
 ```sh
 python3 tools/viewflipper-lab/summarize-doom-transport.py \

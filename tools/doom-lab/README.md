@@ -14,6 +14,8 @@ Requires Android SDK platform/build-tools 36, NDK `27.1.12297006`, SDK CMake `3.
 
 Each build also archives its APK, manifest and source snapshot under ignored `artifacts/doom-optimization/builds/<apk-sha256>.*`. Keep that snapshot with recordings: later source edits do not change the APK used for an earlier trial.
 
+Rebuilding uses the current production settings, including the 952×595 live GIF canvas and 64 KiB slot budget. Published live-renderer comparisons used 640×400 and 32 KiB. Use their recorded APK/source archives to reproduce those revisions; a new build does not reproduce their exact implementation or performance figures.
+
 Optional `--live-slots 4|16|32` and `--live-delay-ms 20|30|40|50` change only the instrumented live renderer for focused diagnostics; the build manifest records both overrides. Omit them for production-source comparisons and proxy consistency tests. The latter deliberately compare complete encoded bytes against the production encoder.
 
 Install both APKs on the explicitly selected device, grant the producer notification permission and enable the observer for the test. Physical devices may require installation or notification-access confirmation. The listener filters by producer package before reading extras, but Android grants notification access to the service at system level; remove it afterward.
@@ -58,4 +60,4 @@ adb -s DEVICE uninstall dev.noti.doomobserver
 adb -s DEVICE uninstall dev.noti.doomlab
 ```
 
-See [live rendering](../../docs/doom-live-rendering.md) and its [results](../../docs/doom-live-results.json), plus the earlier [ViewFlipper responsiveness](../../docs/doom-optimization.md). Full recordings and command logs are local ignored artifacts.
+See [the current Doom guide](../../docs/doom.md) and [the research record](../../docs/doom-research.md), which indexes the retained result files and measurement limits. Full recordings and command logs are local ignored artifacts.

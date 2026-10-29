@@ -51,13 +51,9 @@ The [ViewFlipper investigation](docs/viewflipper-limits.md) maps Android source 
 
 The [physical Xiaomi follow-up](docs/viewflipper-xiaomi.md) compares Android 14 / HyperOS 2 with the Android 16 emulator.
 
-The [Doom responsiveness update](docs/doom-optimization.md) implements stable controls, shorter interactive decks and consistent frame selection when SystemUI reads images. Its [native comparison lab](tools/doom-lab/README.md) measures recorded responses on both devices. Expand the game picture and use the separate **Doom controls** notification to play.
+The [Doom guide](docs/doom.md) covers the current demo: a live messaging-image stream, a full-width game picture, momentary native controls and stable notification order. Expand **Doom** and **Doom controls** to play. The release was verified on Xiaomi Android 14 and the Android 16 emulator; ViewFlipper remains the compatibility renderer.
 
-The demo now opts into the [experimental live Doom renderer](docs/doom-live-rendering.md), which supplies recent animation frames through a seekable image stream. It targets faster control response and retains ViewFlipper as a compatibility option. The minified Expo release has run on the emulator and Xiaomi; the final 40 ms cadence was smoke-tested on Xiaomi. Its measured response gain is larger than its motion-rate gain, and occasional recorded frame reversals remain.
-
-The [Doom controls update](docs/doom-tap-controls.md) uses momentary buttons: each movement tap lasts 250 ms, and Fire lasts 160 ms. It removes the continuous-toggle experiment and keeps notification timestamps stable so control updates do not acquire a newer sorting time.
-
-The [larger Doom image](docs/doom-max-size.md) fills the available chat-image width without cropping the game: 817×510 px on the tested emulator, up from 640×400.
+The [Doom research record](docs/doom-research.md) keeps older measurements and the reasons for the renderer, sizing and input decisions. Its [native comparison lab](tools/doom-lab/README.md) provides bounded experiments. Historical latency/FPS measurements retain their original APK/settings and do not describe the latest larger canvas.
 
 ## Bad Apple in a notification
 

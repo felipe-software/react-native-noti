@@ -1,6 +1,6 @@
 Native Doom JNI contract
 
-Kotlin owner should create this exact class in `expo.modules.notificationmotion`:
+The Kotlin owner is [DoomEngine.kt](../packages/react-native-noti/android/src/main/java/expo/modules/notificationmotion/DoomEngine.kt) in `expo.modules.notificationmotion`, with these JNI signatures. The [Doom guide](doom.md) documents the current notification renderer and public API.
 
 ```kotlin
 object DoomEngine {
@@ -23,7 +23,7 @@ object DoomEngine {
 - `keyTracked(key, pressed)` returns a positive monotonic ID for an accepted event, or zero otherwise. A rendered response requires `appliedInput >= requestedId` and `discardedThrough < requestedId`. Queue receipt alone is insufficient. Stop and queue overflow invalidate earlier IDs. A wrapper records input in an actual tic command; `DG_DrawFrame` acknowledges it after that command's game tic is simulated and rendered. An acknowledged input need not change pixels, for example Use away from a door.
 - `start()` is idempotent while running. `stop()` pauses the engine and releases held controls; another `start()` with the same WAD resumes the session. Native Doom's global state is retained until process exit. Switching WADs in one process is unsupported.
 - Keys are Doom key values, NOT Android KeyEvent codes: forward/up `0xAD`, backward/down `0xAF`, turn left `0xAC`, turn right `0xAE`, fire `0xA3`, use/open `0xA2`, strafe left `0xA0`, strafe right `0xA1`, strafe modifier/right-alt `0xB8`, run/right-shift `0xB6`, enter `13`, escape `27`. Use `0xA2` for doors; space is not bound to use in doomgeneric.
-- Notification buttons should send key down then key up after a short pulse (e.g. 180–250 ms), or implement explicit toggles. Repeated presses must replace/extend any pending release for that key. Fire can be held.
+- The notification service sends key down then releases movement/Use after 250 ms and Fire after 160 ms. Repeated presses replace/extend that key's pending release. The native key API can express down/up states, but the notification UI uses momentary buttons; the continuous-toggle option has been removed.
 - `setVolume(volume)` sets the master gain from 0 to 1. Audio plays through an AAudio stream (48 kHz stereo, game usage) only while the engine runs and the volume is above 0; `stop()` and volume 0 pause output, holding sound effects and music where they are. Callers own audio focus.
 - Starts directly in Freedoom Phase 1 E1M1, normal skill, with sound effects and OPL music.
 
@@ -41,6 +41,6 @@ Initial port validation, before the October 28 service revision:
 - Malformed IWAD initialization test passed: engine failure is contained without terminating the process.
 - Host JVM exercised the exact JNI class/method signatures, ARGB frame shape, input, and stop/resume successfully.
 
-October 28 follow-up: `doom_input.c` wraps `G_BuildTiccmd`, renaming only the upstream implementation symbol at compile time; vendored sources remain unchanged. The arm64 engine and current Kotlin service/resources compiled into an isolated native APK and ran in SystemUI on an Android 16 emulator and Xiaomi Android 14 device. Host gameplay/JNI tests additionally cover rendered-input acknowledgement, pause invalidation and metadata argument validation. Seven Android cache checks and emulator lifecycle checks passed. The complete Expo application and other ABIs were not rebuilt for this revision. See [results and scope](doom-optimization.md).
+`doom_input.c` wraps `G_BuildTiccmd`, renaming only the upstream implementation symbol at compile time; vendored sources remain unchanged. Host gameplay/JNI tests cover rendered-input acknowledgement, pause invalidation and metadata argument validation. [Historical trials](doom-research.md#earlier-viewflipper-trials) distinguish the isolated service tests from subsequent full-app validation.
 
-October 29 follow-up: the optional [live renderer](doom-live-rendering.md) adds `DoomGifEncoder` JNI methods in `doom_gif.c` without changing the engine's 35 Hz simulation. Its native class names are preserved by consumer R8 rules. The complete arm64 Expo release app was built with R8 and exercised through its real Play button, notification controls and lifecycle on the emulator and physical Xiaomi. See [current results](doom-live-results.json) for renderer-specific measurements and recorded playback limitations.
+The optional live renderer adds `DoomGifEncoder` JNI methods in `doom_gif.c` without changing the engine's 35 Hz simulation. Consumer R8 rules preserve its native class names. The latest complete arm64 Expo release was built with R8 and passed 30 real-app control/order checks on each of the Android 16 emulator and physical Xiaomi Android 14. See [the current guide](doom.md) and [release results](doom-tap-controls-results.json); older renderer performance measurements are indexed in [the research record](doom-research.md).
