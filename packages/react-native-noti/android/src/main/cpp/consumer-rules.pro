@@ -2,3 +2,6 @@
 -keep class expo.modules.notificationmotion.DoomEngine {
     native <methods>;
 }
+-keep class expo.modules.notificationmotion.DoomGifEncoder {
+    native <methods>;
+}

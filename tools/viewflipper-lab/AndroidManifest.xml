@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.noti.flipperlab">
+    <uses-sdk android:minSdkVersion="31" android:targetSdkVersion="36" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application android:label="ViewFlipper Lab" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:debuggable="true" android:allowBackup="false">
+        <activity android:name=".LabActivity" android:exported="true" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="flipperlab" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DoomTransportActivity" android:exported="true" android:process=":transport">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="flippertransport" />
+            </intent-filter>
+        </activity>
+        <provider android:name=".DoomTransportActivity$BmpProvider" android:authorities="dev.noti.flipperlab.doomprobe" android:exported="false" />
+        <receiver android:name=".LabWidget" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget" />
+        </receiver>
+        <provider android:name=".FrameProvider" android:authorities="dev.noti.flipperlab.frames" android:exported="false" android:grantUriPermissions="true" />
+    </application>
+</manifest>

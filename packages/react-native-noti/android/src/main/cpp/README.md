@@ -85,5 +85,8 @@ pause/resume, released controls, and simulation timing. It then renders the mixe
 directly (the host has no audio device): E1M1's OPL music must be audible, a pistol
 effect must mix, and both must end in silence. The clips are written to
 `/tmp/noti-doom-music.wav`, `/tmp/noti-doom-pistol.wav` and `/tmp/noti-doom-after.wav`. JNI tests exercise the exact
-class and native method descriptors with a host JVM. The Android UI/service still
-needs device validation by the application owner.
+class and native method descriptors with a host JVM, including tracked input and
+matching rendered-frame metadata. `doom_input.c` wraps the original command
+builder without editing vendored sources. The October 28 service revision ran in
+a native comparison APK on an Android 16 emulator and Xiaomi Android 14 device;
+see [results and scope](../../../../../../docs/doom-optimization.md).

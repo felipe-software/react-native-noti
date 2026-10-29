@@ -110,6 +110,8 @@ set_source_files_properties(${DOOM_DIR}/i_system.c PROPERTIES
     COMPILE_DEFINITIONS "I_Error=noti_upstream_error;I_Quit=noti_upstream_quit")
 set_source_files_properties(${DOOM_DIR}/m_config.c PROPERTIES
     COMPILE_DEFINITIONS "M_SetConfigDir=noti_upstream_config_dir")
+set_source_files_properties(${DOOM_DIR}/g_game.c PROPERTIES
+    COMPILE_DEFINITIONS "G_BuildTiccmd=noti_upstream_build_ticcmd")
 # doom_audio.c supplies the OPL driver (instead of SDL's), wraps the music module,
 # and gives the player a temp-file location Android has (instead of /tmp).
 set_source_files_properties(${OPL_DIR}/opl/opl.c PROPERTIES
@@ -122,7 +124,7 @@ set_source_files_properties(${OPL_DIR}/src/midifile.c PROPERTIES
 # Doom intentionally wraps fixed-point integer arithmetic.
 target_compile_options(doomgeneric_engine PRIVATE -fwrapv -fno-strict-aliasing)
 
-add_library(noti_doom SHARED doom_runtime.cpp doom_guard.c doom_jni.cpp doom_audio.c)
+add_library(noti_doom SHARED doom_runtime.cpp doom_guard.c doom_jni.cpp doom_audio.c doom_input.c doom_gif.c)
 target_include_directories(noti_doom PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(noti_doom PRIVATE doomgeneric_engine m)
 if(ANDROID)

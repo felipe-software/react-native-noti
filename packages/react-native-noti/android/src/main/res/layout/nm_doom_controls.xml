@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="48dp"
+    android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="#111111" android:baselineAligned="false">
+    <Button android:id="@+id/nm_doom_left" style="@style/NotiDoomControl" android:layout_height="48dp" android:text="←" android:contentDescription="Turn left" />
+    <Button android:id="@+id/nm_doom_forward" style="@style/NotiDoomControl" android:layout_height="48dp" android:text="↑" android:contentDescription="Move forward" />
+    <Button android:id="@+id/nm_doom_backward" style="@style/NotiDoomControl" android:layout_height="48dp" android:text="↓" android:contentDescription="Move backward" />
+    <Button android:id="@+id/nm_doom_right" style="@style/NotiDoomControl" android:layout_height="48dp" android:text="→" android:contentDescription="Turn right" />
+    <Button android:id="@+id/nm_doom_fire" style="@style/NotiDoomControl" android:layout_height="48dp" android:text="Fire" android:textColor="#FFB08A" android:contentDescription="Fire weapon" />
+    <Button android:id="@+id/nm_doom_use" style="@style/NotiDoomControl" android:layout_height="48dp" android:text="Use" android:contentDescription="Open door or use switch" />
+</LinearLayout>

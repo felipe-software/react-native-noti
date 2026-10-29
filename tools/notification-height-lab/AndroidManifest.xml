@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.noti.heightlab">
+    <uses-sdk android:minSdkVersion="31" android:targetSdkVersion="36" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application android:label="Notification height lab" android:allowBackup="false" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity android:name=".HeightActivity" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <provider android:name=".ImageProvider" android:authorities="dev.noti.heightlab.images" android:exported="true" android:permission="android.permission.STATUS_BAR_SERVICE" android:grantUriPermissions="true" />
+    </application>
+</manifest>

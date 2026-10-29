@@ -1,0 +1,227 @@
+{
+  "ref": "android-16.0.0_r1",
+  "files": [
+    {
+      "path": "core/java/android/widget/ViewFlipper.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/widget/ViewFlipper.java",
+      "bytes": 5981,
+      "sha256": "43fbc9a1873883be0589675772c67b14652c47fc0215f448f9aa86ecde16fa8a"
+    },
+    {
+      "path": "core/java/android/widget/ViewAnimator.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/widget/ViewAnimator.java",
+      "bytes": 12409,
+      "sha256": "525e9069d42282400d668231c200f47ac0b1afdb44b682fecbe939702b8ce66b"
+    },
+    {
+      "path": "core/java/android/widget/AdapterViewFlipper.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/widget/AdapterViewFlipper.java",
+      "bytes": 8045,
+      "sha256": "b425717e706f0a0b3838f07a1e2cc5cf9b4032e1b5783f5305dc7a1aeee71562"
+    },
+    {
+      "path": "core/java/android/widget/AdapterViewAnimator.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/widget/AdapterViewAnimator.java",
+      "bytes": 39891,
+      "sha256": "ea1c46a8c79296e2ea99a775f4d445b83cd882b34ad55e7acb8639ec5d87bc55"
+    },
+    {
+      "path": "core/java/android/widget/RemoteViews.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/widget/RemoteViews.java",
+      "bytes": 460548,
+      "sha256": "a545c34c84d7ba8bda41b11a3332bea956ec0d2dc597aef0cad0bb01c321bcbe"
+    },
+    {
+      "path": "core/java/android/widget/ImageView.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/widget/ImageView.java",
+      "bytes": 61496,
+      "sha256": "982c78afaefb235c512b4ea7a84c18a0631d30054c781cef6205a9b64b74e09c"
+    },
+    {
+      "path": "core/java/android/view/View.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/view/View.java",
+      "bytes": 1418192,
+      "sha256": "ceb24df845d5304ba82422d828f0bd3af8f9da93c33ce898935850df875c7ac2"
+    },
+    {
+      "path": "core/java/android/view/animation/Animation.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/view/animation/Animation.java",
+      "bytes": 46462,
+      "sha256": "b48c8ffdfb2c9382e5aa4960bf35ce9e604685ffdb28e11145eb5254da8c3145"
+    },
+    {
+      "path": "core/java/android/view/animation/AnimationUtils.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/view/animation/AnimationUtils.java",
+      "bytes": 20031,
+      "sha256": "0cb5c5b5f3f6b344ebf11fd58b3b93ca321b949c3e7709d14e1fd96368906054"
+    },
+    {
+      "path": "core/java/android/app/Notification.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/app/Notification.java",
+      "bytes": 633125,
+      "sha256": "250f04e68f72688ffec2d5a8506adae3f1f3bc103f3eb2223f83800d28ed2c1a"
+    },
+    {
+      "path": "core/java/android/service/notification/RateEstimator.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/android/service/notification/RateEstimator.java",
+      "bytes": 2048,
+      "sha256": "f897f849bf0ba7b6196429b931a08d4ab0e396a02780424de9d1c8149554d0c4"
+    },
+    {
+      "path": "core/res/res/values/config.xml",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/res/res/values/config.xml",
+      "bytes": 416775,
+      "sha256": "8d9e0bd60ab8afdd026097ae37b092954480b99c6302ebd452982d05cf18e567"
+    },
+    {
+      "path": "services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java",
+      "bytes": 308442,
+      "sha256": "efce7291e2efca3f4447e20a5d60a45c79998bccec0ed6b56283c33db3abe17f"
+    },
+    {
+      "path": "services/core/java/com/android/server/notification/NotificationManagerService.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/services/core/java/com/android/server/notification/NotificationManagerService.java",
+      "bytes": 685032,
+      "sha256": "891b94d823e3956219d3ea6f109f73be577c68bc9e3c4074ef4cccda909d2095"
+    },
+    {
+      "path": "services/core/java/com/android/server/notification/NotificationUsageStats.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/services/core/java/com/android/server/notification/NotificationUsageStats.java",
+      "bytes": 44951,
+      "sha256": "29632a25b2ed08a08808f2b2ffe726c58b7f9f4fa89a23e946e69ce864f07e2b"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/RemoteComposeBuffer.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/RemoteComposeBuffer.java",
+      "bytes": 91798,
+      "sha256": "8d314badcb4c88124b578da31a3cea3ed487fcecdfae0f7ba926a16947bdedff"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/WireBuffer.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/WireBuffer.java",
+      "bytes": 11503,
+      "sha256": "532fbb9363c62bdb618539de4e5b4600c43dcd7577d128ba145c8065a7f09c28"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/CoreDocument.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/CoreDocument.java",
+      "bytes": 57815,
+      "sha256": "ad707d311d280cedb1936004f5efc631b78d8264c19f4c6557621d23b1e30d1a"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/Operations.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/Operations.java",
+      "bytes": 26602,
+      "sha256": "691101fa313fc23f915b304e252fecbaa57d90ca494805b2e9ae857237480ed2"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/RemoteContext.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/RemoteContext.java",
+      "bytes": 28810,
+      "sha256": "b41a3c266beefa3b59ae9a862ada259e2b2feb54f25f6c32597c7902f70a1416"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/Header.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/Header.java",
+      "bytes": 19179,
+      "sha256": "ed4d389b6cb6b303608a6eb26069ed0624a5287d2c732bdd65e597231334bae8"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/DrawCircle.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/DrawCircle.java",
+      "bytes": 3832,
+      "sha256": "19225a5dde5749fd8485caea155c85a265fec37be34ec82f9d1e7ebdc1a42442"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/FloatExpression.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/FloatExpression.java",
+      "bytes": 14285,
+      "sha256": "229325ebcbefb2c723550bd284df94d7cc3f9674da3daf10deefa3958a045051"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/RootContentBehavior.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/RootContentBehavior.java",
+      "bytes": 13004,
+      "sha256": "0c1c2a40030a301a929b943a5b881d003d0472a2ec76ab126df91ee53137717c"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/Utils.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/Utils.java",
+      "bytes": 11277,
+      "sha256": "97ef40252d7bf6d1fa3a540d880f2ce45a56e88ac22238574d838a7eda0b5d1f"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/utilities/AnimatedFloatExpression.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/utilities/AnimatedFloatExpression.java",
+      "bytes": 30419,
+      "sha256": "4b863623902001746008c394d81fb1a655fd1e03ef1c329d728efb853c4c4121"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/PaintData.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/PaintData.java",
+      "bytes": 4571,
+      "sha256": "bb66099403017fd5261044a69fb2ee5e48366a9eda84ace85b26b0a37b2967ad"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/paint/PaintBundle.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/paint/PaintBundle.java",
+      "bytes": 52597,
+      "sha256": "74e44e7d0e7c03efec5881f84cd0f45bc874492b6295035a17a82056b8311551"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/ClickArea.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/ClickArea.java",
+      "bytes": 8424,
+      "sha256": "745f94bdbb32425b6e066a19f121effa1d4c9588e0376d22a6d5b97a9de140a7"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/RootLayoutComponent.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/RootLayoutComponent.java",
+      "bytes": 9546,
+      "sha256": "35379f9c7116646c45a553ae0d08b6aa00344ee6ba2afe8717d2de23a912bfcf"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/LayoutComponent.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/LayoutComponent.java",
+      "bytes": 20975,
+      "sha256": "10957bdd282852be488d151ef1a3867e8435e92754faa91c1a762ce593409d1a"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/LayoutComponentContent.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/LayoutComponentContent.java",
+      "bytes": 3527,
+      "sha256": "190c6b6451b05d2b0a17158716cf9bfb0a55ca0c97cdb1750fa13f0879f9b593"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/managers/CanvasLayout.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/managers/CanvasLayout.java",
+      "bytes": 5304,
+      "sha256": "d52edec253c90abdbc7e9de57beb0d70da03f652e4c32dbd7af493d5d41a2f0b"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/CanvasContent.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/CanvasContent.java",
+      "bytes": 3290,
+      "sha256": "927c83682747246d3a34bf203515df4e0b2bd916a1392c6b2f7ef7bc3b555dca"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/modifiers/WidthModifierOperation.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/modifiers/WidthModifierOperation.java",
+      "bytes": 4651,
+      "sha256": "d3c962e58c83aa9e4c6bbc7ac8b70eb9c7f16fa3409b272527333dffe5be0421"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/modifiers/HeightModifierOperation.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/modifiers/HeightModifierOperation.java",
+      "bytes": 4678,
+      "sha256": "6f482d86af92d4b1dbbc807cf9b746fb179ad396cb7bc03c7309af725883a0d3"
+    },
+    {
+      "path": "core/java/com/android/internal/widget/remotecompose/core/operations/layout/Component.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-16.0.0_r1/core/java/com/android/internal/widget/remotecompose/core/operations/layout/Component.java",
+      "bytes": 38092,
+      "sha256": "46ca0e0fb17ec5f1f7be41c1c4c81eda3bf68e6211f02d93f4f7e0515df828e7"
+    }
+  ]
+}

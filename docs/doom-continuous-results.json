@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-29",
+  "status": "Implemented and validated on Xiaomi Android 14 and emulator Android 16",
+  "apk": {
+    "package": "dev.reactnativenoti.demo",
+    "sha256": "511e9246ee1cbd39f203dc7e6f4dbbad33cc315fcfefa0479ba9919678d710b9",
+    "bytes": 37647597,
+    "r8Enabled": true,
+    "abis": [
+      "arm64-v8a"
+    ],
+    "renderer": "live",
+    "controls": "hold",
+    "nativeLibrarySha256": "59d320b4be03988a12664893132a161e7d51bb58fdbda3a1f5a2db65d0ece8eb",
+    "nativeLibraryIdenticalToPrevious40msRelease": true,
+    "path": "/Users/mac/work/react-native-noti/artifacts/doom-optimization/doom-continuous-release.apk"
+  },
+  "interaction": {
+    "mode": "hold",
+    "libraryDefault": "tap",
+    "demoDefault": "hold",
+    "continuous": [
+      "forward",
+      "backward",
+      "left",
+      "right",
+      "fire"
+    ],
+    "momentary": [
+      "use"
+    ],
+    "releaseAll": [
+      "pause",
+      "stop",
+      "screen-off"
+    ],
+    "shadeVisibility": "Closing the shade alone does not release a latched control.",
+    "nativeState": "DoomStatus.controls and heldControls; native service also exposes status through dumpsys.",
+    "presentationSync": "Local checked feedback followed by a 120-ms coalesced native snapshot publication into collapsed and expanded presentations, through the existing notification rate guard."
+  },
+  "validation": {
+    "typecheck": true,
+    "minifiedReleaseBuild": true,
+    "devices": [
+      {
+        "serial": "swge8phybixgsk9t",
+        "checks": {
+          "continuousCheckboxControlsVisible": true,
+          "nativeModeIsHold": true,
+          "oneTapHoldsRightBeyondOld250msPulse": true,
+          "collapsedControlsPreserveRightState": true,
+          "expandedControlsPreserveRightState": true,
+          "forwardAndRightHeldTogether": true,
+          "fireCanBeHeldAlongsideMovement": true,
+          "secondFireTapReleasesOnlyFire": true,
+          "useRemainsMomentary": true,
+          "pauseClearsAllHeldKeys": true,
+          "resumeStartsWithNoHeldKeys": true,
+          "leftCanBeHeld": true,
+          "secondLeftTapReleasesIt": true,
+          "stopRemovesDoomService": true
+        },
+        "complete": true,
+        "scope": "Real minified release app, SystemUI checkbox actions and native service state. No FPS or input-latency benchmark."
+      },
+      {
+        "serial": "emulator-5554",
+        "checks": {
+          "continuousCheckboxControlsVisible": true,
+          "nativeModeIsHold": true,
+          "oneTapHoldsRightBeyondOld250msPulse": true,
+          "collapsedControlsPreserveRightState": true,
+          "expandedControlsPreserveRightState": true,
+          "forwardAndRightHeldTogether": true,
+          "fireCanBeHeldAlongsideMovement": true,
+          "secondFireTapReleasesOnlyFire": true,
+          "useRemainsMomentary": true,
+          "pauseClearsAllHeldKeys": true,
+          "resumeStartsWithNoHeldKeys": true,
+          "leftCanBeHeld": true,
+          "secondLeftTapReleasesIt": true,
+          "backwardCanBeHeld": true,
+          "screenActuallySlept": true,
+          "screenOffClearsHeldKeys": true,
+          "stopRemovesDoomService": true
+        },
+        "complete": true,
+        "scope": "Real minified release app, SystemUI checkbox actions and native service state. No FPS or input-latency benchmark."
+      }
+    ],
+    "nativeRenderingLibraryUnchanged": true,
+    "scope": "Functional real-app and native-state checks, not an FPS or latency benchmark. Screen-off tested only on emulator; normal native Stop tested on Xiaomi and in-app Stop after wake tested on emulator."
+  },
+  "motionProof": {
+    "priorCapture": {
+      "source": "Real game pixels from two screenshots taken during a single held right turn",
+      "crop": {
+        "x": 182,
+        "y": 1171,
+        "width": 640,
+        "height": 400
+      },
+      "imageHashes": [
+        "25833e178bcac77c44253add563c0ff919817b7263f025ae4163085061e2a0e5",
+        "19a5df07f30c7476c69a88a8502ee51c243baafcdba4f0063428f0b2459bd36e"
+      ],
+      "pixelsChanged": true
+    },
+    "note": "Pixel-change check from the initial continuous-controls capture; its image path uses the same native library. Final recordings and presentation-state checks use the final APK."
+  },
+  "artifacts": {
+    "commands": "artifacts/doom-optimization/hold-controls/<serial>/commands.json",
+    "recordings": "artifacts/doom-optimization/hold-controls/<serial>/continuous-controls.mp4",
+    "demoVideo": "artifacts/doom-optimization/hold-controls/continuous-gameplay.mp4",
+    "buildLog": "artifacts/doom-optimization/doom-hold-release-final-build.log",
+    "checkScript": "artifacts/doom-optimization/hold-controls/check-ui.mjs",
+    "checkDeadlineSeconds": 90
+  },
+  "sources": [
+    "https://developer.android.com/reference/android/widget/RemoteViews#setOnCheckedChangeResponse(int,%20android.widget.RemoteViews.RemoteResponse)",
+    "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/CheckBox.java"
+  ]
+}

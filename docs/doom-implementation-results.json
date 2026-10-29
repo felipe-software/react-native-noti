@@ -1,0 +1,496 @@
+{
+  "date": "2026-10-28",
+  "status": "Implemented and measured in isolated native APK using actual service/engine/resources",
+  "metric": "Service input receipt to first captured SystemUI image whose rendered simulation contains the input; excludes pre-service touch dispatch. Video sampling/calibration add uncertainty.",
+  "build": {
+    "baselineRef": "b056478e9b930fd705ead02f3f1f7844bbd23151",
+    "baselineServiceSha256": "025e559e69f7ccd4648951da7fcc954be4c615d1e1509a4a9850984d420c7fdf",
+    "candidateServiceSha256": "8dee94e36535fe0785abbdede169a6892c8e3cb6cbf41fcc6e18428ed2778db3",
+    "abi": "arm64-v8a",
+    "apkSha256": "a2d8381c9e29eec6ebc6a3675bc7d82c75f6c1a72b9cff350229260fee02a21a",
+    "instrumentation": "Both services get identical frame-ID strips and timing logs. The baseline is renamed, but its scheduling is unchanged. The native engine is shared by the variants and starts in a fresh process for each trial."
+  },
+  "selectedComparison": [
+    {
+      "device": "Android 16 Pixel 8 emulator",
+      "serial": "emulator-5554",
+      "trials": [
+        {
+          "mode": "baseline",
+          "calibration": {
+            "samples": 157,
+            "offsetMs": 377059661.656,
+            "offsetDistribution": {
+              "count": 157,
+              "median": 377059661.656,
+              "p90": 377059663.911,
+              "min": 377059575.044,
+              "max": 377059667.556
+            }
+          },
+          "videoFrames": 1298,
+          "verifiedGameSamples": 1101,
+          "gameDrawCrop": [
+            773,
+            483,
+            201,
+            836
+          ],
+          "phases": [
+            {
+              "name": "isolated",
+              "offeredTaps": 12,
+              "receivedTaps": 12,
+              "serviceInputToRecordedStateMs": {
+                "count": 12,
+                "median": 542.5725000202656,
+                "p90": 592.0450000166893,
+                "min": 397.21200001239777,
+                "max": 643.2229999899864
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 482,
+                "median": 897.5429475009441,
+                "p90": 1126.5417800545692,
+                "min": 316.222864985466,
+                "max": 1298.434948027134
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 482,
+                "median": 883.1560000181198,
+                "p90": 1110.9670000076294,
+                "min": 303.21200001239777,
+                "max": 1275.0890000462532
+              },
+              "receivedInputGapsMs": {
+                "count": 11,
+                "median": 1329,
+                "p90": 1376,
+                "min": 1300,
+                "max": 1377
+              }
+            },
+            {
+              "name": "burst",
+              "offeredTaps": 60,
+              "receivedTaps": 45,
+              "serviceInputToRecordedStateMs": {
+                "count": 45,
+                "median": 1061.0120000243187,
+                "p90": 1262.5890000462532,
+                "min": 503.5,
+                "max": 1377.0120000243187
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 431,
+                "median": 1025.5561910271645,
+                "p90": 1260.8557740449905,
+                "min": 451.32439601421356,
+                "max": 1778.5131940245628
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 431,
+                "median": 1013.3889999985695,
+                "p90": 1250.611999988556,
+                "min": 439.5,
+                "max": 1764.8560000061989
+              },
+              "receivedInputGapsMs": {
+                "count": 44,
+                "median": 268.0,
+                "p90": 457,
+                "min": 201,
+                "max": 784
+              }
+            }
+          ],
+          "notifyCalls": 101,
+          "postedSequences": 101,
+          "missingPostedSequences": [],
+          "notifyToObserverMs": {
+            "count": 101,
+            "median": 222,
+            "p90": 251,
+            "min": 203,
+            "max": 293
+          },
+          "backwardRecordedFrameTransitions": 1,
+          "artifactDirectory": "artifacts/doom-optimization/emulator-baseline-2",
+          "rateSheddingMessages": 0
+        },
+        {
+          "mode": "candidate",
+          "calibration": {
+            "samples": 161,
+            "offsetMs": 378507167.744,
+            "offsetDistribution": {
+              "count": 161,
+              "median": 378507167.744,
+              "p90": 378507170.544,
+              "min": 378506929.911,
+              "max": 378507173.989
+            }
+          },
+          "videoFrames": 1505,
+          "verifiedGameSamples": 1090,
+          "gameDrawCrop": [
+            773,
+            483,
+            201,
+            1298
+          ],
+          "phases": [
+            {
+              "name": "isolated",
+              "offeredTaps": 12,
+              "receivedTaps": 12,
+              "serviceInputToRecordedStateMs": {
+                "count": 12,
+                "median": 419.08300000429153,
+                "p90": 527.5879999995232,
+                "min": 363.0329999923706,
+                "max": 741.2110000252724
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 494,
+                "median": 583.3989430069923,
+                "p90": 794.1293820142746,
+                "min": 70.94375801086426,
+                "max": 1428.744921028614
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 494,
+                "median": 570.4275000393391,
+                "p90": 779.6110000014305,
+                "min": 57.21100002527237,
+                "max": 1408.1000000238419
+              },
+              "receivedInputGapsMs": {
+                "count": 11,
+                "median": 1309,
+                "p90": 1355,
+                "min": 1280,
+                "max": 1359
+              }
+            },
+            {
+              "name": "burst",
+              "offeredTaps": 60,
+              "receivedTaps": 60,
+              "serviceInputToRecordedStateMs": {
+                "count": 60,
+                "median": 660.6220000088215,
+                "p90": 815.8770000338554,
+                "min": 272.02200001478195,
+                "max": 1015.8770000338554
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 405,
+                "median": 613.4909120202065,
+                "p90": 774.744204044342,
+                "min": 119.08008301258087,
+                "max": 1143.5909950733185
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 405,
+                "median": 597.6770000457764,
+                "p90": 762.5660000443459,
+                "min": 91.02200001478195,
+                "max": 1131.7880000472069
+              },
+              "receivedInputGapsMs": {
+                "count": 59,
+                "median": 267,
+                "p90": 302,
+                "min": 200,
+                "max": 357
+              }
+            }
+          ],
+          "notifyCalls": 125,
+          "postedSequences": 125,
+          "missingPostedSequences": [],
+          "notifyToObserverMs": {
+            "count": 125,
+            "median": 221,
+            "p90": 243,
+            "min": 204,
+            "max": 332
+          },
+          "backwardRecordedFrameTransitions": 1,
+          "artifactDirectory": "artifacts/doom-optimization/emulator-latched-1",
+          "rateSheddingMessages": 0
+        }
+      ]
+    },
+    {
+      "device": "Xiaomi Redmi Note 12 Pro 5G, Android 14 / HyperOS 2",
+      "serial": "swge8phybixgsk9t",
+      "trials": [
+        {
+          "mode": "baseline",
+          "calibration": {
+            "samples": 186,
+            "offsetMs": 515347872.1165,
+            "offsetDistribution": {
+              "count": 186,
+              "median": 515347872.1165,
+              "p90": 515347876.933,
+              "min": 515347830.967,
+              "max": 515347881.033
+            }
+          },
+          "videoFrames": 1413,
+          "verifiedGameSamples": 1099,
+          "gameDrawCrop": [
+            810,
+            506,
+            184,
+            1090
+          ],
+          "phases": [
+            {
+              "name": "isolated",
+              "offeredTaps": 12,
+              "receivedTaps": 8,
+              "serviceInputToRecordedStateMs": {
+                "count": 8,
+                "median": 476.7495000362396,
+                "p90": 542.6834999918938,
+                "min": 393.81650000810623,
+                "max": 607.1605000495911
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 511,
+                "median": 907.3579370379448,
+                "p90": 1063.9456300139427,
+                "min": 344.2601680159569,
+                "max": 1232.1900910139084
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 511,
+                "median": 895.8165000081062,
+                "p90": 1050.9605000019073,
+                "min": 319.81650000810623,
+                "max": 1221.8725000023842
+              },
+              "receivedInputGapsMs": {
+                "count": 7,
+                "median": 2539,
+                "p90": 2561,
+                "min": 1279,
+                "max": 2596
+              }
+            },
+            {
+              "name": "burst",
+              "offeredTaps": 60,
+              "receivedTaps": 52,
+              "serviceInputToRecordedStateMs": {
+                "count": 52,
+                "median": 1050.8495000302792,
+                "p90": 1152.0724999904633,
+                "min": 484.07249999046326,
+                "max": 1266.216500043869
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 369,
+                "median": 943.1460890173912,
+                "p90": 1148.3263970017433,
+                "min": 411.6316279768944,
+                "max": 1261.200397014618
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 369,
+                "median": 928.972500026226,
+                "p90": 1128.9835000038147,
+                "min": 405.07249999046326,
+                "max": 1244.0164999961853
+              },
+              "receivedInputGapsMs": {
+                "count": 51,
+                "median": 189,
+                "p90": 353,
+                "min": 153,
+                "max": 396
+              }
+            }
+          ],
+          "notifyCalls": 96,
+          "postedSequences": 96,
+          "missingPostedSequences": [],
+          "notifyToObserverMs": {
+            "count": 96,
+            "median": 250.5,
+            "p90": 286,
+            "min": 216,
+            "max": 297
+          },
+          "backwardRecordedFrameTransitions": 0,
+          "artifactDirectory": "artifacts/doom-optimization/xiaomi-baseline-2",
+          "rateSheddingMessages": 0
+        },
+        {
+          "mode": "candidate",
+          "calibration": {
+            "samples": 205,
+            "offsetMs": 516552768.822,
+            "offsetDistribution": {
+              "count": 205,
+              "median": 516552768.822,
+              "p90": 516552774.2,
+              "min": 516552728.611,
+              "max": 516552777.6
+            }
+          },
+          "videoFrames": 1499,
+          "verifiedGameSamples": 1156,
+          "gameDrawCrop": [
+            810,
+            506,
+            184,
+            1090
+          ],
+          "phases": [
+            {
+              "name": "isolated",
+              "offeredTaps": 12,
+              "receivedTaps": 12,
+              "serviceInputToRecordedStateMs": {
+                "count": 12,
+                "median": 546.1220000088215,
+                "p90": 571.9000000357628,
+                "min": 505.1110000014305,
+                "max": 624.466000020504
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 537,
+                "median": 585.2212880253792,
+                "p90": 699.9639810323715,
+                "min": 38.08244204521179,
+                "max": 793.3739040493965
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 537,
+                "median": 567.8889999985695,
+                "p90": 685.5440000295639,
+                "min": 32.80000001192093,
+                "max": 779.3660000562668
+              },
+              "receivedInputGapsMs": {
+                "count": 11,
+                "median": 1275,
+                "p90": 1290,
+                "min": 1264,
+                "max": 1295
+              }
+            },
+            {
+              "name": "burst",
+              "offeredTaps": 60,
+              "receivedTaps": 60,
+              "serviceInputToRecordedStateMs": {
+                "count": 60,
+                "median": 519.7050000429153,
+                "p90": 583.9000000357628,
+                "min": 321.744000017643,
+                "max": 665.5330000519753
+              },
+              "recordedNativeFrameAgeMs": {
+                "count": 395,
+                "median": 498.13767206668854,
+                "p90": 595.4657490253448,
+                "min": 147.95990300178528,
+                "max": 721.2191339731216
+              },
+              "recordedSampledFrameAgeMs": {
+                "count": 395,
+                "median": 485.9000000357628,
+                "p90": 577.2110000252724,
+                "min": 128.74400001764297,
+                "max": 716.3780000209808
+              },
+              "receivedInputGapsMs": {
+                "count": 59,
+                "median": 190,
+                "p90": 216,
+                "min": 158,
+                "max": 234
+              }
+            }
+          ],
+          "notifyCalls": 110,
+          "postedSequences": 110,
+          "missingPostedSequences": [],
+          "notifyToObserverMs": {
+            "count": 110,
+            "median": 259.0,
+            "p90": 283,
+            "min": 221,
+            "max": 300
+          },
+          "backwardRecordedFrameTransitions": 0,
+          "artifactDirectory": "artifacts/doom-optimization/xiaomi-latched-1",
+          "rateSheddingMessages": 0
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "androidBuild": "arm64-v8a, SDK 36 / min 31, Kotlin/native/resources/APK",
+    "hostGameplay": "passed including rendered-input acknowledgement and pause invalidation",
+    "hostJni": "passed including metadata argument validation",
+    "demoTypecheck": "bun run typecheck passed",
+    "cache": {
+      "passed": [
+        "Late read selects newer frames; every index shares one snapshot",
+        "Repeated reads remain byte-identical after new captures",
+        "Next deck advances beyond the previous sealed deck",
+        "No new captures holds the latest image without rewinding",
+        "Captured URIs remain frozen for pause",
+        "Deferred retention is bounded",
+        "Clear invalidates URIs and the previous snapshot watermark"
+      ],
+      "complete": true
+    },
+    "lifecycle": {
+      "device": "emulator-5554",
+      "scope": "Final native harness, Android 16, UI lifecycle and owned-notification cleanup",
+      "checks": {
+        "pauseImageUnchangedAcrossOneSecond": true,
+        "resumeAdvancesRecordedImage": true,
+        "muteActionRoundTrip": true,
+        "allSixControlsReceived": true,
+        "stopRemovesBothNotificationsAndService": true,
+        "processDeathRemovesBothNotificationsWithin12Seconds": true
+      },
+      "complete": true
+    }
+  },
+  "cleanup": [
+    {
+      "serial": "emulator-5554",
+      "packagesRemoved": true,
+      "observerGrantRemoved": true,
+      "ownNotificationsRemoved": true,
+      "complete": true
+    },
+    {
+      "serial": "swge8phybixgsk9t",
+      "packagesRemoved": true,
+      "observerGrantRemoved": true,
+      "ownNotificationsRemoved": true,
+      "complete": true
+    }
+  ],
+  "limits": [
+    "One complete baseline/candidate pair per device; exploratory and failed setup trials excluded.",
+    "Isolated taps on Xiaomi were slower for received taps; baseline missed 4/12.",
+    "The baseline scheduler uses the archived service/layout with the shared current native engine and telemetry.",
+    "Both variants have a lab-only frame-ID strip, timing logs and initially muted state.",
+    "Requested tap interval differs from actual dispatch/receipt interval; measured receipt gaps retained.",
+    "Emulator had one backward recorded frame transition in each full clip; no guarantee that all replay is eliminated.",
+    "33 ms frame request and 35 Hz simulation unchanged; no 60 unique fps claim.",
+    "Full Expo application and other ABIs were not rebuilt; no Samsung device tested for this revision."
+  ]
+}

@@ -47,6 +47,18 @@ await Noti.widgets.requestPin(widget);
 
 See the [package README](packages/react-native-noti/README.md) for installation, APIs, components, and Android limits.
 
+The [ViewFlipper investigation](docs/viewflipper-limits.md) maps Android source to measured notification and widget boundaries, with a standalone [native experiment lab](tools/viewflipper-lab/README.md).
+
+The [physical Xiaomi follow-up](docs/viewflipper-xiaomi.md) compares Android 14 / HyperOS 2 with the Android 16 emulator.
+
+The [Doom responsiveness update](docs/doom-optimization.md) implements stable controls, shorter interactive decks and consistent frame selection when SystemUI reads images. Its [native comparison lab](tools/doom-lab/README.md) measures recorded responses on both devices. Expand the game picture and use the separate **Doom controls** notification to play.
+
+The demo now opts into the [experimental live Doom renderer](docs/doom-live-rendering.md), which supplies recent animation frames through a seekable image stream. It targets faster control response and retains ViewFlipper as a compatibility option. The minified Expo release has run on the emulator and Xiaomi; the final 40 ms cadence was smoke-tested on Xiaomi. Its measured response gain is larger than its motion-rate gain, and occasional recorded frame reversals remain.
+
+The [Doom controls update](docs/doom-tap-controls.md) uses momentary buttons: each movement tap lasts 250 ms, and Fire lasts 160 ms. It removes the continuous-toggle experiment and keeps notification timestamps stable so control updates do not acquire a newer sorting time.
+
+The [larger Doom image](docs/doom-max-size.md) fills the available chat-image width without cropping the game: 817×510 px on the tested emulator, up from 640×400.
+
 ## Bad Apple in a notification
 
 The demo includes the complete silent Bad Apple video (3m39s, 6,572 source frames at 30 fps). Use **Play**, then open the Android notification shade and expand **Bad Apple!!**. The controls select 15, 30, or an experimental 60 Hz schedule, restart playback, and stop it. A 30 fps source still has at most 30 unique images per second in the 60 Hz mode.

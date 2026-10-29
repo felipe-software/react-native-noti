@@ -12,8 +12,9 @@ import java.io.FileNotFoundException
 /**
  * Serves live Doom frames from [DoomFrames] to the notification's RemoteViews in SystemUI.
  *
- * Every frame has its own URI, so an update that SystemUI inflates late still shows its own
- * frames. NotificationManager revokes the grant for a URI once an update drops it, so the
+ * Captured images have immutable URIs. Live decks have unique URIs and seal their shared
+ * snapshot on first read, after delivery delay; later reads return that same snapshot.
+ * NotificationManager revokes the grant for a URI once an update drops it, so the
  * manifest instead lets SystemUI read with STATUS_BAR_SERVICE, a permission only it holds.
  */
 class DoomFrameProvider : ContentProvider() {

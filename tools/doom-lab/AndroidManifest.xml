@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.noti.doomlab">
+    <uses-sdk android:minSdkVersion="31" android:targetSdkVersion="36" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <application android:label="Doom comparison lab" android:debuggable="true" android:allowBackup="false" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:extractNativeLibs="true">
+        <activity android:name="expo.modules.notificationmotion.DoomLabActivity" android:exported="true" android:launchMode="singleTask">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+            <intent-filter><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.DEFAULT" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="doomlab" /></intent-filter>
+        </activity>
+        <activity android:name="expo.modules.notificationmotion.DoomCacheTestActivity" android:exported="true" />
+        <activity android:name="expo.modules.notificationmotion.DoomLiveCacheTestActivity" android:exported="true" />
+        <activity android:name="expo.modules.notificationmotion.AnimatedTransportProbeActivity" android:exported="true" />
+        <provider android:name="expo.modules.notificationmotion.AnimatedTransportProbeProvider" android:authorities="dev.noti.doomlab.gifprobe" android:exported="true" android:permission="android.permission.STATUS_BAR_SERVICE" android:grantUriPermissions="true" />
+        <provider android:name="expo.modules.notificationmotion.DoomGifProbeProvider" android:authorities="dev.noti.doomlab.livegif" android:exported="true" android:permission="android.permission.STATUS_BAR_SERVICE" android:grantUriPermissions="true" />
+        <provider android:name="expo.modules.notificationmotion.DoomLiveFrameProvider" android:authorities="dev.noti.doomlab.notificationmotion.doom.live" android:exported="true" android:permission="android.permission.STATUS_BAR_SERVICE" android:grantUriPermissions="true" />
+        <receiver android:name="expo.modules.notificationmotion.DoomLabReceiver" android:exported="true" />
+        <service android:name="expo.modules.notificationmotion.DoomService" android:exported="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-started comparison of notification Doom controls and frame age" />
+        </service>
+        <service android:name="expo.modules.notificationmotion.BaselineDoomService" android:exported="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-started baseline for notification Doom comparison" />
+        </service>
+        <provider android:name="expo.modules.notificationmotion.DoomFrameProvider" android:authorities="dev.noti.doomlab.notificationmotion.doom" android:exported="true" android:permission="android.permission.STATUS_BAR_SERVICE" android:grantUriPermissions="true" />
+        <provider android:name="expo.modules.notificationmotion.BaselineDoomFrameProvider" android:authorities="dev.noti.doomlab.notificationmotion.doom.baseline" android:exported="true" android:permission="android.permission.STATUS_BAR_SERVICE" android:grantUriPermissions="true" />
+    </application>
+</manifest>

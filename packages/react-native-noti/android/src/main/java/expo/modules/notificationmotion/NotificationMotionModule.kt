@@ -4,6 +4,7 @@ import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 import expo.modules.kotlin.records.Field
 import expo.modules.kotlin.records.Record
+import org.json.JSONObject
 
 class NotificationIdentity : Record {
   @Field val id: Int = 0
@@ -28,6 +29,10 @@ class NotificationMotionModule : Module() {
     AsyncFunction("stopFrames") { FramePlaybackController.stop(context) }
     AsyncFunction("getFramesStatus") { FramePlaybackController.status(context) }
     AsyncFunction("startDoom") { DoomController.start(context) }
+    AsyncFunction("startDoomWithOptions") { options: String ->
+      val parsed = JSONObject(options)
+      DoomController.start(context, parsed.optString("renderer", "flipper"))
+    }
     AsyncFunction("stopDoom") { DoomController.stop(context) }
     AsyncFunction("getDoomStatus") { DoomController.status() }
     AsyncFunction("doomAction") { action: String -> DoomController.action(action) }

@@ -1,5 +1,9 @@
 Doom notification demo validation — 2026-10-03
 
+The [October 29 live renderer](doom-live-rendering.md) adds a further implementation and full R8 release-app validation. Its [results](doom-live-results.json) supersede the current-performance figures below; the dated historical runs remain useful for provenance.
+
+The [2026-10-28 responsiveness implementation](doom-optimization.md) supersedes the scheduling and attached-control details below. In an isolated APK using the actual native service, repeated-input median service-receipt-to-recorded-response time improved from 1,061 to 661 ms on the Android 16 emulator and from 1,051 to 520 ms on Xiaomi Android 14. Final trials received 144/144 offered taps. Xiaomi isolated-input latency did not improve. These are short recorded comparisons, excluding pre-service touch dispatch; the full Expo application was not rebuilt. [Structured results and limits](doom-implementation-results.json) include seven cache checks, six emulator lifecycle checks, and verified removal of both temporary packages and observer grants from both devices.
+
 Validated on the dedicated `Noti_Doom_API_36` x86_64 emulator (`emulator-5556`),
 Android API 36, using the Expo development client and Metro on port 8082.
 The previously running emulator-5554 and Metro 8081 were not modified.

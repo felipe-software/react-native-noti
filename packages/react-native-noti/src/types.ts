@@ -236,11 +236,16 @@ export type FramePlaybackStatus = {
  * `pause` and `mute` toggle.
  */
 export type DoomAction = 'forward' | 'backward' | 'left' | 'right' | 'fire' | 'use' | 'pause' | 'mute';
+export type DoomOptions = {
+    /** Live uses an experimental streamed animation; flipper preserves the original frame colors. */
+    renderer?: 'live' | 'flipper';
+};
 export type DoomStatus = {
     state: 'idle' | 'starting' | 'playing' | 'paused' | 'stopped' | 'error';
-    /** Frames sent to Android, not a measurement of SystemUI's display rate. */
+    renderer: 'live' | 'flipper';
+    /** Frames produced for notification playback, not a measurement of SystemUI's display rate. */
     framesPublished: number;
-    /** Requested animation frame rate within each batch. Android may display fewer frames. */
+    /** Requested source sampling rate. Android may display fewer distinct frames. */
     notificationFps: number;
     engineTickRate: number;
     lastAction: DoomAction | null;

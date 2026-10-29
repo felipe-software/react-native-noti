@@ -46,7 +46,7 @@ export function Doom() {
 
     const play = () => run(async () => {
         if (!(await Noti.requestPermission())) throw new Error('Enable notifications to play Doom.');
-        return Noti.startDoom();
+        return Noti.startDoom({ renderer: 'live' });
     });
 
     return (
@@ -59,8 +59,8 @@ export function Doom() {
                 A real game. Inside your notification.
             </Text>
             <Text className="mt-3 text-sm leading-5 text-zinc-400">
-                Expand the notification to move, turn and fire. Tap Use to open doors.
-                Each tap makes a short move; tap again to keep going.
+                Expand Doom and use the Doom controls notification to move, turn and fire. Tap Use to open doors.
+                Each tap moves, turns or fires briefly, then releases automatically.
             </Text>
             <View className="mt-5 flex-row gap-3">
                 <Pressable
@@ -87,14 +87,14 @@ export function Doom() {
             <Text accessibilityLiveRegion="polite" className="mt-4 text-xs leading-5 text-zinc-400">
                 {error ?? game?.error ?? (
                     starting ? 'Loading the level…' : active
-                        ? game?.state === 'paused' ? 'Paused. Resume here or in the notification.'
-                            : 'Playing. Pull down and expand the Doom notification.'
+                        ? game?.state === 'paused' ? 'Paused. Resume here or in Doom controls.'
+                            : 'Playing. Pull down to see Doom and Doom controls.'
                         : game?.state === 'stopped' ? 'Stopped. Play resumes this session until the app process closes.'
                             : 'Freedoom Phase 1 · Doom engine · sound and OPL music'
                 )}
             </Text>
             <Text className="mt-2 text-xs leading-4 text-zinc-500">
-                Live gameplay · targets 30 fps inside the notification. Smoothness depends on Android.
+                Live gameplay · responsiveness and smoothness vary by Android device.
             </Text>
         </View>
     );

@@ -27,6 +27,12 @@
       android:exported="true"
       android:permission="android.permission.STATUS_BAR_SERVICE"
       android:grantUriPermissions="true" />
+    <provider
+      android:name="expo.modules.notificationmotion.DoomLiveFrameProvider"
+      android:authorities="${applicationId}.notificationmotion.doom.live"
+      android:exported="true"
+      android:permission="android.permission.STATUS_BAR_SERVICE"
+      android:grantUriPermissions="true" />
     <service
       android:name="expo.modules.notificationmotion.FramePlaybackService"
       android:exported="false"

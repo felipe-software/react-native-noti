@@ -7,6 +7,7 @@ import type {
     ActiveNotification,
     CreateNotificationOptions,
     DoomAction,
+    DoomOptions,
     DoomStatus,
     FramePlaybackOptions,
     FramePlaybackStatus,
@@ -36,6 +37,7 @@ declare class NotificationMotionModule extends NativeModule<Events> {
     stopFrames(): Promise<FramePlaybackStatus>;
     getFramesStatus(): Promise<FramePlaybackStatus>;
     startDoom(): Promise<DoomStatus>;
+    startDoomWithOptions(options: string): Promise<DoomStatus>;
     stopDoom(): Promise<DoomStatus>;
     getDoomStatus(): Promise<DoomStatus>;
     doomAction(action: DoomAction): Promise<DoomStatus>;
@@ -257,8 +259,11 @@ const lifecycle = {
         return native().getFramesStatus();
     },
     /** Start/resume the bundled Freedoom session in an expanded Android notification. */
-    async startDoom(): Promise<DoomStatus> {
-        return native().startDoom();
+    async startDoom(options?: DoomOptions): Promise<DoomStatus> {
+        if (options === undefined) return native().startDoom();
+        const renderer = options.renderer ?? 'flipper';
+        if (!['live', 'flipper'].includes(renderer)) throw new Error('Unknown Doom renderer.');
+        return native().startDoomWithOptions(JSON.stringify({ renderer }));
     },
     async stopDoom(): Promise<DoomStatus> {
         return native().stopDoom();

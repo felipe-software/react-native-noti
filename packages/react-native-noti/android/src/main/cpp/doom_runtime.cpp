@@ -17,9 +17,15 @@
 #include <android/log.h>
 #endif
 
+extern "C" {
+extern int gametic;
+extern int ticdup;
+}
+
 namespace {
 using Clock = std::chrono::steady_clock;
-struct KeyEvent { unsigned char code; bool pressed; };
+struct KeyEvent { unsigned char code; bool pressed; uint64_t sequence; };
+struct CommandInput { int64_t after_tic; uint64_t sequence; };
 struct Runtime {
     std::mutex lifecycle;
     std::mutex mutex;
@@ -35,6 +41,12 @@ struct Runtime {
     std::array<int32_t, noti_doom::kPixelCount> frame{};
     std::array<bool, 256> held{};
     std::deque<KeyEvent> keys;
+    uint64_t next_input = 1;
+    uint64_t consumed_input = 0;
+    uint64_t command_input = 0;
+    uint64_t discarded_input = 0;
+    std::deque<CommandInput> commands;
+    noti_doom::FrameInfo frame_info;
     // These clock fields are exclusively owned by the engine thread.
     Clock::time_point epoch = Clock::now();
     Clock::duration suspended{};
@@ -71,9 +83,11 @@ bool valid_wad(const std::string& path) {
 }
 
 void release_keys(Runtime& state) {
+    // A later watermark must never falsely acknowledge a key discarded by pause/overflow.
+    state.discarded_input = state.next_input - 1;
     state.keys.clear();
     for (int i = 0; i < 256; ++i) {
-        if (state.held[i]) state.keys.push_back({static_cast<unsigned char>(i), false});
+        if (state.held[i]) state.keys.push_back({static_cast<unsigned char>(i), false, 0});
     }
 }
 
@@ -156,22 +170,29 @@ bool start(const std::string& wad_path) {
     return state.initialized && !state.failed;
 }
 
-bool render(int32_t* pixels) {
+bool render(int32_t* pixels, FrameInfo* info) {
     Runtime& state = runtime();
     std::lock_guard<std::mutex> lock(state.mutex);
     if (!state.running || !state.has_frame || state.failed) return false;
     std::copy(state.frame.begin(), state.frame.end(), pixels);
+    if (info) {
+        *info = state.frame_info;
+        // Queue invalidation can happen after the last draw, without producing a new image.
+        info->discarded_input = state.discarded_input;
+    }
     return true;
 }
 
-void key(int code, bool pressed) {
-    if (code < 0 || code > 255) return;
+uint64_t key(int code, bool pressed) {
+    if (code < 0 || code > 255) return 0;
     Runtime& state = runtime();
     std::lock_guard<std::mutex> lock(state.mutex);
-    if (!state.running || state.failed) return;
+    if (!state.running || state.failed) return 0;
     // Bound the queue if a caller floods input; releases cannot be lost.
     if (state.keys.size() >= 512) release_keys(state);
-    state.keys.push_back({static_cast<unsigned char>(code), pressed});
+    const auto sequence = state.next_input++;
+    state.keys.push_back({static_cast<unsigned char>(code), pressed, sequence});
+    return sequence;
 }
 
 void stop() {
@@ -188,6 +209,16 @@ void set_volume(float volume) { noti_audio_set_volume(volume); }
 } // namespace noti_doom
 
 extern "C" {
+// Called after G_BuildTiccmd has processed events. The command is for `tic`, which may
+// be ahead of gametic; consuming DG_GetKey alone is not proof that it has been simulated.
+void noti_doom_command_built(int tic) {
+    Runtime& state = runtime();
+    std::lock_guard<std::mutex> lock(state.mutex);
+    if (state.consumed_input > state.command_input) {
+        state.commands.push_back({int64_t(tic + 1) * std::max(ticdup, 1), state.consumed_input});
+        state.command_input = state.consumed_input;
+    }
+}
 void DG_Init() {}
 void DG_SetWindowTitle(const char*) {}
 void DG_DrawFrame() {
@@ -196,6 +227,14 @@ void DG_DrawFrame() {
     for (int i = 0; i < noti_doom::kPixelCount; ++i) {
         state.frame[i] = static_cast<int32_t>(DG_ScreenBuffer[i] | 0xff000000u);
     }
+    while (!state.commands.empty() && state.commands.front().after_tic <= gametic) {
+        state.frame_info.applied_input = state.commands.front().sequence;
+        state.commands.pop_front();
+    }
+    ++state.frame_info.sequence;
+    state.frame_info.game_tic = gametic;
+    state.frame_info.rendered_at_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(
+        Clock::now().time_since_epoch()).count();
     state.has_frame = true;
 }
 void DG_SleepMs(uint32_t ms) { std::this_thread::sleep_for(std::chrono::milliseconds(ms)); }
@@ -211,6 +250,7 @@ int DG_GetKey(int* pressed, unsigned char* key) {
     const KeyEvent event = state.keys.front();
     state.keys.pop_front();
     state.held[event.code] = event.pressed;
+    state.consumed_input = std::max(state.consumed_input, event.sequence);
     *pressed = event.pressed;
     *key = event.code;
     return 1;

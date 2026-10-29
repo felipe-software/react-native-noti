@@ -70,6 +70,16 @@ Frames default to `frame_00001.png`, `frame_00002.png`, and so on; the prefix, p
 
 The foreground service keeps scheduling when React Native is backgrounded and exposes `starting`, `playing`, `completed`, `stopped`, and `error` status with frame, elapsed-time, progress, and batch counters. Starting a foreground service is subject to Android's background-start restrictions, so begin or restart playback from a visible user action. The notification channel is created silent and the notification provides a native Stop action.
 
+## Doom demo
+
+`Noti.startDoom()` starts the native engine with ViewFlipper playback. The optional `Noti.startDoom({ renderer: 'live' })` selects an experimental animated-image stream and separate controls notification. The demo opts into this mode. It reduces measured response time, while quantizing colors to RGB332 and allowing spatial detail reduction for unusually complex frames. It runs on the Android 16 emulator and physical Xiaomi Android 14; short backward frame transitions in Xiaomi recordings remain a playback limitation under investigation.
+
+Stop with `Noti.stopDoom()` before changing renderers. `(await Noti.getDoomStatus()).renderer` reports the active renderer, including automatic ViewFlipper fallback when the live file cannot be opened. Read [measurements and compatibility scope](../../docs/doom-live-rendering.md) before treating the requested cadence as displayed FPS.
+
+The [Doom controls update](../../docs/doom-tap-controls.md) restores momentary buttons: movement and Use last 250 ms per tap; Fire lasts 160 ms. Keys release automatically. The continuous-toggle option has been removed. Start the live renderer with `Noti.startDoom({ renderer: 'live' })`.
+
+The live renderer now uses a [larger canvas](../../docs/doom-max-size.md) to fill the available messaging-image width while retaining the full game. It displayed at 817×510 px in the Android 16 emulator; the earlier performance measurements used 640×400.
+
 ## Limits
 
 - 96 serialized nodes and seven nesting levels per presentation.

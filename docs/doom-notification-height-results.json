@@ -1,0 +1,84 @@
+{
+  "serial": "emulator-5554",
+  "scope": "Static PNG in the same MessagingStyle configuration as live Doom. Layout only; no animation benchmark.",
+  "results": [
+    {
+      "source": "640x400",
+      "image": {
+        "x": 179,
+        "y": 793,
+        "width": 640,
+        "height": 400
+      },
+      "row": {
+        "x": 42,
+        "y": 574,
+        "width": 996,
+        "height": 671
+      }
+    },
+    {
+      "source": "1280x800",
+      "image": {
+        "x": 179,
+        "y": 793,
+        "width": 817,
+        "height": 510
+      },
+      "row": {
+        "x": 42,
+        "y": 574,
+        "width": 996,
+        "height": 781
+      }
+    },
+    {
+      "source": "1280x1280",
+      "image": {
+        "x": 179,
+        "y": 793,
+        "width": 746,
+        "height": 669
+      },
+      "row": {
+        "x": 42,
+        "y": 574,
+        "width": 996,
+        "height": 940
+      }
+    },
+    {
+      "source": "640x1600",
+      "image": {
+        "x": 179,
+        "y": 793,
+        "width": 298,
+        "height": 669
+      },
+      "row": {
+        "x": 42,
+        "y": 574,
+        "width": 996,
+        "height": 940
+      }
+    }
+  ],
+  "date": "2026-10-29",
+  "device": {
+    "platform": "Android 16",
+    "api": 36,
+    "screenPixels": [
+      1080,
+      2400
+    ],
+    "densityDpi": 420
+  },
+  "configuredNotificationMaxHeightDp": {
+    "emulator": 358,
+    "xiaomi": 358
+  },
+  "xiaomiProbeExecuted": false,
+  "xiaomiProbeReason": "Secure lock screen; no unlock attempted.",
+  "productionDoomChanged": false,
+  "temporaryApkRemoved": true
+}

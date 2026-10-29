@@ -1,21 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:orientation="vertical" android:background="#111111">
-    <!-- Keep game + controls at 248dp, leaving the existing system chrome budget. -->
+    <!-- Controls have their own stable notification; video updates replace only this row. -->
     <ViewFlipper android:id="@+id/nm_doom_frame"
         android:layout_width="match_parent" android:layout_height="184dp"
         android:autoStart="true" android:animateFirstView="false"
         android:measureAllChildren="false" android:contentDescription="Live Doom gameplay" />
-    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
-        android:orientation="horizontal" android:gravity="center_vertical"
-        android:baselineAligned="false">
-        <Button android:id="@+id/nm_doom_left" style="@style/NotiDoomControl" android:text="←" android:contentDescription="Turn left" />
-        <Button android:id="@+id/nm_doom_forward" style="@style/NotiDoomControl" android:text="↑" android:contentDescription="Move forward" />
-        <Button android:id="@+id/nm_doom_backward" style="@style/NotiDoomControl" android:text="↓" android:contentDescription="Move backward" />
-        <Button android:id="@+id/nm_doom_right" style="@style/NotiDoomControl" android:text="→" android:contentDescription="Turn right" />
-        <Button android:id="@+id/nm_doom_fire" style="@style/NotiDoomControl" android:text="Fire" android:textColor="#FFB08A" android:contentDescription="Fire weapon" />
-        <Button android:id="@+id/nm_doom_use" style="@style/NotiDoomControl" android:text="Use" android:contentDescription="Open door or use switch" />
-    </LinearLayout>
     <TextView android:id="@+id/nm_doom_status" android:layout_width="match_parent"
         android:layout_height="20dp" android:visibility="gone" android:gravity="center" android:textColor="#AAAAAA"
         android:textSize="10sp" android:maxLines="1" />

@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-29",
+  "apk": {
+    "path": "artifacts/doom-optimization/doom-max-size-release.apk",
+    "sha256": "2dc08f9fccab267cbc54163a99ec3a8f5f37e787e91392746a9b00162deb20da"
+  },
+  "canvas": {
+    "previous": [
+      640,
+      400
+    ],
+    "current": [
+      952,
+      595
+    ],
+    "sourceGame": [
+      320,
+      200
+    ],
+    "preservesAspect": true
+  },
+  "stream": {
+    "slots": 4,
+    "encodedDataBudgetBytes": 65536,
+    "requestedStepMs": 40
+  },
+  "emulator": {
+    "serial": "emulator-5554",
+    "androidApi": 36,
+    "liveBounds": {
+      "x": 179,
+      "y": 793,
+      "width": 817,
+      "height": 510
+    },
+    "pausedBounds": {
+      "x": 179,
+      "y": 793,
+      "width": 817,
+      "height": 510
+    },
+    "ui": {
+      "serial": "emulator-5554",
+      "checks": {
+        "imageUsesAvailableWidth": true,
+        "continuousCheckboxControlsVisible": true,
+        "nativeModeIsHold": true,
+        "oneTapHoldsRightBeyondOld250msPulse": true,
+        "collapsedControlsPreserveRightState": true,
+        "expandedControlsPreserveRightState": true,
+        "forwardAndRightHeldTogether": true,
+        "fireCanBeHeldAlongsideMovement": true,
+        "secondFireTapReleasesOnlyFire": true,
+        "useRemainsMomentary": true,
+        "pauseClearsAllHeldKeys": true,
+        "pausePreservesLargeImage": true,
+        "resumeStartsWithNoHeldKeys": true,
+        "leftCanBeHeld": true,
+        "secondLeftTapReleasesIt": true,
+        "backwardCanBeHeld": true,
+        "screenActuallySlept": true,
+        "screenOffClearsHeldKeys": true,
+        "stopRemovesDoomService": true
+      },
+      "complete": true,
+      "scope": "Real minified release app, SystemUI checkbox actions and native service state. No FPS or input-latency benchmark."
+    },
+    "motion": {
+      "movingMeanAbsoluteRgbDifference": 12.6453125,
+      "pausedMeanAbsoluteRgbDifference": 0,
+      "motionVisible": true,
+      "pausePixelsStable": true,
+      "method": "Owned image bounds from accessibility; screenshots downscaled to 32x20 RGB. Motion check only, no FPS or input-latency claim."
+    }
+  },
+  "xiaomi": {
+    "serial": "swge8phybixgsk9t",
+    "androidApi": 34,
+    "apkInstalled": true,
+    "visualValidation": true,
+    "userUnlocked": true,
+    "liveBounds": {
+      "x": 182,
+      "y": 1171,
+      "width": 815,
+      "height": 509
+    },
+    "pausedBounds": {
+      "x": 182,
+      "y": 1171,
+      "width": 815,
+      "height": 509
+    },
+    "ui": {
+      "serial": "swge8phybixgsk9t",
+      "checks": {
+        "imageUsesAvailableWidth": true,
+        "continuousCheckboxControlsVisible": true,
+        "nativeModeIsHold": true,
+        "oneTapHoldsRightBeyondOld250msPulse": true,
+        "collapsedControlsPreserveRightState": true,
+        "expandedControlsPreserveRightState": true,
+        "forwardAndRightHeldTogether": true,
+        "fireCanBeHeldAlongsideMovement": true,
+        "secondFireTapReleasesOnlyFire": true,
+        "useRemainsMomentary": true,
+        "pauseClearsAllHeldKeys": true,
+        "pausePreservesLargeImage": true,
+        "resumeStartsWithNoHeldKeys": true,
+        "leftCanBeHeld": true,
+        "secondLeftTapReleasesIt": true,
+        "stopRemovesDoomService": true
+      },
+      "complete": true,
+      "scope": "Real minified release app, SystemUI checkbox actions and native service state. No FPS or input-latency benchmark."
+    },
+    "motion": {
+      "movingMeanAbsoluteRgbDifference": 13.128645833333334,
+      "pausedMeanAbsoluteRgbDifference": 0,
+      "motionVisible": true,
+      "pausePixelsStable": true,
+      "method": "Owned image bounds from accessibility; screenshots downscaled to 32x20 RGB. Motion check only, no FPS or input-latency claim."
+    }
+  },
+  "codec": {
+    "independentDecoder": "JVM ImageIO",
+    "pixelExactFixtures": 24,
+    "realDoomProductionSpatialStep": 1,
+    "realDoomCompressedBytes": 53586
+  },
+  "checks": {
+    "minifiedReleaseBuild": true,
+    "typecheck": true,
+    "whitespace": true
+  },
+  "performanceScope": "Visible motion and stable pause verified. No new sustained FPS or input-latency benchmark."
+}

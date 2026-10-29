@@ -1,0 +1,5315 @@
+{
+  "schema": 1,
+  "sdk": 36,
+  "fingerprint": "google/sdk_gphone64_arm64/emu64a:16/BE2A.250530.026.F3/13894323:userdebug/dev-keys",
+  "widthPixels": 1080,
+  "heightPixels": 2400,
+  "density": 2.625,
+  "complete": true,
+  "results": [
+    {
+      "name": "inflate/FrameLayout",
+      "expected": "accept",
+      "uptimeMs": 369135529,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.FrameLayout"
+    },
+    {
+      "name": "inflate/LinearLayout",
+      "expected": "accept",
+      "uptimeMs": 369135578,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.LinearLayout"
+    },
+    {
+      "name": "inflate/RelativeLayout",
+      "expected": "accept",
+      "uptimeMs": 369135620,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.RelativeLayout"
+    },
+    {
+      "name": "inflate/GridLayout",
+      "expected": "accept",
+      "uptimeMs": 369135663,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.GridLayout"
+    },
+    {
+      "name": "inflate/TextView",
+      "expected": "accept",
+      "uptimeMs": 369135704,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.TextView"
+    },
+    {
+      "name": "inflate/Button",
+      "expected": "accept",
+      "uptimeMs": 369135748,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.Button"
+    },
+    {
+      "name": "inflate/ImageView",
+      "expected": "accept",
+      "uptimeMs": 369135791,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.ImageView"
+    },
+    {
+      "name": "inflate/ImageButton",
+      "expected": "accept",
+      "uptimeMs": 369135838,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.ImageButton"
+    },
+    {
+      "name": "inflate/ProgressBar",
+      "expected": "accept",
+      "uptimeMs": 369135887,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.ProgressBar"
+    },
+    {
+      "name": "inflate/Chronometer",
+      "expected": "accept",
+      "uptimeMs": 369135931,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.Chronometer"
+    },
+    {
+      "name": "inflate/TextClock",
+      "expected": "accept",
+      "uptimeMs": 369136024,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.TextClock"
+    },
+    {
+      "name": "inflate/AnalogClock",
+      "expected": "accept",
+      "uptimeMs": 369136069,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.AnalogClock"
+    },
+    {
+      "name": "inflate/ViewFlipper",
+      "expected": "accept",
+      "uptimeMs": 369136114,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.ViewFlipper"
+    },
+    {
+      "name": "inflate/AdapterViewFlipper",
+      "expected": "accept",
+      "uptimeMs": 369136155,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.AdapterViewFlipper"
+    },
+    {
+      "name": "inflate/ListView",
+      "expected": "accept",
+      "uptimeMs": 369136203,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.ListView"
+    },
+    {
+      "name": "inflate/GridView",
+      "expected": "accept",
+      "uptimeMs": 369136245,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.GridView"
+    },
+    {
+      "name": "inflate/StackView",
+      "expected": "accept",
+      "uptimeMs": 369136286,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.StackView"
+    },
+    {
+      "name": "inflate/CheckBox",
+      "expected": "accept",
+      "uptimeMs": 369136339,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.CheckBox"
+    },
+    {
+      "name": "inflate/Switch",
+      "expected": "accept",
+      "uptimeMs": 369136407,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.Switch"
+    },
+    {
+      "name": "inflate/RadioButton",
+      "expected": "accept",
+      "uptimeMs": 369136455,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.RadioButton"
+    },
+    {
+      "name": "inflate/RadioGroup",
+      "expected": "accept",
+      "uptimeMs": 369136500,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.RadioGroup"
+    },
+    {
+      "name": "inflate/View",
+      "expected": "reject",
+      "uptimeMs": 369136542,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_21: Binary XML file line #1 in dev.noti.flipperlab:layout/class_21: Error inflating class android.view.View",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_21: Class not allowed to be inflated android.view.View"
+    },
+    {
+      "name": "inflate/Space",
+      "expected": "reject",
+      "uptimeMs": 369136586,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_22: Binary XML file line #1 in dev.noti.flipperlab:layout/class_22: Error inflating class android.widget.Space",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_22: Class not allowed to be inflated android.widget.Space"
+    },
+    {
+      "name": "inflate/EditText",
+      "expected": "reject",
+      "uptimeMs": 369136627,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_23: Binary XML file line #1 in dev.noti.flipperlab:layout/class_23: Error inflating class android.widget.EditText",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_23: Class not allowed to be inflated android.widget.EditText"
+    },
+    {
+      "name": "inflate/WebView",
+      "expected": "reject",
+      "uptimeMs": 369136670,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_24: Binary XML file line #1 in dev.noti.flipperlab:layout/class_24: Error inflating class android.webkit.WebView",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_24: Class not allowed to be inflated android.webkit.WebView"
+    },
+    {
+      "name": "inflate/SurfaceView",
+      "expected": "reject",
+      "uptimeMs": 369136713,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_25: Binary XML file line #1 in dev.noti.flipperlab:layout/class_25: Error inflating class android.view.SurfaceView",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_25: Class not allowed to be inflated android.view.SurfaceView"
+    },
+    {
+      "name": "inflate/TextureView",
+      "expected": "reject",
+      "uptimeMs": 369136754,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_26: Binary XML file line #1 in dev.noti.flipperlab:layout/class_26: Error inflating class android.view.TextureView",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_26: Class not allowed to be inflated android.view.TextureView"
+    },
+    {
+      "name": "inflate/VideoView",
+      "expected": "reject",
+      "uptimeMs": 369136797,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_27: Binary XML file line #1 in dev.noti.flipperlab:layout/class_27: Error inflating class android.widget.VideoView",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_27: Class not allowed to be inflated android.widget.VideoView"
+    },
+    {
+      "name": "inflate/ScrollView",
+      "expected": "reject",
+      "uptimeMs": 369136840,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_28: Binary XML file line #1 in dev.noti.flipperlab:layout/class_28: Error inflating class android.widget.ScrollView",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_28: Class not allowed to be inflated android.widget.ScrollView"
+    },
+    {
+      "name": "inflate/CustomText",
+      "expected": "reject",
+      "uptimeMs": 369136883,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_29: Binary XML file line #1 in dev.noti.flipperlab:layout/class_29: Error inflating class dev.noti.flipperlab.CustomText",
+      "rootCause": "android.view.InflateException: Binary XML file line #1 in dev.noti.flipperlab:layout/class_29: Class not allowed to be inflated dev.noti.flipperlab.CustomText"
+    },
+    {
+      "name": "methods/remotable-inventory",
+      "expected": "accept",
+      "uptimeMs": 369136958,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": [
+        {
+          "class": "android.widget.ViewFlipper",
+          "methods": [
+            "public void android.view.View.setAccessibilityTraversalAfter(int)",
+            "public void android.view.View.setAccessibilityTraversalBefore(int)",
+            "public void android.view.View.setAlpha(float)",
+            "public void android.view.View.setBackgroundColor(int)",
+            "public void android.view.View.setBackgroundResource(int)",
+            "public void android.view.View.setBackgroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setBackgroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setClipToOutline(boolean)",
+            "public void android.view.View.setContentDescription(java.lang.CharSequence)",
+            "public void android.view.View.setElevation(float)",
+            "public void android.view.View.setEnabled(boolean)",
+            "public void android.view.View.setFocusable(boolean)",
+            "public void android.view.View.setFocusable(int)",
+            "public void android.view.View.setFocusableInTouchMode(boolean)",
+            "public void android.view.View.setFocusedByDefault(boolean)",
+            "public void android.view.View.setForegroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setForegroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setLabelFor(int)",
+            "public void android.view.View.setLayoutDirection(int)",
+            "public void android.view.View.setMinimumHeight(int)",
+            "public void android.view.View.setMinimumWidth(int)",
+            "public void android.view.View.setPivotX(float)",
+            "public void android.view.View.setPivotY(float)",
+            "public void android.view.View.setRotation(float)",
+            "public void android.view.View.setRotationX(float)",
+            "public void android.view.View.setRotationY(float)",
+            "public void android.view.View.setScaleX(float)",
+            "public void android.view.View.setScaleY(float)",
+            "public void android.view.View.setScrollIndicators(int)",
+            "public void android.view.View.setStateDescription(java.lang.CharSequence)",
+            "public void android.view.View.setSupplementalDescription(java.lang.CharSequence)",
+            "public void android.view.View.setTranslationX(float)",
+            "public void android.view.View.setTranslationY(float)",
+            "public void android.view.View.setTranslationZ(float)",
+            "public void android.view.View.setVisibility(int)",
+            "public void android.widget.FrameLayout.setForegroundGravity(int)",
+            "public void android.widget.FrameLayout.setMeasureAllChildren(boolean)",
+            "public void android.widget.ViewAnimator.setDisplayedChild(int)",
+            "public void android.widget.ViewAnimator.showNext()",
+            "public void android.widget.ViewAnimator.showPrevious()",
+            "public void android.widget.ViewFlipper.setFlipInterval(int)"
+          ]
+        },
+        {
+          "class": "android.widget.AdapterViewFlipper",
+          "methods": [
+            "public void android.view.View.setAccessibilityTraversalAfter(int)",
+            "public void android.view.View.setAccessibilityTraversalBefore(int)",
+            "public void android.view.View.setAlpha(float)",
+            "public void android.view.View.setBackgroundColor(int)",
+            "public void android.view.View.setBackgroundResource(int)",
+            "public void android.view.View.setBackgroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setBackgroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setClipToOutline(boolean)",
+            "public void android.view.View.setContentDescription(java.lang.CharSequence)",
+            "public void android.view.View.setElevation(float)",
+            "public void android.view.View.setEnabled(boolean)",
+            "public void android.view.View.setFocusable(boolean)",
+            "public void android.view.View.setFocusedByDefault(boolean)",
+            "public void android.view.View.setForegroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setForegroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setLabelFor(int)",
+            "public void android.view.View.setLayoutDirection(int)",
+            "public void android.view.View.setMinimumHeight(int)",
+            "public void android.view.View.setMinimumWidth(int)",
+            "public void android.view.View.setPivotX(float)",
+            "public void android.view.View.setPivotY(float)",
+            "public void android.view.View.setRotation(float)",
+            "public void android.view.View.setRotationX(float)",
+            "public void android.view.View.setRotationY(float)",
+            "public void android.view.View.setScaleX(float)",
+            "public void android.view.View.setScaleY(float)",
+            "public void android.view.View.setScrollIndicators(int)",
+            "public void android.view.View.setStateDescription(java.lang.CharSequence)",
+            "public void android.view.View.setSupplementalDescription(java.lang.CharSequence)",
+            "public void android.view.View.setTranslationX(float)",
+            "public void android.view.View.setTranslationY(float)",
+            "public void android.view.View.setTranslationZ(float)",
+            "public void android.view.View.setVisibility(int)",
+            "public void android.widget.AdapterView.setEmptyView(android.view.View)",
+            "public void android.widget.AdapterViewAnimator.setDisplayedChild(int)",
+            "public void android.widget.AdapterViewAnimator.setRemoteViewsAdapter(android.content.Intent)",
+            "public void android.widget.AdapterViewFlipper.showNext()",
+            "public void android.widget.AdapterViewFlipper.showPrevious()"
+          ]
+        },
+        {
+          "class": "android.widget.ImageView",
+          "methods": [
+            "public final void android.widget.ImageView.setColorFilter(int)",
+            "public void android.view.View.setAccessibilityTraversalAfter(int)",
+            "public void android.view.View.setAccessibilityTraversalBefore(int)",
+            "public void android.view.View.setAlpha(float)",
+            "public void android.view.View.setBackgroundColor(int)",
+            "public void android.view.View.setBackgroundResource(int)",
+            "public void android.view.View.setBackgroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setBackgroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setClipToOutline(boolean)",
+            "public void android.view.View.setContentDescription(java.lang.CharSequence)",
+            "public void android.view.View.setElevation(float)",
+            "public void android.view.View.setEnabled(boolean)",
+            "public void android.view.View.setFocusable(boolean)",
+            "public void android.view.View.setFocusable(int)",
+            "public void android.view.View.setFocusableInTouchMode(boolean)",
+            "public void android.view.View.setFocusedByDefault(boolean)",
+            "public void android.view.View.setForegroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setForegroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setLabelFor(int)",
+            "public void android.view.View.setLayoutDirection(int)",
+            "public void android.view.View.setMinimumHeight(int)",
+            "public void android.view.View.setMinimumWidth(int)",
+            "public void android.view.View.setPivotX(float)",
+            "public void android.view.View.setPivotY(float)",
+            "public void android.view.View.setRotation(float)",
+            "public void android.view.View.setRotationX(float)",
+            "public void android.view.View.setRotationY(float)",
+            "public void android.view.View.setScaleX(float)",
+            "public void android.view.View.setScaleY(float)",
+            "public void android.view.View.setScrollIndicators(int)",
+            "public void android.view.View.setStateDescription(java.lang.CharSequence)",
+            "public void android.view.View.setSupplementalDescription(java.lang.CharSequence)",
+            "public void android.view.View.setTranslationX(float)",
+            "public void android.view.View.setTranslationY(float)",
+            "public void android.view.View.setTranslationZ(float)",
+            "public void android.widget.ImageView.setAdjustViewBounds(boolean)",
+            "public void android.widget.ImageView.setAlpha(int)",
+            "public void android.widget.ImageView.setImageAlpha(int)",
+            "public void android.widget.ImageView.setImageBitmap(android.graphics.Bitmap)",
+            "public void android.widget.ImageView.setImageIcon(android.graphics.drawable.Icon)",
+            "public void android.widget.ImageView.setImageLevel(int)",
+            "public void android.widget.ImageView.setImageResource(int)",
+            "public void android.widget.ImageView.setImageTintBlendMode(android.graphics.BlendMode)",
+            "public void android.widget.ImageView.setImageTintList(android.content.res.ColorStateList)",
+            "public void android.widget.ImageView.setImageURI(android.net.Uri)",
+            "public void android.widget.ImageView.setMaxHeight(int)",
+            "public void android.widget.ImageView.setMaxWidth(int)",
+            "public void android.widget.ImageView.setVisibility(int)"
+          ]
+        },
+        {
+          "class": "android.widget.TextView",
+          "methods": [
+            "public boolean android.widget.TextView.setFontVariationSettings(java.lang.String)",
+            "public final void android.widget.TextView.setAutoLinkMask(int)",
+            "public final void android.widget.TextView.setHint(int)",
+            "public final void android.widget.TextView.setHint(java.lang.CharSequence)",
+            "public final void android.widget.TextView.setHintTextColor(int)",
+            "public final void android.widget.TextView.setLinkTextColor(int)",
+            "public final void android.widget.TextView.setLinksClickable(boolean)",
+            "public final void android.widget.TextView.setShowSoftInputOnFocus(boolean)",
+            "public final void android.widget.TextView.setText(int)",
+            "public final void android.widget.TextView.setText(java.lang.CharSequence)",
+            "public final void android.widget.TextView.setTextKeepState(java.lang.CharSequence)",
+            "public void android.view.View.setAccessibilityTraversalAfter(int)",
+            "public void android.view.View.setAccessibilityTraversalBefore(int)",
+            "public void android.view.View.setAlpha(float)",
+            "public void android.view.View.setBackgroundColor(int)",
+            "public void android.view.View.setBackgroundResource(int)",
+            "public void android.view.View.setBackgroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setBackgroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setClipToOutline(boolean)",
+            "public void android.view.View.setContentDescription(java.lang.CharSequence)",
+            "public void android.view.View.setElevation(float)",
+            "public void android.view.View.setFocusable(boolean)",
+            "public void android.view.View.setFocusable(int)",
+            "public void android.view.View.setFocusableInTouchMode(boolean)",
+            "public void android.view.View.setFocusedByDefault(boolean)",
+            "public void android.view.View.setForegroundTintBlendMode(android.graphics.BlendMode)",
+            "public void android.view.View.setForegroundTintList(android.content.res.ColorStateList)",
+            "public void android.view.View.setLabelFor(int)",
+            "public void android.view.View.setLayoutDirection(int)",
+            "public void android.view.View.setMinimumHeight(int)",
+            "public void android.view.View.setMinimumWidth(int)",
+            "public void android.view.View.setPivotX(float)",
+            "public void android.view.View.setPivotY(float)",
+            "public void android.view.View.setRotation(float)",
+            "public void android.view.View.setRotationX(float)",
+            "public void android.view.View.setRotationY(float)",
+            "public void android.view.View.setScaleX(float)",
+            "public void android.view.View.setScaleY(float)",
+            "public void android.view.View.setScrollIndicators(int)",
+            "public void android.view.View.setStateDescription(java.lang.CharSequence)",
+            "public void android.view.View.setSupplementalDescription(java.lang.CharSequence)",
+            "public void android.view.View.setTranslationX(float)",
+            "public void android.view.View.setTranslationY(float)",
+            "public void android.view.View.setTranslationZ(float)",
+            "public void android.view.View.setVisibility(int)",
+            "public void android.widget.TextView.setAllCaps(boolean)",
+            "public void android.widget.TextView.setCompoundDrawablePadding(int)",
+            "public void android.widget.TextView.setCompoundDrawablesRelative(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)",
+            "public void android.widget.TextView.setCompoundDrawablesRelativeWithIntrinsicBounds(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)",
+            "public void android.widget.TextView.setCompoundDrawablesRelativeWithIntrinsicBounds(int,int,int,int)",
+            "public void android.widget.TextView.setCompoundDrawablesWithIntrinsicBounds(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable)",
+            "public void android.widget.TextView.setCompoundDrawablesWithIntrinsicBounds(int,int,int,int)",
+            "public void android.widget.TextView.setCursorVisible(boolean)",
+            "public void android.widget.TextView.setEms(int)",
+            "public void android.widget.TextView.setEnabled(boolean)",
+            "public void android.widget.TextView.setError(java.lang.CharSequence)",
+            "public void android.widget.TextView.setFontFeatureSettings(java.lang.String)",
+            "public void android.widget.TextView.setFreezesText(boolean)",
+            "public void android.widget.TextView.setGravity(int)",
+            "public void android.widget.TextView.setHeight(int)",
+            "public void android.widget.TextView.setHighlightColor(int)",
+            "public void android.widget.TextView.setJustificationMode(int)",
+            "public void android.widget.TextView.setLetterSpacing(float)",
+            "public void android.widget.TextView.setLineHeight(int)",
+            "public void android.widget.TextView.setLineHeight(int,float)",
+            "public void android.widget.TextView.setLines(int)",
+            "public void android.widget.TextView.setMaxEms(int)",
+            "public void android.widget.TextView.setMaxHeight(int)",
+            "public void android.widget.TextView.setMaxLines(int)",
+            "public void android.widget.TextView.setMaxWidth(int)",
+            "public void android.widget.TextView.setMinEms(int)",
+            "public void android.widget.TextView.setMinHeight(int)",
+            "public void android.widget.TextView.setMinLines(int)",
+            "public void android.widget.TextView.setMinWidth(int)",
+            "public void android.widget.TextView.setPaintFlags(int)",
+            "public void android.widget.TextView.setSelectAllOnFocus(boolean)",
+            "public void android.widget.TextView.setSingleLine(boolean)",
+            "public void android.widget.TextView.setTextColor(android.content.res.ColorStateList)",
+            "public void android.widget.TextView.setTextColor(int)",
+            "public void android.widget.TextView.setTextScaleX(float)",
+            "public void android.widget.TextView.setTextSelectHandle(android.graphics.drawable.Drawable)",
+            "public void android.widget.TextView.setTextSelectHandle(int)",
+            "public void android.widget.TextView.setTextSelectHandleLeft(android.graphics.drawable.Drawable)",
+            "public void android.widget.TextView.setTextSelectHandleLeft(int)",
+            "public void android.widget.TextView.setTextSelectHandleRight(android.graphics.drawable.Drawable)",
+            "public void android.widget.TextView.setTextSelectHandleRight(int)",
+            "public void android.widget.TextView.setTextSize(float)",
+            "public void android.widget.TextView.setWidth(int)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "method/setAlpha",
+      "expected": "observe",
+      "uptimeMs": 369137003,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setRotation",
+      "expected": "observe",
+      "uptimeMs": 369137046,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setRotationX",
+      "expected": "observe",
+      "uptimeMs": 369137091,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setRotationY",
+      "expected": "observe",
+      "uptimeMs": 369137136,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setScaleX",
+      "expected": "observe",
+      "uptimeMs": 369137181,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setScaleY",
+      "expected": "observe",
+      "uptimeMs": 369137224,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setTranslationX",
+      "expected": "observe",
+      "uptimeMs": 369137273,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setTranslationY",
+      "expected": "observe",
+      "uptimeMs": 369137319,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setTranslationZ",
+      "expected": "observe",
+      "uptimeMs": 369137361,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setElevation",
+      "expected": "observe",
+      "uptimeMs": 369137403,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "applied"
+    },
+    {
+      "name": "method/setAutoStart",
+      "expected": "reject",
+      "uptimeMs": 369137446,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.widget.RemoteViews$ActionException: android.widget.RemoteViews$ActionException: view: android.widget.ViewFlipper can't use method with RemoteViews: setAutoStart(boolean)",
+      "rootCause": "android.widget.RemoteViews$ActionException: view: android.widget.ViewFlipper can't use method with RemoteViews: setAutoStart(boolean)"
+    },
+    {
+      "name": "method/setAnimateFirstView",
+      "expected": "reject",
+      "uptimeMs": 369137493,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.widget.RemoteViews$ActionException: android.widget.RemoteViews$ActionException: view: android.widget.ViewFlipper can't use method with RemoteViews: setAnimateFirstView(boolean)",
+      "rootCause": "android.widget.RemoteViews$ActionException: view: android.widget.ViewFlipper can't use method with RemoteViews: setAnimateFirstView(boolean)"
+    },
+    {
+      "name": "method/AdapterViewFlipper.setFlipInterval",
+      "expected": "reject",
+      "uptimeMs": 369137535,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "android.widget.RemoteViews$ActionException: android.widget.RemoteViews$ActionException: view: android.widget.AdapterViewFlipper can't use method with RemoteViews: setFlipInterval(int)",
+      "rootCause": "android.widget.RemoteViews$ActionException: view: android.widget.AdapterViewFlipper can't use method with RemoteViews: setFlipInterval(int)"
+    },
+    {
+      "name": "interval/accepts--1",
+      "expected": "accept",
+      "uptimeMs": 369137577,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": -1
+    },
+    {
+      "name": "interval/accepts-0",
+      "expected": "accept",
+      "uptimeMs": 369137620,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 0
+    },
+    {
+      "name": "interval/accepts-1",
+      "expected": "accept",
+      "uptimeMs": 369137668,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 1
+    },
+    {
+      "name": "interval/accepts-8",
+      "expected": "accept",
+      "uptimeMs": 369137713,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 8
+    },
+    {
+      "name": "interval/accepts-16",
+      "expected": "accept",
+      "uptimeMs": 369137763,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 16
+    },
+    {
+      "name": "interval/accepts-33",
+      "expected": "accept",
+      "uptimeMs": 369137809,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 33
+    },
+    {
+      "name": "interval/accepts-1000",
+      "expected": "accept",
+      "uptimeMs": 369137852,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 1000
+    },
+    {
+      "name": "children/1",
+      "expected": "accept",
+      "uptimeMs": 369137895,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "children": 1,
+        "parcelBytes": 1868,
+        "inflateMs": 0.562083
+      }
+    },
+    {
+      "name": "children/13",
+      "expected": "accept",
+      "uptimeMs": 369137940,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "children": 13,
+        "parcelBytes": 4328,
+        "inflateMs": 1.120459
+      }
+    },
+    {
+      "name": "children/60",
+      "expected": "accept",
+      "uptimeMs": 369137989,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "children": 60,
+        "parcelBytes": 14104,
+        "inflateMs": 5.013709
+      }
+    },
+    {
+      "name": "children/120",
+      "expected": "accept",
+      "uptimeMs": 369138039,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "children": 120,
+        "parcelBytes": 26584,
+        "inflateMs": 8.139417
+      }
+    },
+    {
+      "name": "children/512",
+      "expected": "accept",
+      "uptimeMs": 369138131,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "children": 512,
+        "parcelBytes": 108120,
+        "inflateMs": 45.783667
+      }
+    },
+    {
+      "name": "nested-RemoteViews/9",
+      "expected": "accept",
+      "uptimeMs": 369138175,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.FrameLayout"
+    },
+    {
+      "name": "nested-RemoteViews/10",
+      "expected": "accept",
+      "uptimeMs": 369138219,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.FrameLayout"
+    },
+    {
+      "name": "nested-RemoteViews/11",
+      "expected": "reject",
+      "uptimeMs": 369138260,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "java.lang.IllegalArgumentException: Too many nested views.",
+      "rootCause": "java.lang.IllegalArgumentException: Too many nested views."
+    },
+    {
+      "name": "nested-RemoteViews/12",
+      "expected": "reject",
+      "uptimeMs": 369138317,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "java.lang.IllegalArgumentException: Too many nested views.",
+      "rootCause": "java.lang.IllegalArgumentException: Too many nested views."
+    },
+    {
+      "name": "xml-depth/32",
+      "expected": "accept",
+      "uptimeMs": 369138361,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "android.widget.FrameLayout"
+    },
+    {
+      "name": "index/negative-and-overflow",
+      "expected": "accept",
+      "uptimeMs": 369138405,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "negativeIndex": 12,
+        "overflowIndex": 0
+      }
+    },
+    {
+      "name": "reapply/preserve-and-reset-index",
+      "expected": "accept",
+      "uptimeMs": 369138451,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "preserved": 7,
+        "explicitReset": 0
+      }
+    },
+    {
+      "name": "bitmap/cache-identity",
+      "expected": "accept",
+      "uptimeMs": 369138504,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "sharedInputBitmapBytes": 65536,
+        "distinctInputBitmapBytes": 1310720,
+        "sharedParcelBytes": 3740,
+        "distinctParcelBytes": 6704
+      }
+    },
+    {
+      "name": "bitmap/URI-accounting",
+      "expected": "accept",
+      "uptimeMs": 369138688,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "inlineBitmapBytes": 0,
+        "parcelBytes": 16640,
+        "decodedFrames": 96,
+        "decodedArgbBytes": 7372800
+      }
+    },
+    {
+      "name": "lifecycle/GONE-child-keeps-ticking",
+      "expected": "accept",
+      "uptimeMs": 369139388,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "before": 0,
+        "after": 19,
+        "isShown": false,
+        "started": true
+      }
+    },
+    {
+      "name": "lifecycle/detached-stops-ticking",
+      "expected": "accept",
+      "uptimeMs": 369140082,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "before": 20,
+        "after": 20,
+        "isFlippingStillReturns": true
+      }
+    },
+    {
+      "name": "animation/one-child-infinite-XML",
+      "expected": "accept",
+      "uptimeMs": 369140630,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "childCount": 1,
+        "started": true,
+        "repeatCount": -1,
+        "durationMs": 700
+      }
+    },
+    {
+      "name": "animation/state-list-without-flipper",
+      "expected": "accept",
+      "uptimeMs": 369141232,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "translationX": 180,
+        "rotation": 7.6536674,
+        "flipperCount": 0
+      }
+    },
+    {
+      "name": "interaction/legacy-animation-hit-geometry",
+      "expected": "accept",
+      "uptimeMs": 369141410,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "originalBoundsTouchDowns": 1,
+        "translatedVisualBoundsTouchDowns": 0,
+        "visualOffsetPixels": 120
+      }
+    },
+    {
+      "name": "draw-instructions/public-api-and-inflation",
+      "expected": "accept",
+      "uptimeMs": 369141607,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "supportedDocumentApiLevel": 6,
+        "wireBytes": 119,
+        "parcelBytes": 188,
+        "playerClass": "com.android.internal.widget.remotecompose.player.RemoteComposePlayer"
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-1ms",
+      "expected": "accept",
+      "uptimeMs": 369143410,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 1,
+        "durationMs": 1723,
+        "vsyncSamples": 70,
+        "indexChanges": 68,
+        "selectedSteps": 68,
+        "changesPerSecond": 39.46604759141033,
+        "samples": [
+          {
+            "elapsedMs": 0,
+            "index": 0
+          },
+          {
+            "elapsedMs": 11,
+            "index": 1
+          },
+          {
+            "elapsedMs": 34,
+            "index": 2
+          },
+          {
+            "elapsedMs": 54,
+            "index": 3
+          },
+          {
+            "elapsedMs": 79,
+            "index": 4
+          },
+          {
+            "elapsedMs": 102,
+            "index": 5
+          },
+          {
+            "elapsedMs": 119,
+            "index": 6
+          },
+          {
+            "elapsedMs": 157,
+            "index": 7
+          },
+          {
+            "elapsedMs": 186,
+            "index": 8
+          },
+          {
+            "elapsedMs": 225,
+            "index": 9
+          },
+          {
+            "elapsedMs": 241,
+            "index": 10
+          },
+          {
+            "elapsedMs": 272,
+            "index": 11
+          },
+          {
+            "elapsedMs": 292,
+            "index": 11
+          },
+          {
+            "elapsedMs": 306,
+            "index": 12
+          },
+          {
+            "elapsedMs": 323,
+            "index": 13
+          },
+          {
+            "elapsedMs": 346,
+            "index": 14
+          },
+          {
+            "elapsedMs": 358,
+            "index": 15
+          },
+          {
+            "elapsedMs": 394,
+            "index": 16
+          },
+          {
+            "elapsedMs": 427,
+            "index": 17
+          },
+          {
+            "elapsedMs": 442,
+            "index": 18
+          },
+          {
+            "elapsedMs": 478,
+            "index": 19
+          },
+          {
+            "elapsedMs": 497,
+            "index": 20
+          },
+          {
+            "elapsedMs": 519,
+            "index": 21
+          },
+          {
+            "elapsedMs": 542,
+            "index": 22
+          },
+          {
+            "elapsedMs": 568,
+            "index": 23
+          },
+          {
+            "elapsedMs": 595,
+            "index": 24
+          },
+          {
+            "elapsedMs": 620,
+            "index": 25
+          },
+          {
+            "elapsedMs": 645,
+            "index": 26
+          },
+          {
+            "elapsedMs": 671,
+            "index": 27
+          },
+          {
+            "elapsedMs": 710,
+            "index": 28
+          },
+          {
+            "elapsedMs": 732,
+            "index": 29
+          },
+          {
+            "elapsedMs": 757,
+            "index": 30
+          },
+          {
+            "elapsedMs": 774,
+            "index": 31
+          },
+          {
+            "elapsedMs": 809,
+            "index": 32
+          },
+          {
+            "elapsedMs": 843,
+            "index": 33
+          },
+          {
+            "elapsedMs": 870,
+            "index": 34
+          },
+          {
+            "elapsedMs": 879,
+            "index": 35
+          },
+          {
+            "elapsedMs": 917,
+            "index": 36
+          },
+          {
+            "elapsedMs": 940,
+            "index": 37
+          },
+          {
+            "elapsedMs": 965,
+            "index": 38
+          },
+          {
+            "elapsedMs": 990,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1015,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1045,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1069,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1090,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1113,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1134,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1159,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1190,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1207,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1227,
+            "index": 49
+          },
+          {
+            "elapsedMs": 1265,
+            "index": 50
+          },
+          {
+            "elapsedMs": 1303,
+            "index": 51
+          },
+          {
+            "elapsedMs": 1311,
+            "index": 52
+          },
+          {
+            "elapsedMs": 1349,
+            "index": 53
+          },
+          {
+            "elapsedMs": 1362,
+            "index": 54
+          },
+          {
+            "elapsedMs": 1395,
+            "index": 55
+          },
+          {
+            "elapsedMs": 1438,
+            "index": 56
+          },
+          {
+            "elapsedMs": 1454,
+            "index": 57
+          },
+          {
+            "elapsedMs": 1492,
+            "index": 58
+          },
+          {
+            "elapsedMs": 1513,
+            "index": 59
+          },
+          {
+            "elapsedMs": 1537,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1557,
+            "index": 61
+          },
+          {
+            "elapsedMs": 1574,
+            "index": 62
+          },
+          {
+            "elapsedMs": 1608,
+            "index": 63
+          },
+          {
+            "elapsedMs": 1626,
+            "index": 64
+          },
+          {
+            "elapsedMs": 1659,
+            "index": 65
+          },
+          {
+            "elapsedMs": 1674,
+            "index": 66
+          },
+          {
+            "elapsedMs": 1699,
+            "index": 67
+          },
+          {
+            "elapsedMs": 1723,
+            "index": 68
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-8ms",
+      "expected": "accept",
+      "uptimeMs": 369145169,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 8,
+        "durationMs": 1703,
+        "vsyncSamples": 80,
+        "indexChanges": 63,
+        "selectedSteps": 63,
+        "changesPerSecond": 36.9935408103347,
+        "samples": [
+          {
+            "elapsedMs": 0,
+            "index": 0
+          },
+          {
+            "elapsedMs": 17,
+            "index": 1
+          },
+          {
+            "elapsedMs": 33,
+            "index": 2
+          },
+          {
+            "elapsedMs": 72,
+            "index": 3
+          },
+          {
+            "elapsedMs": 83,
+            "index": 3
+          },
+          {
+            "elapsedMs": 95,
+            "index": 4
+          },
+          {
+            "elapsedMs": 112,
+            "index": 5
+          },
+          {
+            "elapsedMs": 155,
+            "index": 6
+          },
+          {
+            "elapsedMs": 173,
+            "index": 6
+          },
+          {
+            "elapsedMs": 178,
+            "index": 7
+          },
+          {
+            "elapsedMs": 200,
+            "index": 8
+          },
+          {
+            "elapsedMs": 223,
+            "index": 9
+          },
+          {
+            "elapsedMs": 248,
+            "index": 9
+          },
+          {
+            "elapsedMs": 261,
+            "index": 10
+          },
+          {
+            "elapsedMs": 278,
+            "index": 11
+          },
+          {
+            "elapsedMs": 318,
+            "index": 12
+          },
+          {
+            "elapsedMs": 336,
+            "index": 13
+          },
+          {
+            "elapsedMs": 365,
+            "index": 13
+          },
+          {
+            "elapsedMs": 377,
+            "index": 14
+          },
+          {
+            "elapsedMs": 394,
+            "index": 15
+          },
+          {
+            "elapsedMs": 411,
+            "index": 16
+          },
+          {
+            "elapsedMs": 433,
+            "index": 17
+          },
+          {
+            "elapsedMs": 459,
+            "index": 18
+          },
+          {
+            "elapsedMs": 493,
+            "index": 18
+          },
+          {
+            "elapsedMs": 499,
+            "index": 19
+          },
+          {
+            "elapsedMs": 524,
+            "index": 20
+          },
+          {
+            "elapsedMs": 570,
+            "index": 20
+          },
+          {
+            "elapsedMs": 577,
+            "index": 21
+          },
+          {
+            "elapsedMs": 596,
+            "index": 22
+          },
+          {
+            "elapsedMs": 619,
+            "index": 23
+          },
+          {
+            "elapsedMs": 648,
+            "index": 23
+          },
+          {
+            "elapsedMs": 660,
+            "index": 24
+          },
+          {
+            "elapsedMs": 677,
+            "index": 25
+          },
+          {
+            "elapsedMs": 693,
+            "index": 26
+          },
+          {
+            "elapsedMs": 717,
+            "index": 27
+          },
+          {
+            "elapsedMs": 736,
+            "index": 28
+          },
+          {
+            "elapsedMs": 768,
+            "index": 28
+          },
+          {
+            "elapsedMs": 779,
+            "index": 29
+          },
+          {
+            "elapsedMs": 799,
+            "index": 30
+          },
+          {
+            "elapsedMs": 815,
+            "index": 31
+          },
+          {
+            "elapsedMs": 843,
+            "index": 32
+          },
+          {
+            "elapsedMs": 893,
+            "index": 32
+          },
+          {
+            "elapsedMs": 911,
+            "index": 33
+          },
+          {
+            "elapsedMs": 928,
+            "index": 34
+          },
+          {
+            "elapsedMs": 943,
+            "index": 35
+          },
+          {
+            "elapsedMs": 964,
+            "index": 36
+          },
+          {
+            "elapsedMs": 984,
+            "index": 37
+          },
+          {
+            "elapsedMs": 1014,
+            "index": 38
+          },
+          {
+            "elapsedMs": 1041,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1070,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1078,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1093,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1124,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1140,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1143,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1169,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1226,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1227,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1251,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1282,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1305,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1336,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1343,
+            "index": 49
+          },
+          {
+            "elapsedMs": 1361,
+            "index": 50
+          },
+          {
+            "elapsedMs": 1378,
+            "index": 51
+          },
+          {
+            "elapsedMs": 1397,
+            "index": 52
+          },
+          {
+            "elapsedMs": 1423,
+            "index": 53
+          },
+          {
+            "elapsedMs": 1459,
+            "index": 53
+          },
+          {
+            "elapsedMs": 1460,
+            "index": 54
+          },
+          {
+            "elapsedMs": 1484,
+            "index": 55
+          },
+          {
+            "elapsedMs": 1513,
+            "index": 56
+          },
+          {
+            "elapsedMs": 1528,
+            "index": 57
+          },
+          {
+            "elapsedMs": 1555,
+            "index": 58
+          },
+          {
+            "elapsedMs": 1573,
+            "index": 58
+          },
+          {
+            "elapsedMs": 1579,
+            "index": 59
+          },
+          {
+            "elapsedMs": 1621,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1646,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1660,
+            "index": 61
+          },
+          {
+            "elapsedMs": 1679,
+            "index": 62
+          },
+          {
+            "elapsedMs": 1703,
+            "index": 63
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-16ms",
+      "expected": "accept",
+      "uptimeMs": 369146966,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 16,
+        "durationMs": 1722,
+        "vsyncSamples": 93,
+        "indexChanges": 68,
+        "selectedSteps": 68,
+        "changesPerSecond": 39.48896631823461,
+        "samples": [
+          {
+            "elapsedMs": 0,
+            "index": 0
+          },
+          {
+            "elapsedMs": 15,
+            "index": 0
+          },
+          {
+            "elapsedMs": 46,
+            "index": 1
+          },
+          {
+            "elapsedMs": 60,
+            "index": 2
+          },
+          {
+            "elapsedMs": 88,
+            "index": 2
+          },
+          {
+            "elapsedMs": 100,
+            "index": 3
+          },
+          {
+            "elapsedMs": 116,
+            "index": 4
+          },
+          {
+            "elapsedMs": 138,
+            "index": 5
+          },
+          {
+            "elapsedMs": 159,
+            "index": 5
+          },
+          {
+            "elapsedMs": 166,
+            "index": 6
+          },
+          {
+            "elapsedMs": 182,
+            "index": 7
+          },
+          {
+            "elapsedMs": 207,
+            "index": 8
+          },
+          {
+            "elapsedMs": 233,
+            "index": 8
+          },
+          {
+            "elapsedMs": 234,
+            "index": 9
+          },
+          {
+            "elapsedMs": 251,
+            "index": 9
+          },
+          {
+            "elapsedMs": 266,
+            "index": 10
+          },
+          {
+            "elapsedMs": 282,
+            "index": 11
+          },
+          {
+            "elapsedMs": 302,
+            "index": 12
+          },
+          {
+            "elapsedMs": 331,
+            "index": 13
+          },
+          {
+            "elapsedMs": 345,
+            "index": 13
+          },
+          {
+            "elapsedMs": 349,
+            "index": 14
+          },
+          {
+            "elapsedMs": 373,
+            "index": 15
+          },
+          {
+            "elapsedMs": 396,
+            "index": 15
+          },
+          {
+            "elapsedMs": 398,
+            "index": 16
+          },
+          {
+            "elapsedMs": 417,
+            "index": 17
+          },
+          {
+            "elapsedMs": 434,
+            "index": 17
+          },
+          {
+            "elapsedMs": 449,
+            "index": 18
+          },
+          {
+            "elapsedMs": 484,
+            "index": 19
+          },
+          {
+            "elapsedMs": 501,
+            "index": 19
+          },
+          {
+            "elapsedMs": 518,
+            "index": 20
+          },
+          {
+            "elapsedMs": 533,
+            "index": 21
+          },
+          {
+            "elapsedMs": 549,
+            "index": 22
+          },
+          {
+            "elapsedMs": 597,
+            "index": 23
+          },
+          {
+            "elapsedMs": 630,
+            "index": 23
+          },
+          {
+            "elapsedMs": 633,
+            "index": 24
+          },
+          {
+            "elapsedMs": 649,
+            "index": 25
+          },
+          {
+            "elapsedMs": 671,
+            "index": 26
+          },
+          {
+            "elapsedMs": 690,
+            "index": 26
+          },
+          {
+            "elapsedMs": 699,
+            "index": 27
+          },
+          {
+            "elapsedMs": 717,
+            "index": 28
+          },
+          {
+            "elapsedMs": 742,
+            "index": 28
+          },
+          {
+            "elapsedMs": 749,
+            "index": 29
+          },
+          {
+            "elapsedMs": 766,
+            "index": 30
+          },
+          {
+            "elapsedMs": 802,
+            "index": 31
+          },
+          {
+            "elapsedMs": 817,
+            "index": 31
+          },
+          {
+            "elapsedMs": 832,
+            "index": 32
+          },
+          {
+            "elapsedMs": 849,
+            "index": 33
+          },
+          {
+            "elapsedMs": 866,
+            "index": 34
+          },
+          {
+            "elapsedMs": 891,
+            "index": 35
+          },
+          {
+            "elapsedMs": 900,
+            "index": 35
+          },
+          {
+            "elapsedMs": 916,
+            "index": 36
+          },
+          {
+            "elapsedMs": 935,
+            "index": 37
+          },
+          {
+            "elapsedMs": 955,
+            "index": 37
+          },
+          {
+            "elapsedMs": 968,
+            "index": 38
+          },
+          {
+            "elapsedMs": 984,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1014,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1035,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1050,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1066,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1085,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1118,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1132,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1149,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1166,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1189,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1211,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1215,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1239,
+            "index": 49
+          },
+          {
+            "elapsedMs": 1273,
+            "index": 49
+          },
+          {
+            "elapsedMs": 1282,
+            "index": 50
+          },
+          {
+            "elapsedMs": 1300,
+            "index": 51
+          },
+          {
+            "elapsedMs": 1315,
+            "index": 52
+          },
+          {
+            "elapsedMs": 1334,
+            "index": 53
+          },
+          {
+            "elapsedMs": 1367,
+            "index": 53
+          },
+          {
+            "elapsedMs": 1383,
+            "index": 54
+          },
+          {
+            "elapsedMs": 1398,
+            "index": 55
+          },
+          {
+            "elapsedMs": 1427,
+            "index": 56
+          },
+          {
+            "elapsedMs": 1444,
+            "index": 56
+          },
+          {
+            "elapsedMs": 1449,
+            "index": 57
+          },
+          {
+            "elapsedMs": 1466,
+            "index": 58
+          },
+          {
+            "elapsedMs": 1490,
+            "index": 59
+          },
+          {
+            "elapsedMs": 1517,
+            "index": 59
+          },
+          {
+            "elapsedMs": 1533,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1549,
+            "index": 61
+          },
+          {
+            "elapsedMs": 1566,
+            "index": 62
+          },
+          {
+            "elapsedMs": 1606,
+            "index": 63
+          },
+          {
+            "elapsedMs": 1618,
+            "index": 63
+          },
+          {
+            "elapsedMs": 1632,
+            "index": 64
+          },
+          {
+            "elapsedMs": 1656,
+            "index": 65
+          },
+          {
+            "elapsedMs": 1675,
+            "index": 65
+          },
+          {
+            "elapsedMs": 1683,
+            "index": 66
+          },
+          {
+            "elapsedMs": 1699,
+            "index": 67
+          },
+          {
+            "elapsedMs": 1722,
+            "index": 68
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-33ms",
+      "expected": "accept",
+      "uptimeMs": 369148743,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 33,
+        "durationMs": 1707,
+        "vsyncSamples": 102,
+        "indexChanges": 49,
+        "selectedSteps": 49,
+        "changesPerSecond": 28.70533099004101,
+        "samples": [
+          {
+            "elapsedMs": 7,
+            "index": 0
+          },
+          {
+            "elapsedMs": 27,
+            "index": 0
+          },
+          {
+            "elapsedMs": 41,
+            "index": 1
+          },
+          {
+            "elapsedMs": 57,
+            "index": 1
+          },
+          {
+            "elapsedMs": 74,
+            "index": 2
+          },
+          {
+            "elapsedMs": 91,
+            "index": 2
+          },
+          {
+            "elapsedMs": 108,
+            "index": 3
+          },
+          {
+            "elapsedMs": 123,
+            "index": 3
+          },
+          {
+            "elapsedMs": 140,
+            "index": 4
+          },
+          {
+            "elapsedMs": 158,
+            "index": 4
+          },
+          {
+            "elapsedMs": 174,
+            "index": 5
+          },
+          {
+            "elapsedMs": 191,
+            "index": 5
+          },
+          {
+            "elapsedMs": 206,
+            "index": 6
+          },
+          {
+            "elapsedMs": 224,
+            "index": 6
+          },
+          {
+            "elapsedMs": 241,
+            "index": 7
+          },
+          {
+            "elapsedMs": 257,
+            "index": 7
+          },
+          {
+            "elapsedMs": 275,
+            "index": 8
+          },
+          {
+            "elapsedMs": 291,
+            "index": 8
+          },
+          {
+            "elapsedMs": 308,
+            "index": 9
+          },
+          {
+            "elapsedMs": 324,
+            "index": 9
+          },
+          {
+            "elapsedMs": 340,
+            "index": 10
+          },
+          {
+            "elapsedMs": 357,
+            "index": 10
+          },
+          {
+            "elapsedMs": 373,
+            "index": 11
+          },
+          {
+            "elapsedMs": 390,
+            "index": 11
+          },
+          {
+            "elapsedMs": 407,
+            "index": 12
+          },
+          {
+            "elapsedMs": 423,
+            "index": 12
+          },
+          {
+            "elapsedMs": 442,
+            "index": 13
+          },
+          {
+            "elapsedMs": 459,
+            "index": 13
+          },
+          {
+            "elapsedMs": 474,
+            "index": 13
+          },
+          {
+            "elapsedMs": 491,
+            "index": 14
+          },
+          {
+            "elapsedMs": 507,
+            "index": 14
+          },
+          {
+            "elapsedMs": 525,
+            "index": 15
+          },
+          {
+            "elapsedMs": 540,
+            "index": 15
+          },
+          {
+            "elapsedMs": 557,
+            "index": 16
+          },
+          {
+            "elapsedMs": 573,
+            "index": 16
+          },
+          {
+            "elapsedMs": 590,
+            "index": 17
+          },
+          {
+            "elapsedMs": 607,
+            "index": 17
+          },
+          {
+            "elapsedMs": 624,
+            "index": 18
+          },
+          {
+            "elapsedMs": 640,
+            "index": 18
+          },
+          {
+            "elapsedMs": 657,
+            "index": 19
+          },
+          {
+            "elapsedMs": 674,
+            "index": 19
+          },
+          {
+            "elapsedMs": 690,
+            "index": 20
+          },
+          {
+            "elapsedMs": 707,
+            "index": 20
+          },
+          {
+            "elapsedMs": 726,
+            "index": 21
+          },
+          {
+            "elapsedMs": 742,
+            "index": 21
+          },
+          {
+            "elapsedMs": 758,
+            "index": 22
+          },
+          {
+            "elapsedMs": 779,
+            "index": 22
+          },
+          {
+            "elapsedMs": 790,
+            "index": 23
+          },
+          {
+            "elapsedMs": 807,
+            "index": 23
+          },
+          {
+            "elapsedMs": 824,
+            "index": 24
+          },
+          {
+            "elapsedMs": 840,
+            "index": 24
+          },
+          {
+            "elapsedMs": 860,
+            "index": 25
+          },
+          {
+            "elapsedMs": 874,
+            "index": 25
+          },
+          {
+            "elapsedMs": 890,
+            "index": 26
+          },
+          {
+            "elapsedMs": 908,
+            "index": 26
+          },
+          {
+            "elapsedMs": 923,
+            "index": 27
+          },
+          {
+            "elapsedMs": 940,
+            "index": 27
+          },
+          {
+            "elapsedMs": 957,
+            "index": 28
+          },
+          {
+            "elapsedMs": 974,
+            "index": 28
+          },
+          {
+            "elapsedMs": 991,
+            "index": 29
+          },
+          {
+            "elapsedMs": 1007,
+            "index": 29
+          },
+          {
+            "elapsedMs": 1025,
+            "index": 30
+          },
+          {
+            "elapsedMs": 1040,
+            "index": 30
+          },
+          {
+            "elapsedMs": 1057,
+            "index": 31
+          },
+          {
+            "elapsedMs": 1074,
+            "index": 31
+          },
+          {
+            "elapsedMs": 1092,
+            "index": 32
+          },
+          {
+            "elapsedMs": 1107,
+            "index": 32
+          },
+          {
+            "elapsedMs": 1124,
+            "index": 33
+          },
+          {
+            "elapsedMs": 1140,
+            "index": 33
+          },
+          {
+            "elapsedMs": 1157,
+            "index": 33
+          },
+          {
+            "elapsedMs": 1173,
+            "index": 34
+          },
+          {
+            "elapsedMs": 1190,
+            "index": 35
+          },
+          {
+            "elapsedMs": 1207,
+            "index": 35
+          },
+          {
+            "elapsedMs": 1223,
+            "index": 36
+          },
+          {
+            "elapsedMs": 1240,
+            "index": 36
+          },
+          {
+            "elapsedMs": 1257,
+            "index": 37
+          },
+          {
+            "elapsedMs": 1275,
+            "index": 37
+          },
+          {
+            "elapsedMs": 1292,
+            "index": 38
+          },
+          {
+            "elapsedMs": 1308,
+            "index": 38
+          },
+          {
+            "elapsedMs": 1324,
+            "index": 38
+          },
+          {
+            "elapsedMs": 1340,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1357,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1375,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1392,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1409,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1423,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1440,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1478,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1490,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1507,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1524,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1541,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1557,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1573,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1590,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1608,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1623,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1641,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1657,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1674,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1691,
+            "index": 49
+          },
+          {
+            "elapsedMs": 1707,
+            "index": 49
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-66ms",
+      "expected": "accept",
+      "uptimeMs": 369150510,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 66,
+        "durationMs": 1711,
+        "vsyncSamples": 103,
+        "indexChanges": 25,
+        "selectedSteps": 25,
+        "changesPerSecond": 14.611338398597312,
+        "samples": [
+          {
+            "elapsedMs": 11,
+            "index": 0
+          },
+          {
+            "elapsedMs": 27,
+            "index": 0
+          },
+          {
+            "elapsedMs": 45,
+            "index": 0
+          },
+          {
+            "elapsedMs": 61,
+            "index": 0
+          },
+          {
+            "elapsedMs": 77,
+            "index": 1
+          },
+          {
+            "elapsedMs": 94,
+            "index": 1
+          },
+          {
+            "elapsedMs": 111,
+            "index": 1
+          },
+          {
+            "elapsedMs": 129,
+            "index": 1
+          },
+          {
+            "elapsedMs": 144,
+            "index": 2
+          },
+          {
+            "elapsedMs": 160,
+            "index": 2
+          },
+          {
+            "elapsedMs": 177,
+            "index": 2
+          },
+          {
+            "elapsedMs": 195,
+            "index": 2
+          },
+          {
+            "elapsedMs": 213,
+            "index": 3
+          },
+          {
+            "elapsedMs": 227,
+            "index": 3
+          },
+          {
+            "elapsedMs": 246,
+            "index": 3
+          },
+          {
+            "elapsedMs": 261,
+            "index": 3
+          },
+          {
+            "elapsedMs": 282,
+            "index": 4
+          },
+          {
+            "elapsedMs": 294,
+            "index": 4
+          },
+          {
+            "elapsedMs": 312,
+            "index": 4
+          },
+          {
+            "elapsedMs": 327,
+            "index": 4
+          },
+          {
+            "elapsedMs": 345,
+            "index": 5
+          },
+          {
+            "elapsedMs": 362,
+            "index": 5
+          },
+          {
+            "elapsedMs": 379,
+            "index": 5
+          },
+          {
+            "elapsedMs": 394,
+            "index": 5
+          },
+          {
+            "elapsedMs": 411,
+            "index": 6
+          },
+          {
+            "elapsedMs": 428,
+            "index": 6
+          },
+          {
+            "elapsedMs": 444,
+            "index": 6
+          },
+          {
+            "elapsedMs": 464,
+            "index": 6
+          },
+          {
+            "elapsedMs": 477,
+            "index": 7
+          },
+          {
+            "elapsedMs": 494,
+            "index": 7
+          },
+          {
+            "elapsedMs": 511,
+            "index": 7
+          },
+          {
+            "elapsedMs": 528,
+            "index": 7
+          },
+          {
+            "elapsedMs": 544,
+            "index": 8
+          },
+          {
+            "elapsedMs": 561,
+            "index": 8
+          },
+          {
+            "elapsedMs": 578,
+            "index": 8
+          },
+          {
+            "elapsedMs": 594,
+            "index": 8
+          },
+          {
+            "elapsedMs": 610,
+            "index": 9
+          },
+          {
+            "elapsedMs": 627,
+            "index": 9
+          },
+          {
+            "elapsedMs": 645,
+            "index": 9
+          },
+          {
+            "elapsedMs": 662,
+            "index": 9
+          },
+          {
+            "elapsedMs": 677,
+            "index": 10
+          },
+          {
+            "elapsedMs": 694,
+            "index": 10
+          },
+          {
+            "elapsedMs": 711,
+            "index": 10
+          },
+          {
+            "elapsedMs": 728,
+            "index": 10
+          },
+          {
+            "elapsedMs": 751,
+            "index": 11
+          },
+          {
+            "elapsedMs": 760,
+            "index": 11
+          },
+          {
+            "elapsedMs": 777,
+            "index": 11
+          },
+          {
+            "elapsedMs": 794,
+            "index": 11
+          },
+          {
+            "elapsedMs": 811,
+            "index": 12
+          },
+          {
+            "elapsedMs": 828,
+            "index": 12
+          },
+          {
+            "elapsedMs": 845,
+            "index": 12
+          },
+          {
+            "elapsedMs": 861,
+            "index": 12
+          },
+          {
+            "elapsedMs": 878,
+            "index": 13
+          },
+          {
+            "elapsedMs": 894,
+            "index": 13
+          },
+          {
+            "elapsedMs": 912,
+            "index": 13
+          },
+          {
+            "elapsedMs": 928,
+            "index": 13
+          },
+          {
+            "elapsedMs": 944,
+            "index": 14
+          },
+          {
+            "elapsedMs": 961,
+            "index": 14
+          },
+          {
+            "elapsedMs": 977,
+            "index": 14
+          },
+          {
+            "elapsedMs": 995,
+            "index": 14
+          },
+          {
+            "elapsedMs": 1011,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1027,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1045,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1060,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1077,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1094,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1111,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1129,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1145,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1161,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1177,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1195,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1211,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1229,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1246,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1262,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1277,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1295,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1310,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1328,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1345,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1362,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1379,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1394,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1412,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1428,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1445,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1460,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1479,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1496,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1511,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1527,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1544,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1561,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1578,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1599,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1610,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1628,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1645,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1662,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1677,
+            "index": 25
+          },
+          {
+            "elapsedMs": 1694,
+            "index": 25
+          },
+          {
+            "elapsedMs": 1711,
+            "index": 25
+          }
+        ]
+      }
+    },
+    {
+      "name": "widget/bind-private-host",
+      "expected": "accept",
+      "uptimeMs": 369150555,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": 12
+    },
+    {
+      "name": "widget/collection-150-recycles",
+      "expected": "accept",
+      "uptimeMs": 369151514,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "items": 150,
+        "activeChildViews": 2,
+        "displayedIndex": 8,
+        "parcelBytes": 31664
+      }
+    },
+    {
+      "name": "notification/collection-without-widget-host",
+      "expected": "accept",
+      "uptimeMs": 369151557,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "adapterBound": false
+      }
+    },
+    {
+      "name": "widget/bitmap-3x1024",
+      "expected": "accept",
+      "uptimeMs": 369151619,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "inputBitmapBytes": 12582912,
+        "parcelBytes": 2420
+      }
+    },
+    {
+      "name": "widget/bitmap-4x1024",
+      "expected": "reject",
+      "uptimeMs": 369151702,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "java.lang.IllegalArgumentException: RemoteViews for widget update exceeds maximum bitmap memory usage (used: 16777216, max: 15552000)",
+      "rootCause": "android.os.RemoteException: Remote stack trace:\n\tat com.android.server.appwidget.AppWidgetServiceImpl.updateAppWidgetInstanceLocked(AppWidgetServiceImpl.java:2896)\n\tat com.android.server.appwidget.AppWidgetServiceImpl.updateAppWidgetIds(AppWidgetServiceImpl.java:2617)\n\tat com.android.server.appwidget.AppWidgetServiceImpl.updateAppWidgetIds(AppWidgetServiceImpl.java:2141)\n\tat com.android.internal.appwidget.IAppWidgetService$Stub.onTransact(IAppWidgetService.java:457)\n\tat android.os.Binder.execTransactInternal(Binder.java:1421)\n"
+    },
+    {
+      "name": "widget/restore",
+      "expected": "accept",
+      "uptimeMs": 369151748,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "restored"
+    },
+    {
+      "name": "notification/bitmap-18x256",
+      "expected": "accept",
+      "uptimeMs": 369152734,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "bitmapBytes": 4718592,
+        "customViewRetained": true
+      }
+    },
+    {
+      "name": "notification/bitmap-20x256",
+      "expected": "accept",
+      "uptimeMs": 369153698,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "bitmapBytes": 5242880,
+        "customViewRetained": false
+      }
+    },
+    {
+      "name": "binder/metadata-200",
+      "expected": "accept",
+      "uptimeMs": 369153765,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "parcelBytes": 212472,
+        "actions": 200
+      }
+    },
+    {
+      "name": "binder/metadata-1400",
+      "expected": "reject",
+      "uptimeMs": 369153834,
+      "outcome": "rejected",
+      "matchesExpectation": true,
+      "error": "java.lang.RuntimeException: android.os.TransactionTooLargeException: data parcel size 1481044 bytes",
+      "rootCause": "android.os.TransactionTooLargeException: data parcel size 1481044 bytes"
+    },
+    {
+      "name": "widget/cleanup-private-host",
+      "expected": "accept",
+      "uptimeMs": 369153881,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": "removed"
+    }
+  ],
+  "investigationDate": "2026-10-28",
+  "delivery": [
+    {
+      "requestedPerSecond": 2,
+      "offered": 16,
+      "received": 16,
+      "uniqueSequences": 16,
+      "lastReceivedSequence": 15,
+      "postedToListenerMedianMs": 212.0,
+      "postedToListenerP90Ms": 215,
+      "missingSequences": []
+    },
+    {
+      "requestedPerSecond": 4,
+      "offered": 32,
+      "received": 32,
+      "uniqueSequences": 32,
+      "lastReceivedSequence": 31,
+      "postedToListenerMedianMs": 210.0,
+      "postedToListenerP90Ms": 216,
+      "missingSequences": []
+    },
+    {
+      "requestedPerSecond": 8,
+      "offered": 64,
+      "received": 40,
+      "uniqueSequences": 40,
+      "lastReceivedSequence": 63,
+      "postedToListenerMedianMs": 210.0,
+      "postedToListenerP90Ms": 214,
+      "missingSequences": [
+        9,
+        11,
+        14,
+        16,
+        18,
+        21,
+        23,
+        25,
+        28,
+        30,
+        32,
+        35,
+        37,
+        39,
+        42,
+        44,
+        46,
+        48,
+        51,
+        53,
+        55,
+        58,
+        60,
+        62
+      ]
+    },
+    {
+      "requestedPerSecond": 20,
+      "offered": 160,
+      "received": 44,
+      "uniqueSequences": 44,
+      "lastReceivedSequence": 156,
+      "postedToListenerMedianMs": 208.0,
+      "postedToListenerP90Ms": 210,
+      "missingSequences": [
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        71,
+        72,
+        73,
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        84,
+        85,
+        86,
+        88,
+        89,
+        90,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        100,
+        101,
+        102,
+        104,
+        105,
+        106,
+        108,
+        109,
+        110,
+        112,
+        113,
+        114,
+        116,
+        117,
+        118,
+        120,
+        121,
+        122,
+        123,
+        125,
+        126,
+        127,
+        129,
+        130,
+        131,
+        133,
+        134,
+        135,
+        137,
+        138,
+        139,
+        141,
+        142,
+        143,
+        145,
+        146,
+        147,
+        149,
+        150,
+        151,
+        153,
+        154,
+        155,
+        157,
+        158,
+        159
+      ]
+    }
+  ],
+  "earlierLocalTiming": [
+    {
+      "name": "timing/vsync-sampled-1ms",
+      "expected": "accept",
+      "uptimeMs": 368361663,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 1,
+        "durationMs": 1713,
+        "vsyncSamples": 104,
+        "indexChanges": 103,
+        "selectedSteps": 103,
+        "changesPerSecond": 60.12842965557501,
+        "samples": [
+          {
+            "elapsedMs": 0,
+            "index": 0
+          },
+          {
+            "elapsedMs": 11,
+            "index": 1
+          },
+          {
+            "elapsedMs": 28,
+            "index": 2
+          },
+          {
+            "elapsedMs": 50,
+            "index": 3
+          },
+          {
+            "elapsedMs": 66,
+            "index": 4
+          },
+          {
+            "elapsedMs": 89,
+            "index": 5
+          },
+          {
+            "elapsedMs": 105,
+            "index": 6
+          },
+          {
+            "elapsedMs": 121,
+            "index": 7
+          },
+          {
+            "elapsedMs": 137,
+            "index": 8
+          },
+          {
+            "elapsedMs": 155,
+            "index": 9
+          },
+          {
+            "elapsedMs": 170,
+            "index": 10
+          },
+          {
+            "elapsedMs": 183,
+            "index": 11
+          },
+          {
+            "elapsedMs": 199,
+            "index": 12
+          },
+          {
+            "elapsedMs": 215,
+            "index": 13
+          },
+          {
+            "elapsedMs": 241,
+            "index": 14
+          },
+          {
+            "elapsedMs": 248,
+            "index": 15
+          },
+          {
+            "elapsedMs": 263,
+            "index": 16
+          },
+          {
+            "elapsedMs": 279,
+            "index": 17
+          },
+          {
+            "elapsedMs": 295,
+            "index": 18
+          },
+          {
+            "elapsedMs": 313,
+            "index": 19
+          },
+          {
+            "elapsedMs": 337,
+            "index": 20
+          },
+          {
+            "elapsedMs": 344,
+            "index": 21
+          },
+          {
+            "elapsedMs": 360,
+            "index": 22
+          },
+          {
+            "elapsedMs": 377,
+            "index": 23
+          },
+          {
+            "elapsedMs": 394,
+            "index": 24
+          },
+          {
+            "elapsedMs": 412,
+            "index": 25
+          },
+          {
+            "elapsedMs": 428,
+            "index": 26
+          },
+          {
+            "elapsedMs": 445,
+            "index": 27
+          },
+          {
+            "elapsedMs": 461,
+            "index": 28
+          },
+          {
+            "elapsedMs": 477,
+            "index": 29
+          },
+          {
+            "elapsedMs": 494,
+            "index": 30
+          },
+          {
+            "elapsedMs": 510,
+            "index": 31
+          },
+          {
+            "elapsedMs": 527,
+            "index": 32
+          },
+          {
+            "elapsedMs": 545,
+            "index": 33
+          },
+          {
+            "elapsedMs": 572,
+            "index": 34
+          },
+          {
+            "elapsedMs": 589,
+            "index": 35
+          },
+          {
+            "elapsedMs": 596,
+            "index": 36
+          },
+          {
+            "elapsedMs": 612,
+            "index": 37
+          },
+          {
+            "elapsedMs": 628,
+            "index": 38
+          },
+          {
+            "elapsedMs": 655,
+            "index": 39
+          },
+          {
+            "elapsedMs": 662,
+            "index": 40
+          },
+          {
+            "elapsedMs": 678,
+            "index": 41
+          },
+          {
+            "elapsedMs": 694,
+            "index": 42
+          },
+          {
+            "elapsedMs": 710,
+            "index": 43
+          },
+          {
+            "elapsedMs": 727,
+            "index": 44
+          },
+          {
+            "elapsedMs": 745,
+            "index": 45
+          },
+          {
+            "elapsedMs": 760,
+            "index": 46
+          },
+          {
+            "elapsedMs": 777,
+            "index": 47
+          },
+          {
+            "elapsedMs": 794,
+            "index": 48
+          },
+          {
+            "elapsedMs": 811,
+            "index": 49
+          },
+          {
+            "elapsedMs": 827,
+            "index": 50
+          },
+          {
+            "elapsedMs": 844,
+            "index": 51
+          },
+          {
+            "elapsedMs": 860,
+            "index": 52
+          },
+          {
+            "elapsedMs": 877,
+            "index": 53
+          },
+          {
+            "elapsedMs": 893,
+            "index": 54
+          },
+          {
+            "elapsedMs": 910,
+            "index": 55
+          },
+          {
+            "elapsedMs": 927,
+            "index": 56
+          },
+          {
+            "elapsedMs": 948,
+            "index": 57
+          },
+          {
+            "elapsedMs": 960,
+            "index": 58
+          },
+          {
+            "elapsedMs": 977,
+            "index": 59
+          },
+          {
+            "elapsedMs": 994,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1010,
+            "index": 61
+          },
+          {
+            "elapsedMs": 1027,
+            "index": 62
+          },
+          {
+            "elapsedMs": 1044,
+            "index": 63
+          },
+          {
+            "elapsedMs": 1060,
+            "index": 64
+          },
+          {
+            "elapsedMs": 1077,
+            "index": 65
+          },
+          {
+            "elapsedMs": 1093,
+            "index": 66
+          },
+          {
+            "elapsedMs": 1110,
+            "index": 67
+          },
+          {
+            "elapsedMs": 1127,
+            "index": 68
+          },
+          {
+            "elapsedMs": 1144,
+            "index": 69
+          },
+          {
+            "elapsedMs": 1160,
+            "index": 70
+          },
+          {
+            "elapsedMs": 1177,
+            "index": 71
+          },
+          {
+            "elapsedMs": 1193,
+            "index": 72
+          },
+          {
+            "elapsedMs": 1211,
+            "index": 73
+          },
+          {
+            "elapsedMs": 1227,
+            "index": 74
+          },
+          {
+            "elapsedMs": 1243,
+            "index": 75
+          },
+          {
+            "elapsedMs": 1260,
+            "index": 76
+          },
+          {
+            "elapsedMs": 1277,
+            "index": 77
+          },
+          {
+            "elapsedMs": 1294,
+            "index": 78
+          },
+          {
+            "elapsedMs": 1310,
+            "index": 79
+          },
+          {
+            "elapsedMs": 1327,
+            "index": 80
+          },
+          {
+            "elapsedMs": 1344,
+            "index": 81
+          },
+          {
+            "elapsedMs": 1360,
+            "index": 82
+          },
+          {
+            "elapsedMs": 1377,
+            "index": 83
+          },
+          {
+            "elapsedMs": 1394,
+            "index": 84
+          },
+          {
+            "elapsedMs": 1416,
+            "index": 85
+          },
+          {
+            "elapsedMs": 1427,
+            "index": 86
+          },
+          {
+            "elapsedMs": 1448,
+            "index": 87
+          },
+          {
+            "elapsedMs": 1472,
+            "index": 88
+          },
+          {
+            "elapsedMs": 1479,
+            "index": 89
+          },
+          {
+            "elapsedMs": 1505,
+            "index": 90
+          },
+          {
+            "elapsedMs": 1511,
+            "index": 91
+          },
+          {
+            "elapsedMs": 1527,
+            "index": 92
+          },
+          {
+            "elapsedMs": 1544,
+            "index": 93
+          },
+          {
+            "elapsedMs": 1561,
+            "index": 94
+          },
+          {
+            "elapsedMs": 1581,
+            "index": 95
+          },
+          {
+            "elapsedMs": 1595,
+            "index": 96
+          },
+          {
+            "elapsedMs": 1610,
+            "index": 97
+          },
+          {
+            "elapsedMs": 1627,
+            "index": 98
+          },
+          {
+            "elapsedMs": 1644,
+            "index": 99
+          },
+          {
+            "elapsedMs": 1664,
+            "index": 100
+          },
+          {
+            "elapsedMs": 1678,
+            "index": 101
+          },
+          {
+            "elapsedMs": 1693,
+            "index": 102
+          },
+          {
+            "elapsedMs": 1713,
+            "index": 103
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-8ms",
+      "expected": "accept",
+      "uptimeMs": 368363445,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 8,
+        "durationMs": 1717,
+        "vsyncSamples": 104,
+        "indexChanges": 103,
+        "selectedSteps": 103,
+        "changesPerSecond": 59.98835177635411,
+        "samples": [
+          {
+            "elapsedMs": 0,
+            "index": 0
+          },
+          {
+            "elapsedMs": 15,
+            "index": 1
+          },
+          {
+            "elapsedMs": 31,
+            "index": 2
+          },
+          {
+            "elapsedMs": 48,
+            "index": 3
+          },
+          {
+            "elapsedMs": 65,
+            "index": 4
+          },
+          {
+            "elapsedMs": 82,
+            "index": 5
+          },
+          {
+            "elapsedMs": 98,
+            "index": 6
+          },
+          {
+            "elapsedMs": 116,
+            "index": 7
+          },
+          {
+            "elapsedMs": 132,
+            "index": 8
+          },
+          {
+            "elapsedMs": 149,
+            "index": 9
+          },
+          {
+            "elapsedMs": 166,
+            "index": 10
+          },
+          {
+            "elapsedMs": 181,
+            "index": 11
+          },
+          {
+            "elapsedMs": 198,
+            "index": 12
+          },
+          {
+            "elapsedMs": 215,
+            "index": 13
+          },
+          {
+            "elapsedMs": 232,
+            "index": 14
+          },
+          {
+            "elapsedMs": 249,
+            "index": 15
+          },
+          {
+            "elapsedMs": 266,
+            "index": 16
+          },
+          {
+            "elapsedMs": 282,
+            "index": 17
+          },
+          {
+            "elapsedMs": 299,
+            "index": 18
+          },
+          {
+            "elapsedMs": 316,
+            "index": 19
+          },
+          {
+            "elapsedMs": 332,
+            "index": 20
+          },
+          {
+            "elapsedMs": 349,
+            "index": 21
+          },
+          {
+            "elapsedMs": 366,
+            "index": 22
+          },
+          {
+            "elapsedMs": 382,
+            "index": 23
+          },
+          {
+            "elapsedMs": 399,
+            "index": 24
+          },
+          {
+            "elapsedMs": 415,
+            "index": 25
+          },
+          {
+            "elapsedMs": 432,
+            "index": 26
+          },
+          {
+            "elapsedMs": 449,
+            "index": 27
+          },
+          {
+            "elapsedMs": 466,
+            "index": 28
+          },
+          {
+            "elapsedMs": 482,
+            "index": 29
+          },
+          {
+            "elapsedMs": 498,
+            "index": 30
+          },
+          {
+            "elapsedMs": 516,
+            "index": 31
+          },
+          {
+            "elapsedMs": 532,
+            "index": 32
+          },
+          {
+            "elapsedMs": 548,
+            "index": 33
+          },
+          {
+            "elapsedMs": 565,
+            "index": 34
+          },
+          {
+            "elapsedMs": 581,
+            "index": 35
+          },
+          {
+            "elapsedMs": 599,
+            "index": 36
+          },
+          {
+            "elapsedMs": 616,
+            "index": 37
+          },
+          {
+            "elapsedMs": 632,
+            "index": 38
+          },
+          {
+            "elapsedMs": 648,
+            "index": 39
+          },
+          {
+            "elapsedMs": 665,
+            "index": 40
+          },
+          {
+            "elapsedMs": 681,
+            "index": 41
+          },
+          {
+            "elapsedMs": 700,
+            "index": 42
+          },
+          {
+            "elapsedMs": 716,
+            "index": 43
+          },
+          {
+            "elapsedMs": 733,
+            "index": 44
+          },
+          {
+            "elapsedMs": 749,
+            "index": 45
+          },
+          {
+            "elapsedMs": 765,
+            "index": 46
+          },
+          {
+            "elapsedMs": 782,
+            "index": 47
+          },
+          {
+            "elapsedMs": 799,
+            "index": 48
+          },
+          {
+            "elapsedMs": 816,
+            "index": 49
+          },
+          {
+            "elapsedMs": 833,
+            "index": 50
+          },
+          {
+            "elapsedMs": 849,
+            "index": 51
+          },
+          {
+            "elapsedMs": 865,
+            "index": 52
+          },
+          {
+            "elapsedMs": 882,
+            "index": 53
+          },
+          {
+            "elapsedMs": 899,
+            "index": 54
+          },
+          {
+            "elapsedMs": 915,
+            "index": 55
+          },
+          {
+            "elapsedMs": 932,
+            "index": 56
+          },
+          {
+            "elapsedMs": 949,
+            "index": 57
+          },
+          {
+            "elapsedMs": 965,
+            "index": 58
+          },
+          {
+            "elapsedMs": 981,
+            "index": 59
+          },
+          {
+            "elapsedMs": 998,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1015,
+            "index": 61
+          },
+          {
+            "elapsedMs": 1032,
+            "index": 62
+          },
+          {
+            "elapsedMs": 1048,
+            "index": 63
+          },
+          {
+            "elapsedMs": 1065,
+            "index": 64
+          },
+          {
+            "elapsedMs": 1082,
+            "index": 65
+          },
+          {
+            "elapsedMs": 1098,
+            "index": 66
+          },
+          {
+            "elapsedMs": 1115,
+            "index": 67
+          },
+          {
+            "elapsedMs": 1133,
+            "index": 68
+          },
+          {
+            "elapsedMs": 1149,
+            "index": 69
+          },
+          {
+            "elapsedMs": 1166,
+            "index": 70
+          },
+          {
+            "elapsedMs": 1182,
+            "index": 71
+          },
+          {
+            "elapsedMs": 1199,
+            "index": 72
+          },
+          {
+            "elapsedMs": 1216,
+            "index": 73
+          },
+          {
+            "elapsedMs": 1232,
+            "index": 74
+          },
+          {
+            "elapsedMs": 1249,
+            "index": 75
+          },
+          {
+            "elapsedMs": 1265,
+            "index": 76
+          },
+          {
+            "elapsedMs": 1282,
+            "index": 77
+          },
+          {
+            "elapsedMs": 1299,
+            "index": 78
+          },
+          {
+            "elapsedMs": 1315,
+            "index": 79
+          },
+          {
+            "elapsedMs": 1332,
+            "index": 80
+          },
+          {
+            "elapsedMs": 1349,
+            "index": 81
+          },
+          {
+            "elapsedMs": 1367,
+            "index": 82
+          },
+          {
+            "elapsedMs": 1383,
+            "index": 83
+          },
+          {
+            "elapsedMs": 1400,
+            "index": 84
+          },
+          {
+            "elapsedMs": 1417,
+            "index": 85
+          },
+          {
+            "elapsedMs": 1432,
+            "index": 86
+          },
+          {
+            "elapsedMs": 1449,
+            "index": 87
+          },
+          {
+            "elapsedMs": 1465,
+            "index": 88
+          },
+          {
+            "elapsedMs": 1481,
+            "index": 89
+          },
+          {
+            "elapsedMs": 1499,
+            "index": 90
+          },
+          {
+            "elapsedMs": 1515,
+            "index": 91
+          },
+          {
+            "elapsedMs": 1532,
+            "index": 92
+          },
+          {
+            "elapsedMs": 1549,
+            "index": 93
+          },
+          {
+            "elapsedMs": 1566,
+            "index": 94
+          },
+          {
+            "elapsedMs": 1582,
+            "index": 95
+          },
+          {
+            "elapsedMs": 1599,
+            "index": 96
+          },
+          {
+            "elapsedMs": 1615,
+            "index": 97
+          },
+          {
+            "elapsedMs": 1632,
+            "index": 98
+          },
+          {
+            "elapsedMs": 1648,
+            "index": 99
+          },
+          {
+            "elapsedMs": 1665,
+            "index": 100
+          },
+          {
+            "elapsedMs": 1682,
+            "index": 101
+          },
+          {
+            "elapsedMs": 1698,
+            "index": 102
+          },
+          {
+            "elapsedMs": 1717,
+            "index": 103
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-16ms",
+      "expected": "accept",
+      "uptimeMs": 368365211,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 16,
+        "durationMs": 1708,
+        "vsyncSamples": 103,
+        "indexChanges": 98,
+        "selectedSteps": 98,
+        "changesPerSecond": 57.377049180327866,
+        "samples": [
+          {
+            "elapsedMs": 6,
+            "index": 0
+          },
+          {
+            "elapsedMs": 23,
+            "index": 1
+          },
+          {
+            "elapsedMs": 40,
+            "index": 2
+          },
+          {
+            "elapsedMs": 56,
+            "index": 3
+          },
+          {
+            "elapsedMs": 74,
+            "index": 4
+          },
+          {
+            "elapsedMs": 91,
+            "index": 5
+          },
+          {
+            "elapsedMs": 107,
+            "index": 6
+          },
+          {
+            "elapsedMs": 124,
+            "index": 7
+          },
+          {
+            "elapsedMs": 151,
+            "index": 8
+          },
+          {
+            "elapsedMs": 162,
+            "index": 8
+          },
+          {
+            "elapsedMs": 173,
+            "index": 9
+          },
+          {
+            "elapsedMs": 191,
+            "index": 10
+          },
+          {
+            "elapsedMs": 207,
+            "index": 11
+          },
+          {
+            "elapsedMs": 223,
+            "index": 12
+          },
+          {
+            "elapsedMs": 240,
+            "index": 13
+          },
+          {
+            "elapsedMs": 256,
+            "index": 14
+          },
+          {
+            "elapsedMs": 273,
+            "index": 15
+          },
+          {
+            "elapsedMs": 290,
+            "index": 16
+          },
+          {
+            "elapsedMs": 306,
+            "index": 17
+          },
+          {
+            "elapsedMs": 325,
+            "index": 18
+          },
+          {
+            "elapsedMs": 340,
+            "index": 19
+          },
+          {
+            "elapsedMs": 356,
+            "index": 20
+          },
+          {
+            "elapsedMs": 373,
+            "index": 21
+          },
+          {
+            "elapsedMs": 391,
+            "index": 22
+          },
+          {
+            "elapsedMs": 406,
+            "index": 23
+          },
+          {
+            "elapsedMs": 424,
+            "index": 24
+          },
+          {
+            "elapsedMs": 440,
+            "index": 25
+          },
+          {
+            "elapsedMs": 458,
+            "index": 26
+          },
+          {
+            "elapsedMs": 473,
+            "index": 26
+          },
+          {
+            "elapsedMs": 491,
+            "index": 27
+          },
+          {
+            "elapsedMs": 506,
+            "index": 28
+          },
+          {
+            "elapsedMs": 523,
+            "index": 29
+          },
+          {
+            "elapsedMs": 540,
+            "index": 30
+          },
+          {
+            "elapsedMs": 557,
+            "index": 31
+          },
+          {
+            "elapsedMs": 573,
+            "index": 32
+          },
+          {
+            "elapsedMs": 590,
+            "index": 33
+          },
+          {
+            "elapsedMs": 606,
+            "index": 34
+          },
+          {
+            "elapsedMs": 623,
+            "index": 35
+          },
+          {
+            "elapsedMs": 640,
+            "index": 36
+          },
+          {
+            "elapsedMs": 657,
+            "index": 37
+          },
+          {
+            "elapsedMs": 674,
+            "index": 38
+          },
+          {
+            "elapsedMs": 690,
+            "index": 39
+          },
+          {
+            "elapsedMs": 708,
+            "index": 40
+          },
+          {
+            "elapsedMs": 724,
+            "index": 41
+          },
+          {
+            "elapsedMs": 740,
+            "index": 42
+          },
+          {
+            "elapsedMs": 756,
+            "index": 43
+          },
+          {
+            "elapsedMs": 773,
+            "index": 44
+          },
+          {
+            "elapsedMs": 791,
+            "index": 45
+          },
+          {
+            "elapsedMs": 809,
+            "index": 45
+          },
+          {
+            "elapsedMs": 824,
+            "index": 46
+          },
+          {
+            "elapsedMs": 840,
+            "index": 47
+          },
+          {
+            "elapsedMs": 858,
+            "index": 48
+          },
+          {
+            "elapsedMs": 874,
+            "index": 49
+          },
+          {
+            "elapsedMs": 892,
+            "index": 50
+          },
+          {
+            "elapsedMs": 906,
+            "index": 51
+          },
+          {
+            "elapsedMs": 923,
+            "index": 52
+          },
+          {
+            "elapsedMs": 940,
+            "index": 53
+          },
+          {
+            "elapsedMs": 957,
+            "index": 54
+          },
+          {
+            "elapsedMs": 974,
+            "index": 55
+          },
+          {
+            "elapsedMs": 990,
+            "index": 56
+          },
+          {
+            "elapsedMs": 1006,
+            "index": 57
+          },
+          {
+            "elapsedMs": 1023,
+            "index": 58
+          },
+          {
+            "elapsedMs": 1040,
+            "index": 59
+          },
+          {
+            "elapsedMs": 1057,
+            "index": 60
+          },
+          {
+            "elapsedMs": 1073,
+            "index": 61
+          },
+          {
+            "elapsedMs": 1090,
+            "index": 62
+          },
+          {
+            "elapsedMs": 1108,
+            "index": 63
+          },
+          {
+            "elapsedMs": 1126,
+            "index": 64
+          },
+          {
+            "elapsedMs": 1141,
+            "index": 65
+          },
+          {
+            "elapsedMs": 1158,
+            "index": 66
+          },
+          {
+            "elapsedMs": 1173,
+            "index": 67
+          },
+          {
+            "elapsedMs": 1190,
+            "index": 68
+          },
+          {
+            "elapsedMs": 1208,
+            "index": 69
+          },
+          {
+            "elapsedMs": 1223,
+            "index": 70
+          },
+          {
+            "elapsedMs": 1241,
+            "index": 71
+          },
+          {
+            "elapsedMs": 1256,
+            "index": 72
+          },
+          {
+            "elapsedMs": 1273,
+            "index": 73
+          },
+          {
+            "elapsedMs": 1290,
+            "index": 74
+          },
+          {
+            "elapsedMs": 1308,
+            "index": 75
+          },
+          {
+            "elapsedMs": 1323,
+            "index": 75
+          },
+          {
+            "elapsedMs": 1340,
+            "index": 76
+          },
+          {
+            "elapsedMs": 1357,
+            "index": 77
+          },
+          {
+            "elapsedMs": 1375,
+            "index": 78
+          },
+          {
+            "elapsedMs": 1390,
+            "index": 79
+          },
+          {
+            "elapsedMs": 1406,
+            "index": 80
+          },
+          {
+            "elapsedMs": 1424,
+            "index": 81
+          },
+          {
+            "elapsedMs": 1441,
+            "index": 82
+          },
+          {
+            "elapsedMs": 1457,
+            "index": 83
+          },
+          {
+            "elapsedMs": 1474,
+            "index": 84
+          },
+          {
+            "elapsedMs": 1490,
+            "index": 85
+          },
+          {
+            "elapsedMs": 1506,
+            "index": 86
+          },
+          {
+            "elapsedMs": 1523,
+            "index": 87
+          },
+          {
+            "elapsedMs": 1540,
+            "index": 88
+          },
+          {
+            "elapsedMs": 1556,
+            "index": 89
+          },
+          {
+            "elapsedMs": 1573,
+            "index": 90
+          },
+          {
+            "elapsedMs": 1590,
+            "index": 91
+          },
+          {
+            "elapsedMs": 1606,
+            "index": 92
+          },
+          {
+            "elapsedMs": 1623,
+            "index": 93
+          },
+          {
+            "elapsedMs": 1641,
+            "index": 94
+          },
+          {
+            "elapsedMs": 1657,
+            "index": 95
+          },
+          {
+            "elapsedMs": 1674,
+            "index": 96
+          },
+          {
+            "elapsedMs": 1691,
+            "index": 97
+          },
+          {
+            "elapsedMs": 1708,
+            "index": 98
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-33ms",
+      "expected": "accept",
+      "uptimeMs": 368366976,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 33,
+        "durationMs": 1701,
+        "vsyncSamples": 103,
+        "indexChanges": 49,
+        "selectedSteps": 49,
+        "changesPerSecond": 28.80658436213992,
+        "samples": [
+          {
+            "elapsedMs": 3,
+            "index": 0
+          },
+          {
+            "elapsedMs": 19,
+            "index": 0
+          },
+          {
+            "elapsedMs": 34,
+            "index": 1
+          },
+          {
+            "elapsedMs": 51,
+            "index": 1
+          },
+          {
+            "elapsedMs": 68,
+            "index": 2
+          },
+          {
+            "elapsedMs": 84,
+            "index": 2
+          },
+          {
+            "elapsedMs": 101,
+            "index": 3
+          },
+          {
+            "elapsedMs": 118,
+            "index": 3
+          },
+          {
+            "elapsedMs": 135,
+            "index": 4
+          },
+          {
+            "elapsedMs": 151,
+            "index": 4
+          },
+          {
+            "elapsedMs": 169,
+            "index": 5
+          },
+          {
+            "elapsedMs": 184,
+            "index": 5
+          },
+          {
+            "elapsedMs": 201,
+            "index": 5
+          },
+          {
+            "elapsedMs": 218,
+            "index": 6
+          },
+          {
+            "elapsedMs": 237,
+            "index": 7
+          },
+          {
+            "elapsedMs": 253,
+            "index": 7
+          },
+          {
+            "elapsedMs": 268,
+            "index": 7
+          },
+          {
+            "elapsedMs": 284,
+            "index": 8
+          },
+          {
+            "elapsedMs": 301,
+            "index": 8
+          },
+          {
+            "elapsedMs": 318,
+            "index": 9
+          },
+          {
+            "elapsedMs": 334,
+            "index": 9
+          },
+          {
+            "elapsedMs": 355,
+            "index": 10
+          },
+          {
+            "elapsedMs": 373,
+            "index": 10
+          },
+          {
+            "elapsedMs": 385,
+            "index": 11
+          },
+          {
+            "elapsedMs": 401,
+            "index": 11
+          },
+          {
+            "elapsedMs": 418,
+            "index": 12
+          },
+          {
+            "elapsedMs": 437,
+            "index": 12
+          },
+          {
+            "elapsedMs": 454,
+            "index": 13
+          },
+          {
+            "elapsedMs": 469,
+            "index": 13
+          },
+          {
+            "elapsedMs": 485,
+            "index": 14
+          },
+          {
+            "elapsedMs": 503,
+            "index": 14
+          },
+          {
+            "elapsedMs": 518,
+            "index": 15
+          },
+          {
+            "elapsedMs": 538,
+            "index": 15
+          },
+          {
+            "elapsedMs": 553,
+            "index": 16
+          },
+          {
+            "elapsedMs": 569,
+            "index": 16
+          },
+          {
+            "elapsedMs": 584,
+            "index": 17
+          },
+          {
+            "elapsedMs": 607,
+            "index": 17
+          },
+          {
+            "elapsedMs": 618,
+            "index": 18
+          },
+          {
+            "elapsedMs": 634,
+            "index": 18
+          },
+          {
+            "elapsedMs": 651,
+            "index": 19
+          },
+          {
+            "elapsedMs": 668,
+            "index": 19
+          },
+          {
+            "elapsedMs": 686,
+            "index": 20
+          },
+          {
+            "elapsedMs": 704,
+            "index": 20
+          },
+          {
+            "elapsedMs": 718,
+            "index": 20
+          },
+          {
+            "elapsedMs": 739,
+            "index": 21
+          },
+          {
+            "elapsedMs": 753,
+            "index": 21
+          },
+          {
+            "elapsedMs": 769,
+            "index": 22
+          },
+          {
+            "elapsedMs": 785,
+            "index": 22
+          },
+          {
+            "elapsedMs": 801,
+            "index": 23
+          },
+          {
+            "elapsedMs": 818,
+            "index": 23
+          },
+          {
+            "elapsedMs": 834,
+            "index": 24
+          },
+          {
+            "elapsedMs": 851,
+            "index": 24
+          },
+          {
+            "elapsedMs": 868,
+            "index": 25
+          },
+          {
+            "elapsedMs": 885,
+            "index": 25
+          },
+          {
+            "elapsedMs": 902,
+            "index": 26
+          },
+          {
+            "elapsedMs": 918,
+            "index": 26
+          },
+          {
+            "elapsedMs": 934,
+            "index": 27
+          },
+          {
+            "elapsedMs": 951,
+            "index": 27
+          },
+          {
+            "elapsedMs": 971,
+            "index": 28
+          },
+          {
+            "elapsedMs": 985,
+            "index": 28
+          },
+          {
+            "elapsedMs": 1003,
+            "index": 29
+          },
+          {
+            "elapsedMs": 1019,
+            "index": 29
+          },
+          {
+            "elapsedMs": 1035,
+            "index": 30
+          },
+          {
+            "elapsedMs": 1051,
+            "index": 30
+          },
+          {
+            "elapsedMs": 1068,
+            "index": 31
+          },
+          {
+            "elapsedMs": 1085,
+            "index": 31
+          },
+          {
+            "elapsedMs": 1103,
+            "index": 32
+          },
+          {
+            "elapsedMs": 1118,
+            "index": 32
+          },
+          {
+            "elapsedMs": 1135,
+            "index": 33
+          },
+          {
+            "elapsedMs": 1151,
+            "index": 33
+          },
+          {
+            "elapsedMs": 1168,
+            "index": 34
+          },
+          {
+            "elapsedMs": 1184,
+            "index": 34
+          },
+          {
+            "elapsedMs": 1201,
+            "index": 35
+          },
+          {
+            "elapsedMs": 1218,
+            "index": 35
+          },
+          {
+            "elapsedMs": 1234,
+            "index": 36
+          },
+          {
+            "elapsedMs": 1251,
+            "index": 36
+          },
+          {
+            "elapsedMs": 1268,
+            "index": 37
+          },
+          {
+            "elapsedMs": 1285,
+            "index": 37
+          },
+          {
+            "elapsedMs": 1301,
+            "index": 38
+          },
+          {
+            "elapsedMs": 1318,
+            "index": 38
+          },
+          {
+            "elapsedMs": 1334,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1351,
+            "index": 39
+          },
+          {
+            "elapsedMs": 1369,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1384,
+            "index": 40
+          },
+          {
+            "elapsedMs": 1404,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1418,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1435,
+            "index": 41
+          },
+          {
+            "elapsedMs": 1451,
+            "index": 42
+          },
+          {
+            "elapsedMs": 1475,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1485,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1502,
+            "index": 43
+          },
+          {
+            "elapsedMs": 1518,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1534,
+            "index": 44
+          },
+          {
+            "elapsedMs": 1551,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1568,
+            "index": 45
+          },
+          {
+            "elapsedMs": 1585,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1601,
+            "index": 46
+          },
+          {
+            "elapsedMs": 1619,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1635,
+            "index": 47
+          },
+          {
+            "elapsedMs": 1653,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1672,
+            "index": 48
+          },
+          {
+            "elapsedMs": 1685,
+            "index": 49
+          },
+          {
+            "elapsedMs": 1701,
+            "index": 49
+          }
+        ]
+      }
+    },
+    {
+      "name": "timing/vsync-sampled-66ms",
+      "expected": "accept",
+      "uptimeMs": 368368726,
+      "outcome": "accepted",
+      "matchesExpectation": true,
+      "value": {
+        "requestedIntervalMs": 66,
+        "durationMs": 1701,
+        "vsyncSamples": 103,
+        "indexChanges": 25,
+        "selectedSteps": 25,
+        "changesPerSecond": 14.697236919459142,
+        "samples": [
+          {
+            "elapsedMs": 1,
+            "index": 0
+          },
+          {
+            "elapsedMs": 18,
+            "index": 0
+          },
+          {
+            "elapsedMs": 36,
+            "index": 0
+          },
+          {
+            "elapsedMs": 58,
+            "index": 0
+          },
+          {
+            "elapsedMs": 70,
+            "index": 1
+          },
+          {
+            "elapsedMs": 84,
+            "index": 1
+          },
+          {
+            "elapsedMs": 103,
+            "index": 1
+          },
+          {
+            "elapsedMs": 122,
+            "index": 1
+          },
+          {
+            "elapsedMs": 137,
+            "index": 1
+          },
+          {
+            "elapsedMs": 151,
+            "index": 2
+          },
+          {
+            "elapsedMs": 168,
+            "index": 2
+          },
+          {
+            "elapsedMs": 184,
+            "index": 2
+          },
+          {
+            "elapsedMs": 201,
+            "index": 2
+          },
+          {
+            "elapsedMs": 218,
+            "index": 3
+          },
+          {
+            "elapsedMs": 234,
+            "index": 3
+          },
+          {
+            "elapsedMs": 252,
+            "index": 3
+          },
+          {
+            "elapsedMs": 269,
+            "index": 3
+          },
+          {
+            "elapsedMs": 284,
+            "index": 4
+          },
+          {
+            "elapsedMs": 301,
+            "index": 4
+          },
+          {
+            "elapsedMs": 318,
+            "index": 4
+          },
+          {
+            "elapsedMs": 336,
+            "index": 4
+          },
+          {
+            "elapsedMs": 352,
+            "index": 5
+          },
+          {
+            "elapsedMs": 368,
+            "index": 5
+          },
+          {
+            "elapsedMs": 388,
+            "index": 5
+          },
+          {
+            "elapsedMs": 402,
+            "index": 5
+          },
+          {
+            "elapsedMs": 419,
+            "index": 6
+          },
+          {
+            "elapsedMs": 434,
+            "index": 6
+          },
+          {
+            "elapsedMs": 453,
+            "index": 6
+          },
+          {
+            "elapsedMs": 468,
+            "index": 6
+          },
+          {
+            "elapsedMs": 485,
+            "index": 7
+          },
+          {
+            "elapsedMs": 508,
+            "index": 7
+          },
+          {
+            "elapsedMs": 520,
+            "index": 7
+          },
+          {
+            "elapsedMs": 536,
+            "index": 7
+          },
+          {
+            "elapsedMs": 551,
+            "index": 8
+          },
+          {
+            "elapsedMs": 574,
+            "index": 8
+          },
+          {
+            "elapsedMs": 584,
+            "index": 8
+          },
+          {
+            "elapsedMs": 602,
+            "index": 8
+          },
+          {
+            "elapsedMs": 619,
+            "index": 9
+          },
+          {
+            "elapsedMs": 636,
+            "index": 9
+          },
+          {
+            "elapsedMs": 653,
+            "index": 9
+          },
+          {
+            "elapsedMs": 671,
+            "index": 9
+          },
+          {
+            "elapsedMs": 684,
+            "index": 10
+          },
+          {
+            "elapsedMs": 701,
+            "index": 10
+          },
+          {
+            "elapsedMs": 723,
+            "index": 10
+          },
+          {
+            "elapsedMs": 736,
+            "index": 10
+          },
+          {
+            "elapsedMs": 751,
+            "index": 11
+          },
+          {
+            "elapsedMs": 769,
+            "index": 11
+          },
+          {
+            "elapsedMs": 785,
+            "index": 11
+          },
+          {
+            "elapsedMs": 801,
+            "index": 11
+          },
+          {
+            "elapsedMs": 818,
+            "index": 12
+          },
+          {
+            "elapsedMs": 838,
+            "index": 12
+          },
+          {
+            "elapsedMs": 851,
+            "index": 12
+          },
+          {
+            "elapsedMs": 870,
+            "index": 12
+          },
+          {
+            "elapsedMs": 885,
+            "index": 13
+          },
+          {
+            "elapsedMs": 901,
+            "index": 13
+          },
+          {
+            "elapsedMs": 918,
+            "index": 13
+          },
+          {
+            "elapsedMs": 937,
+            "index": 13
+          },
+          {
+            "elapsedMs": 951,
+            "index": 14
+          },
+          {
+            "elapsedMs": 973,
+            "index": 14
+          },
+          {
+            "elapsedMs": 984,
+            "index": 14
+          },
+          {
+            "elapsedMs": 1001,
+            "index": 14
+          },
+          {
+            "elapsedMs": 1018,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1036,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1051,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1070,
+            "index": 15
+          },
+          {
+            "elapsedMs": 1084,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1101,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1118,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1134,
+            "index": 16
+          },
+          {
+            "elapsedMs": 1154,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1169,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1185,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1201,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1219,
+            "index": 17
+          },
+          {
+            "elapsedMs": 1239,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1252,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1268,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1284,
+            "index": 18
+          },
+          {
+            "elapsedMs": 1301,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1318,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1334,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1352,
+            "index": 19
+          },
+          {
+            "elapsedMs": 1368,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1385,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1402,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1418,
+            "index": 20
+          },
+          {
+            "elapsedMs": 1438,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1451,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1468,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1485,
+            "index": 21
+          },
+          {
+            "elapsedMs": 1502,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1518,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1534,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1551,
+            "index": 22
+          },
+          {
+            "elapsedMs": 1568,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1584,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1601,
+            "index": 23
+          },
+          {
+            "elapsedMs": 1624,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1634,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1651,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1669,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1684,
+            "index": 24
+          },
+          {
+            "elapsedMs": 1701,
+            "index": 25
+          }
+        ]
+      }
+    }
+  ],
+  "recordingObservations": {
+    "notification-1ms-analysis.json": {
+      "video": "notification-1ms.mp4",
+      "crop": "817:525:179:836",
+      "downsample": [
+        64,
+        40
+      ],
+      "threshold": 4,
+      "firstTimestampSeconds": 1.001989,
+      "lastTimestampSeconds": 9.968022,
+      "windowSeconds": 8.966033,
+      "decodedFramesInWindow": 262,
+      "significantChanges": 260,
+      "significantChangesPerSecond": 28.99833181519631,
+      "tealCentroidMinX": 33.0,
+      "tealCentroidMaxX": 36.5,
+      "interpretation": "Pixel changes at original recording timestamps; encoder sampling and the threshold can miss display changes. Teal centroids are in downsampled crop coordinates."
+    },
+    "notification-33ms-analysis.json": {
+      "video": "notification-33ms.mp4",
+      "crop": "817:525:179:836",
+      "downsample": [
+        64,
+        40
+      ],
+      "threshold": 4,
+      "firstTimestampSeconds": 1.024856,
+      "lastTimestampSeconds": 9.9831,
+      "windowSeconds": 8.958244,
+      "decodedFramesInWindow": 216,
+      "significantChanges": 178,
+      "significantChangesPerSecond": 19.869965587005666,
+      "tealCentroidMinX": 33.0,
+      "tealCentroidMaxX": 36.5,
+      "interpretation": "Pixel changes at original recording timestamps; encoder sampling and the threshold can miss display changes. Teal centroids are in downsampled crop coordinates."
+    },
+    "draw-after-exit-analysis.json": {
+      "video": "draw-after-exit.mp4",
+      "crop": "1080:800:0:600",
+      "downsample": [
+        64,
+        40
+      ],
+      "threshold": 4,
+      "firstTimestampSeconds": 1.025289,
+      "lastTimestampSeconds": 40.190356,
+      "windowSeconds": 39.165067,
+      "decodedFramesInWindow": 1228,
+      "significantChanges": 0,
+      "significantChangesPerSecond": 0.0,
+      "tealCentroidMinX": 27.5,
+      "tealCentroidMaxX": 41.5,
+      "interpretation": "Pixel changes at original recording timestamps; encoder sampling and the threshold can miss display changes. Teal centroids are in downsampled crop coordinates."
+    },
+    "widget-after-exit-analysis.json": {
+      "video": "widget-after-exit.mp4",
+      "crop": "600:700:80:900",
+      "downsample": [
+        64,
+        40
+      ],
+      "threshold": 4,
+      "firstTimestampSeconds": 1.0112,
+      "lastTimestampSeconds": 9.967644,
+      "windowSeconds": 8.956444,
+      "decodedFramesInWindow": 219,
+      "significantChanges": 101,
+      "significantChangesPerSecond": 11.276796907344032,
+      "tealCentroidMinX": 27.0,
+      "tealCentroidMaxX": 37.6,
+      "interpretation": "Pixel changes at original recording timestamps; encoder sampling and the threshold can miss display changes. Teal centroids are in downsampled crop coordinates."
+    }
+  },
+  "producerExitChecks": [
+    {
+      "epochSeconds": 1793216506.779409,
+      "terminatedPid": "8694",
+      "producerPidAfterTermination": "",
+      "pidofExitCode": 1,
+      "surface": "DrawInstructions notification"
+    },
+    {
+      "epochSeconds": 1793216727.3222961,
+      "terminatedPid": "15968",
+      "producerPidAfterTermination": "",
+      "pidofExitCode": 1,
+      "surface": "Launcher ViewFlipper widget"
+    }
+  ],
+  "notificationServiceLog": [
+    "10-28 16:35:06.394   654  1194 E NotificationService: Package enqueue rate is 5.3038297. Shedding 0|dev.noti.flipperlab|10008|null|10216. package=dev.noti.flipperlab",
+    "10-28 16:35:11.642   654  1946 E NotificationService: Package enqueue rate is 5.564195. Shedding 0|dev.noti.flipperlab|10008|null|10216. package=dev.noti.flipperlab",
+    "10-28 16:35:18.547   654  2180 E NotificationService: Package enqueue rate is 5.4504066. Shedding 0|dev.noti.flipperlab|10020|null|10216. package=dev.noti.flipperlab",
+    "10-28 16:35:23.603   654  1946 E NotificationService: Package enqueue rate is 6.385172. Shedding 0|dev.noti.flipperlab|10020|null|10216. package=dev.noti.flipperlab"
+  ],
+  "scope": "One Android 16 ARM64 emulator; local host state, service acceptance, actual SystemUI and launcher checks. No universal maximum or multi-OEM certification."
+}

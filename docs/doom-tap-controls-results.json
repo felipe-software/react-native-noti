@@ -1,0 +1,537 @@
+{
+  "date": "2026-10-29",
+  "apk": {
+    "path": "artifacts/doom-optimization/doom-tap-controls-release.apk",
+    "sha256": "92c0e11c292fc4b6728fa3d16854624c49b72dc73f8ef30da49b3c98b6626f44"
+  },
+  "behavior": {
+    "momentary": true,
+    "movementAndUsePulseMs": 250,
+    "firePulseMs": 160,
+    "holdOptionRemoved": true,
+    "controlsRepublishedOnMovement": false,
+    "stableNotificationWhen": true
+  },
+  "nativeLibrary": {
+    "sha256": "9ac88cb8fe423f153c3e431be6b33bf2b5509c4cfa983d827a3a3ceb2aed08b0",
+    "identicalToSizeRelease": true
+  },
+  "checks": {
+    "releaseWithR8": true,
+    "typecheck": true,
+    "whitespace": true
+  },
+  "devices": [
+    {
+      "serial": "swge8phybixgsk9t",
+      "complete": true,
+      "checks": {
+        "gameAboveControls:initial": true,
+        "largeImageRetained": true,
+        "sixMomentaryButtons": true,
+        "noToggleControls": true,
+        "tapReceivedAndReleased:right": true,
+        "gameAboveControls:after-right": true,
+        "tapReceivedAndReleased:forward": true,
+        "gameAboveControls:after-forward": true,
+        "tapReceivedAndReleased:left": true,
+        "gameAboveControls:after-left": true,
+        "tapReceivedAndReleased:backward": true,
+        "gameAboveControls:after-backward": true,
+        "tapReceivedAndReleased:fire": true,
+        "gameAboveControls:after-fire": true,
+        "tapReceivedAndReleased:use": true,
+        "gameAboveControls:after-use": true,
+        "burstReleasesAutomatically": true,
+        "gameAboveControls:after-burst": true,
+        "pauseStopsAndReleases": true,
+        "gameAboveControls:paused": true,
+        "pauseKeepsLargeImage": true,
+        "soundToggleWorks": true,
+        "gameAboveControls:sound-changed": true,
+        "soundRestored": true,
+        "gameAboveControls:sound-restored": true,
+        "gameAboveControls:after-paused-heartbeat": true,
+        "resumeWorks": true,
+        "gameAboveControls:resumed": true,
+        "gameAboveControls:shade-reopened": true,
+        "stopRemovesService": true
+      },
+      "initialBounds": {
+        "x": 182,
+        "y": 1171,
+        "width": 815,
+        "height": 509
+      },
+      "orders": [
+        {
+          "stage": "initial",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-right",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-forward",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-left",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-backward",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-fire",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-use",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-burst",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "paused",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "sound-changed",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "sound-restored",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "after-paused-heartbeat",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "resumed",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        },
+        {
+          "stage": "shade-reopened",
+          "image": {
+            "x": 182,
+            "y": 1171,
+            "width": 815,
+            "height": 509
+          },
+          "control": {
+            "x": 589,
+            "y": 1891,
+            "width": 136,
+            "height": 132
+          }
+        }
+      ],
+      "scope": "Actual release app; native key-release callbacks and SystemUI image/control positions. No FPS or input-latency benchmark."
+    },
+    {
+      "serial": "emulator-5554",
+      "complete": true,
+      "checks": {
+        "gameAboveControls:initial": true,
+        "largeImageRetained": true,
+        "sixMomentaryButtons": true,
+        "noToggleControls": true,
+        "tapReceivedAndReleased:right": true,
+        "gameAboveControls:after-right": true,
+        "tapReceivedAndReleased:forward": true,
+        "gameAboveControls:after-forward": true,
+        "tapReceivedAndReleased:left": true,
+        "gameAboveControls:after-left": true,
+        "tapReceivedAndReleased:backward": true,
+        "gameAboveControls:after-backward": true,
+        "tapReceivedAndReleased:fire": true,
+        "gameAboveControls:after-fire": true,
+        "tapReceivedAndReleased:use": true,
+        "gameAboveControls:after-use": true,
+        "burstReleasesAutomatically": true,
+        "gameAboveControls:after-burst": true,
+        "pauseStopsAndReleases": true,
+        "gameAboveControls:paused": true,
+        "pauseKeepsLargeImage": true,
+        "soundToggleWorks": true,
+        "gameAboveControls:sound-changed": true,
+        "soundRestored": true,
+        "gameAboveControls:sound-restored": true,
+        "gameAboveControls:after-paused-heartbeat": true,
+        "resumeWorks": true,
+        "gameAboveControls:resumed": true,
+        "gameAboveControls:shade-reopened": true,
+        "stopRemovesService": true
+      },
+      "initialBounds": {
+        "x": 179,
+        "y": 793,
+        "width": 817,
+        "height": 510
+      },
+      "orders": [
+        {
+          "stage": "initial",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-right",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-forward",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-left",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-backward",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-fire",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-use",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-burst",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "paused",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "sound-changed",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "sound-restored",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "after-paused-heartbeat",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "resumed",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        },
+        {
+          "stage": "shade-reopened",
+          "image": {
+            "x": 179,
+            "y": 793,
+            "width": 817,
+            "height": 510
+          },
+          "control": {
+            "x": 587,
+            "y": 1491,
+            "width": 136,
+            "height": 126
+          }
+        }
+      ],
+      "scope": "Actual release app; native key-release callbacks and SystemUI image/control positions. No FPS or input-latency benchmark."
+    }
+  ],
+  "scope": "Controls and real SystemUI ordering on the tested Android 14 and 16 devices. No new FPS/input-latency benchmark; system ranking can also use non-time criteria."
+}

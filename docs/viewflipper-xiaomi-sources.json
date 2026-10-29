@@ -1,0 +1,96 @@
+{
+  "ref": "android-14.0.0_r1",
+  "scope": "AOSP version baseline; Xiaomi HyperOS implementation is established through device observations, not assumed identical to AOSP.",
+  "files": [
+    {
+      "path": "core/java/android/widget/ViewFlipper.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/ViewFlipper.java",
+      "bytes": 7619,
+      "sha256": "0ea63b0c27a54ecdec9496f35e116fd2b75b8ca7ecbc38418d35cf52fd4256ab"
+    },
+    {
+      "path": "core/java/android/widget/ViewAnimator.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/ViewAnimator.java",
+      "bytes": 12409,
+      "sha256": "525e9069d42282400d668231c200f47ac0b1afdb44b682fecbe939702b8ce66b"
+    },
+    {
+      "path": "core/java/android/widget/AdapterViewFlipper.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/AdapterViewFlipper.java",
+      "bytes": 9675,
+      "sha256": "f5ae6a76fde7c20b3b1bc5ac6f4b00d99010080d67b6433e5bbd8375f0904d97"
+    },
+    {
+      "path": "core/java/android/widget/AdapterViewAnimator.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/AdapterViewAnimator.java",
+      "bytes": 39891,
+      "sha256": "ea1c46a8c79296e2ea99a775f4d445b83cd882b34ad55e7acb8639ec5d87bc55"
+    },
+    {
+      "path": "core/java/android/widget/RemoteViews.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/RemoteViews.java",
+      "bytes": 285139,
+      "sha256": "e1747fa91a723fa061e04ee14bb649f0d7faa6896c566cffb19cad037a147f09"
+    },
+    {
+      "path": "core/java/android/widget/ImageView.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/widget/ImageView.java",
+      "bytes": 61496,
+      "sha256": "982c78afaefb235c512b4ea7a84c18a0631d30054c781cef6205a9b64b74e09c"
+    },
+    {
+      "path": "core/java/android/view/View.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/view/View.java",
+      "bytes": 1335052,
+      "sha256": "9c0b8b119b605d833df02e4f9684c227bbc3b26b838e761676abfd4b09eb4b0d"
+    },
+    {
+      "path": "core/java/android/view/animation/Animation.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/view/animation/Animation.java",
+      "bytes": 46368,
+      "sha256": "f6c6e896169dab25f5f98a7ca13a371ede3cf2ce6646dd168dc2cb197db729bc"
+    },
+    {
+      "path": "core/java/android/view/animation/AnimationUtils.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/view/animation/AnimationUtils.java",
+      "bytes": 16063,
+      "sha256": "a1b62cad9a58613d0f973b14e3d9ae10b83b52db17cb28a73dc7b427848ed3eb"
+    },
+    {
+      "path": "core/java/android/app/Notification.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/java/android/app/Notification.java",
+      "bytes": 532574,
+      "sha256": "8f036f56c67da236537796f24d45229f2cdc4923c128b62b019a6d73b6137bf2"
+    },
+    {
+      "path": "core/res/res/values/config.xml",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/core/res/res/values/config.xml",
+      "bytes": 357613,
+      "sha256": "2c2b0f1642f6585f6e26ff80be17494157fabf0b976de46549b074fbe74354bb"
+    },
+    {
+      "path": "services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java",
+      "bytes": 213708,
+      "sha256": "76610d8df6d66f6e7a039247b4033fe56effe8658af65c421a23a7ed80c22fdd"
+    },
+    {
+      "path": "services/core/java/com/android/server/notification/NotificationManagerService.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/services/core/java/com/android/server/notification/NotificationManagerService.java",
+      "bytes": 563361,
+      "sha256": "e6f570bbd4edec052e1734c6d40a9ac89317301ab2d22486bfdb650337ac9526"
+    },
+    {
+      "path": "services/core/java/com/android/server/notification/NotificationUsageStats.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/services/core/java/com/android/server/notification/NotificationUsageStats.java",
+      "bytes": 43995,
+      "sha256": "fdb54cb6f5e52d8d62795db97d08366116b3474be8697bb498640284d1f974da"
+    },
+    {
+      "path": "services/core/java/com/android/server/notification/RateEstimator.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-14.0.0_r1/services/core/java/com/android/server/notification/RateEstimator.java",
+      "bytes": 2234,
+      "sha256": "57d8352b425c928364e59ca0a9e00362bc3914b1afd856ee08f648793234f749"
+    }
+  ]
+}

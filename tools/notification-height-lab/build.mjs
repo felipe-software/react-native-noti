@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+
+const root = path.dirname(fileURLToPath(import.meta.url));
+const out = path.resolve(root, '../../artifacts/notification-height/build');
+const sdk = process.env.ANDROID_HOME ?? '/Users/mac/Library/Android/sdk';
+const java = process.env.JAVA_HOME ?? '/Users/mac/.sdkman/candidates/java/current';
+const bin = path.join(sdk, 'build-tools/36.0.0');
+const android = path.join(sdk, 'platforms/android-36/android.jar');
+const run = (cmd, ...args) => execFileSync(cmd, args, {stdio:'inherit', timeout:30_000});
+for (const name of ['classes', 'dex']) fs.mkdirSync(path.join(out, name), {recursive:true});
+run(path.join(bin,'aapt2'), 'link', '-I', android, '--manifest', path.join(root,'AndroidManifest.xml'), '-o', path.join(out,'base.apk'));
+run(path.join(java,'bin/javac'), '-source','8','-target','8','-classpath',android,'-d',path.join(out,'classes'),path.join(root,'HeightActivity.java'),path.join(root,'ImageProvider.java'));
+run(path.join(java,'bin/jar'), 'cf',path.join(out,'classes.jar'),'-C',path.join(out,'classes'),'.');
+run(path.join(bin,'d8'), '--lib',android,'--min-api','31','--output',path.join(out,'dex'),path.join(out,'classes.jar'));
+run(path.join(java,'bin/jar'), 'uf',path.join(out,'base.apk'),'-C',path.join(out,'dex'),'classes.dex');
+run(path.join(bin,'zipalign'), '-f','4',path.join(out,'base.apk'),path.join(out,'aligned.apk'));
+if (!fs.existsSync(path.join(out,'debug.keystore'))) run(path.join(java,'bin/keytool'), '-genkeypair','-keystore',path.join(out,'debug.keystore'),'-storepass','android','-keypass','android','-alias','debug','-dname','CN=Height lab','-keyalg','RSA','-validity','10000');
+run(path.join(bin,'apksigner'), 'sign','--ks',path.join(out,'debug.keystore'),'--ks-pass','pass:android','--out',path.join(out,'height-lab.apk'),path.join(out,'aligned.apk'));
+run(path.join(bin,'apksigner'), 'verify',path.join(out,'height-lab.apk'));
+console.log(path.join(out,'height-lab.apk'));
