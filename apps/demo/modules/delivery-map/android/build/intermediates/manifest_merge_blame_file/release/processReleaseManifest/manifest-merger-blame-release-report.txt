@@ -1,0 +1,28 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dev.reactnativenoti.deliverymap" >
+4
+5    <uses-sdk android:minSdkVersion="31" />
+6
+7    <application>
+7-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:2:3-11:17
+8        <service
+8-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:3:5-10:15
+9            android:name="dev.reactnativenoti.deliverymap.DeliveryService"
+9-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:4:7-69
+10            android:exported="false"
+10-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:5:7-31
+11            android:foregroundServiceType="specialUse"
+11-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:6:7-49
+12            android:stopWithTask="false" >
+12-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:7:7-35
+13            <property
+13-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:8:7-9:98
+14                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+14-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:8:17-76
+15                android:value="User-started delivery tracking map rendered in an ongoing notification" />
+15-->/Users/mac/work/react-native-noti/apps/demo/modules/delivery-map/android/src/main/AndroidManifest.xml:9:9-95
+16        </service>
+17    </application>
+18
+19</manifest>

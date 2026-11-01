@@ -19,7 +19,8 @@
                     "android": {
                         "minSdkVersion": 31,
                         "compileSdkVersion": 36,
-                        "targetSdkVersion": 36
+                        "targetSdkVersion": 36,
+                        "extraMavenRepos": ["https://api.mapbox.com/downloads/v2/releases/maven"]
                     }
                 }
             ],

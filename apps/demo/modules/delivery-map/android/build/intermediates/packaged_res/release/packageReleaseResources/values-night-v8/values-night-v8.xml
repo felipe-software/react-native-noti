@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="delivery_credit">#B3FFFFFF</color>
+    <color name="delivery_credit_background">#B3000000</color>
+    <color name="delivery_land">#1E2329</color>
+    <color name="delivery_pin">#3F3F46</color>
+    <color name="delivery_text">#F4F4F6</color>
+    <color name="delivery_text_secondary">#A9A9B2</color>
+    <color name="delivery_track">#46464E</color>
+</resources>

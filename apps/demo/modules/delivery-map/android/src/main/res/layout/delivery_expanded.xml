@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/delivery_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:textColor="@color/delivery_text"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/delivery_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/delivery_text_secondary"
+        android:textSize="14sp" />
+    <include
+        layout="@layout/delivery_segments"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp" />
+    <FrameLayout
+        android:id="@+id/delivery_map_box"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/delivery_map_height"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/delivery_map_box"
+        android:clipToOutline="true">
+        <ViewFlipper
+            android:id="@+id/delivery_frames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateFirstView="false"
+            android:autoStart="true"
+            android:flipInterval="66"
+            android:measureAllChildren="false" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="6dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Mapbox"
+            android:src="@drawable/mapbox_logo_icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="5dp"
+            android:background="@drawable/delivery_credit"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="1dp"
+            android:text="© Mapbox © OpenStreetMap"
+            android:textColor="@color/delivery_credit"
+            android:textSize="8sp" />
+    </FrameLayout>
+</LinearLayout>

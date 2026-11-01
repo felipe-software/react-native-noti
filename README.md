@@ -55,6 +55,8 @@ The [Doom guide](docs/doom.md) covers the current demo: a live messaging-image s
 
 The [Doom research record](docs/doom-research.md) keeps older measurements and the reasons for the renderer, sizing and input decisions. Its [native comparison lab](tools/doom-lab/README.md) provides bounded experiments. Historical latency/FPS measurements retain their original APK/settings and do not describe the latest larger canvas.
 
+The [delivery guide](docs/delivery-map.md) covers a live delivery card in a custom notification: an off-screen Mapbox map that zooms in as the courier approaches, animated markers, and the ETA above the map. It needs a public Mapbox token in `apps/demo/.env.local`; copy [the example](apps/demo/.env.example). It was verified on Android 16 and 17 emulators only.
+
 ## Bad Apple in a notification
 
 The demo includes the complete silent Bad Apple video (3m39s, 6,572 source frames at 30 fps). Use **Play**, then open the Android notification shade and expand **Bad Apple!!**. The controls select 15, 30, or an experimental 60 Hz schedule, restart playback, and stop it. A 30 fps source still has at most 30 unique images per second in the 60 Hz mode.

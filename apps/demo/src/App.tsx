@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Noti, type NotificationTarget } from 'react-native-noti';
 import { examples, notificationScene } from './scenes';
 import { BadApple } from './BadApple';
+import { Delivery } from './Delivery';
 import { Doom } from './Doom';
 
 const demoIdentity = { id: 12012, tag: 'noti-demo' } as const;
@@ -158,6 +159,7 @@ function Demo() {
         <SafeAreaView className="flex-1 bg-zinc-950" edges={['top']}>
             <StatusBar style="light" />
             <ScrollView contentContainerClassName="px-5 pb-12 pt-6">
+                <Delivery />
                 <Doom />
                 <BadApple />
                 <View className="mb-7 flex-row items-end justify-between">

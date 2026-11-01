@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-31",
+  "subject": "Delivery map in a custom notification with ViewFlipper frames",
+  "release": {
+    "sha256": "6bd1835b29c2ec4d1fb15e20d8150b150ea601181ac822a9005d2c789e3b9a28",
+    "abis": ["arm64-v8a", "x86_64"],
+    "r8": true,
+    "bytes": 111984898,
+    "mapbox_sdk": "com.mapbox.maps:android-ndk27:11.34.1",
+    "mapbox_native_library_bytes_arm64": 26200040,
+    "local_copy": "artifacts/delivery-map/delivery-release.apk"
+  },
+  "configuration": {
+    "delivery_ms": 80000,
+    "route_meters": 2506,
+    "map_style_light": "mapbox://styles/mapbox/navigation-day-v1",
+    "map_style_dark": "mapbox://styles/mapbox/navigation-night-v1",
+    "hidden_layers_containing": ["traffic", "incident", "poi-label", "transit-label", "airport-label", "natural-point-label"],
+    "map_render_px": [1029, 582],
+    "map_render_config": "ARGB_8888",
+    "map_render_pixel_budget": 600000,
+    "overscan": 1.35,
+    "flip_interval_ms": 66,
+    "frame_step_ms": 68,
+    "deck_period_ms": 3000,
+    "frames_per_deck": 54,
+    "map_crossfade_ms": 400
+  },
+  "android_17": {
+    "device": {
+      "host": "roberto, idle at the time of the recording",
+      "avd": "Pixel_8",
+      "android": 17,
+      "fingerprint": "google/sdk_gphone16k_x86_64/emu64xa16k:17/CE2A.260420.051.A2/16418371:user/dev-keys",
+      "page_size_bytes": 16384,
+      "gpu": "AMD Radeon through -gpu host",
+      "physical": false
+    },
+    "map_column_px": [764, 461],
+    "full_run": {
+      "map_renders": 17,
+      "map_renders_planned": 17,
+      "map_render_ms": { "first": 732, "median": 18, "max_after_first": 130 },
+      "decks": 28,
+      "deck_build_ms_sampled": [5.7, 13.6],
+      "map_updates_per_second": 15.18,
+      "update_gap_ms": { "p50": 67, "p90": 68, "p99": 83, "max": 134 },
+      "courier_step_px": { "p50": 1.57, "p90": 2.74, "p99": 3.91, "max": 4.48 },
+      "final_notification_flags": "ONLY_ALERT_ONCE|AUTO_CANCEL",
+      "crashes": 0
+    },
+    "cpu_percent_of_one_core": {
+      "method": "One 10-second top sample each, without a screen recording",
+      "shade_open": { "systemui": 13.5, "surfaceflinger": 8.7, "app": 2.3 },
+      "shade_closed": { "systemui": 2.2, "surfaceflinger": 1.9, "app": 5.6 }
+    },
+    "screen_off": { "seconds": 25, "renders_added": 0, "decks_added": 0, "resumed_on_wake": true },
+    "checks": {
+      "arrivals_dismissible": "2 of 2",
+      "swipe_finished_card": true,
+      "swipe_mid_delivery_stops_service": true,
+      "stop_button_clears_card_and_service": true,
+      "collapsed_card": true,
+      "dark_mode": true,
+      "doom_still_plays": true
+    }
+  },
+  "android_16": {
+    "device": {
+      "host": "mac9000, shared with other builds and emulators",
+      "avd": "Pixel_8_API_36",
+      "android": 16,
+      "fingerprint": "google/sdk_gphone64_arm64/emu64a:16/BE2A.250530.026.F3/13894323:userdebug/dev-keys",
+      "physical": false
+    },
+    "map_column_px": [817, 463],
+    "full_run": {
+      "map_renders": 17,
+      "map_renders_planned": 17,
+      "map_render_ms": { "first": 4359, "median": 99, "max_after_first": 1736 },
+      "decks": 28,
+      "deck_build_ms_sampled": [5.2, 38.3],
+      "map_updates_per_second": 14.17,
+      "map_updates_per_second_before_last_15_s": [14.7, 15.2],
+      "update_gap_ms": { "p50": 67, "p90": 95, "p99": 198, "max": 345 },
+      "courier_step_px": { "p50": 1.56, "p90": 2.69, "p99": 4.12, "max_before_last_15_s": 5.5, "max": 32.62 },
+      "largest_steps_note": "19.7 and 32.6 px at two deck changes near arrival, while the host's load average was above 30",
+      "final_notification_flags": "ONLY_ALERT_ONCE|AUTO_CANCEL",
+      "crashes": 0
+    },
+    "checks": {
+      "arrivals_dismissible": "3 of 3",
+      "second_delivery_from_track_again": true,
+      "network_cut_14_s_in_on_cached_tiles_finishes": true
+    }
+  },
+  "measurement": {
+    "rates": "Android screenrecord H.264, cropped to the map. An update is a frame whose mean absolute RGB difference from the previous frame exceeds 0.15. Not a display-refresh measurement.",
+    "courier_step": "Centroid of the red marker disc after eroding away the thinner route line, compared across updates."
+  },
+  "not_tested": [
+    "physical devices, including the Xiaomi used for Doom",
+    "other OEMs and Android versions below 16",
+    "battery and thermal behavior",
+    "the lock screen",
+    "cities other than this San Francisco route",
+    "network loss on a route with no cached tiles",
+    "the service's 30 s first-map timeout"
+  ]
+}

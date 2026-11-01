@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="3dp" android:top="3dp" android:right="3dp" android:bottom="3dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/delivery_accent" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/delivery_glyph_check" android:left="9dp" android:top="9dp" android:right="9dp" android:bottom="9dp" />
+</layer-list>

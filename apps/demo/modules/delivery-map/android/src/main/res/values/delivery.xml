@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="delivery_accent">#EB1700</color>
+    <color name="delivery_text">#1C1B1F</color>
+    <color name="delivery_text_secondary">#5F6368</color>
+    <color name="delivery_track">#CFCFD6</color>
+    <color name="delivery_land">#F4F4F6</color>
+    <color name="delivery_pin">#1C1B1F</color>
+    <color name="delivery_credit">#99000000</color>
+    <color name="delivery_credit_background">#D9FFFFFF</color>
+    <dimen name="delivery_map_height">176dp</dimen>
+    <style name="DeliverySegment" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxHeight">5dp</item>
+        <item name="android:max">1000</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:progressDrawable">@drawable/delivery_segment</item>
+    </style>
+</resources>

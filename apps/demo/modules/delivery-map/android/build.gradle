@@ -1,0 +1,17 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+group = 'dev.reactnativenoti.deliverymap'
+version = '1.0.0'
+android {
+  namespace 'dev.reactnativenoti.deliverymap'
+  defaultConfig {
+    minSdkVersion 31
+    versionCode 1
+    versionName '1.0.0'
+  }
+}
+dependencies {
+  implementation 'com.mapbox.maps:android-ndk27:11.34.1'
+}
